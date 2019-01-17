@@ -1604,7 +1604,22 @@ WaveEnvelope <- function(y, k = "all") {
 
 
 get_doi <- function(repo = ".", message = "Automatic commit from knitr") {
+  # Commits changes
   git2r::add(repo = repo, path = "*")
   commit <- git2r::commit(repo = repo, message = message)
-  git2r::push(object = repo)
+  git2r::tag(object = repo, name = paste0("Auto-Sys.time()"))
+  
+  # Push to github
+  git2r::push(object = repo, credentials = git2r::cred_token())
+  
+  # Creates a release -> Zenodo creates a DOI
+  
+  ### WPI
+  
+  # Gets DOI from Zenodo
+  ### WPI
+  
+  # Returns DOI
+  ## WPI
+  
 }
