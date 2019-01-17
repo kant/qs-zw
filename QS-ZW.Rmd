@@ -121,6 +121,9 @@ guide_colorstrip_bottom <- function(width = 25, height = 0.5, ...) {
 
 knitr::write_bib(c("base", "metR", "data.table"), 
                  "qszw-pkgs.bib")
+
+
+
 ```
 
 # Introduction

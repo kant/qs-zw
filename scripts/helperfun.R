@@ -1603,6 +1603,8 @@ WaveEnvelope <- function(y, k = "all") {
 }
 
 
-get_doi <- function(repo, ) {
-  git2r::add()
+get_doi <- function(repo = ".", message = "Automatic commit from knitr") {
+  git2r::add(repo = repo, path = "*")
+  commit <- git2r::commit(repo = repo, message = message)
+  git2r::push(object = repo)
 }
