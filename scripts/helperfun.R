@@ -1615,7 +1615,6 @@ get_doi <- function(repo = ".", commit = "Automatic commit from knitr",
               refspec = paste0("refs/tags/", tag_info$name),
               credentials = git2r::cred_token())
   
-  push(repo, "origin", "refs/tags/fbind-init", credentials = cred_user_pass("EMAIL", Sys.getenv("GITHUB_PAT")))
   # Push to github
   git2r::push(object = repo, credentials = git2r::cred_token())
   
