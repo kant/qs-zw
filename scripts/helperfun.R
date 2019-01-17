@@ -1622,6 +1622,7 @@ get_doi <- function(repo = ".", commit = "Automatic commit from knitr",
   # Push to github
   git2r::push(object = repo, credentials = git2r::cred_token())
   
+  
   # Creates a release -> Zenodo creates a DOI
   gh_repo <- git2r::branch_remote_url(git2r::branch_get_upstream(git2r::repository_head(commit_info$repo)))
   gh_repo <- substr(gh_repo, 1, nchar(gh_repo) - 4)  # removes ".git"
