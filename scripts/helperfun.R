@@ -1608,8 +1608,11 @@ get_doi <- function(repo = ".", commit = "Automatic commit from knitr",
   # Commits changes
   git2r::add(repo = repo, path = "*")
   commit_info <- git2r::commit(repo = repo, message = commit)
-  git2r::tag(object = repo, name = commit_info$sha, message = tag)
+  tag_info <- git2r::tag(object = repo, name = commit_info$sha, message = tag)
   
+  git2r::push(object = repo, refspec = )
+  
+  push(repo, "origin", "refs/tags/fbind-init", credentials = cred_user_pass("EMAIL", Sys.getenv("GITHUB_PAT")))
   # Push to github
   git2r::push(object = repo, credentials = git2r::cred_token())
   
@@ -1618,8 +1621,9 @@ get_doi <- function(repo = ".", commit = "Automatic commit from knitr",
   gh_repo <- substr(gh_repo, 1, nchar(gh_repo) - 4)  # removes ".git"
   gh_repo <- substr(gh_repo, 20, nchar(gh_repo))     # removes github domain
   
-  a <- gh::gh(paste0("POST  /repos/", gh_repo, "/release"), 
-         tag_name = tag)
+  a <- gh::gh(paste0("POST /repos/", gh_repo, "/releases"), 
+         tag_name = tag,
+         )
   ### WPI
   
   # Gets DOI from Zenodo
