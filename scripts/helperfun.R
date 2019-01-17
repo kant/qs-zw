@@ -1609,7 +1609,7 @@ get_doi <- function(repo = ".", commit = "Automatic commit from knitr",
   # Commits changes
   git2r::add(repo = repo, path = "*")
   commit_info <- git2r::commit(repo = repo, message = commit)
-  tag_info <- git2r::tag(object = repo, name = commit_info$sha, message = tag)
+  tag_info <- git2r::tag(object = repo, name = tag, message = tag)
   
   git2r::push(object = repo,
               refspec = paste0("refs/tags/", tag_info$name),
