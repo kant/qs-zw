@@ -1601,3 +1601,8 @@ WaveEnvelope <- function(y, k = "all") {
    x_hat[-k] <- 0
    Mod(fft(x_hat, inverse = T))*2
 }
+
+
+get_doi <- function(repo, ) {
+  git2r::add()
+}

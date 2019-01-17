@@ -35,6 +35,8 @@ header-includes:
       - \usepackage{gensymb} 
       - \usepackage{soulutf8}
       - \usepackage{subfig}
+params: 
+  draft: TRUE
 ---
 
 

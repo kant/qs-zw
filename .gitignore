@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.rcache
+DATA
+*_cache
+*_files
+papers/
+
+cache/
+
+fig/
