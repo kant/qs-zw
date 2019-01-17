@@ -1605,15 +1605,19 @@ WaveEnvelope <- function(y, k = "all") {
 
 get_doi <- function(repo = ".", commit = "Automatic commit from knitr", 
                     tag = paste0("Auto tag from knitr at ", Sys.time())) {
+  repo <- git2r::repository(repo)
   # Commits changes
   git2r::add(repo = repo, path = "*")
   commit_info <- git2r::commit(repo = repo, message = commit)
   tag_info <- git2r::tag(object = repo, name = commit_info$sha, message = tag)
   
-  git2r::push(object = repo, "origin", refspec = paste0("refs/tags/", tag_info$name),
+  git2r::push(object = repo, "origin", 
+              refspec = paste0("refs/tags/", tag_info$name),
               credentials = git2r::cred_token())
   
-  
+  push(repo, "origin", "refs/tags/fbind-init", credentials = cred_user_pass("EMAIL", Sys.getenv("GITHUB_PAT")))
+  # Push to github
+  git2r::push(object = repo, credentials = git2r::cred_token())
   
   # Creates a release -> Zenodo creates a DOI
   gh_repo <- git2r::branch_remote_url(git2r::branch_get_upstream(git2r::repository_head(commit_info$repo)))
