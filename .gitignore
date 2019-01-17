@@ -7,7 +7,6 @@ DATA
 *_cache
 *_files
 papers/
-
 cache/
-
 fig/
+.httr-oauth

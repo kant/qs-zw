@@ -23,14 +23,14 @@ keypoints:
   - "The relationship between the mean ZW amplitude and QS amplitude yields an estimate of stationarity"
 abstract: >
    Abstract goes here
-knit: (function(file, encoding, ...) { 
-     rmarkdown::render(file, encoding = encoding, output_format = "all")}) 
+#knit: (function(file, encoding, ...) { 
+#     rmarkdown::render(file, encoding = encoding, output_format = "all")}) 
 output:
-   word_document:
-      default
    rticles::agu_article:
       keep_tex: true
-bibliography: qszw.bib
+   word_document:
+      default
+bibliography: [qszw.bib, qszw-pkgs.bib]
 header-includes: 
       - \usepackage{gensymb} 
       - \usepackage{soulutf8}
@@ -118,12 +118,15 @@ guide_colorstrip_bottom <- function(width = 25, height = 0.5, ...) {
                     barheight = height,
                     barwidth = width, ...)
 }
+# 
+# knitr::write_bib(c("base", "ggplot2", "metR", "data.table"), 
+#                  "qszw-pkgs.bib")
 
-knitr::write_bib(c("base", "metR", "data.table"), 
-                 "qszw-pkgs.bib")
-
-
-
+session_file <- "session_info.txt"
+file.create(session_file) 
+op <- options(width = 100)
+writeLines(capture.output(sessioninfo::session_info()), session_file)
+options(op)
 ```
 
 # Introduction
@@ -173,7 +176,7 @@ setnames(rao_data, "level", "lev")
 
 Here we use monthly geopotential fields from the NCEP/NCAR Reanalysis [@Kalnay1996] for the period `r period_rao[1]` to `r period_rao[2]` and compute one quasi-stationary wave for the whole period for each month, level and wavenumber. Amplitude and phase for each wavenumber was estimated by fitting a fourier transform for each latitude circle, level and monthly record.
 
-We analyzed the data using the statistical programming language R [@R-base], using data.table and metR packages [@R-data.table; @R-metR] to read and transform it and ggplot2 package [@R-ggplot2] to make the plots. The sourcecode for this project can be located at 
+We analyzed the data using the statistical programming language R [@R-base], using data.table and metR packages [@R-data.table; @R-metR] to read and transform it and ggplot2 package [@R-ggplot2] to make the plots. The source code is available as Figshare repository [@Campitelli2019-figshare].
 
 # Results
 
