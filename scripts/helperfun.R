@@ -1604,7 +1604,11 @@ WaveEnvelope <- function(y, k = "all") {
 
 
 get_doi <- function(repo = ".", commit = "Automatic commit from knitr", 
-                    tag =  stringi::stri_replace_all(Sys.time(), "_", fixed = " ")) {
+                    tag =  "auto") {
+  if (tag == "auto") {
+    tag <- stringi::stri_replace_all(Sys.time(), "_", fixed = " ")
+    tag <- stringi::stri_replace_all(tag, "-", fixed = ":")
+  }
   repo <- git2r::repository(repo)
   # Commits changes
   git2r::add(repo = repo, path = "*")
