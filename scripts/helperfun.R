@@ -1603,11 +1603,12 @@ WaveEnvelope <- function(y, k = "all") {
 }
 
 
-get_doi <- function(repo = ".", message = "Automatic commit from knitr") {
+get_doi <- function(repo = ".", commit = "Automatic commit from knitr", 
+                    tag = paste0("Auto tag from knitr at ", Sys.time())) {
   # Commits changes
   git2r::add(repo = repo, path = "*")
-  commit <- git2r::commit(repo = repo, message = message)
-  git2r::tag(object = repo, name = paste0("Auto-Sys.time()"))
+  commit <- git2r::commit(repo = repo, message = commit)
+  git2r::tag(object = repo, name = commit$sha, message = tag)
   
   # Push to github
   git2r::push(object = repo, credentials = git2r::cred_token())
