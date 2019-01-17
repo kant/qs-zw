@@ -1615,22 +1615,20 @@ get_doi <- function(repo = ".", commit = "Automatic commit from knitr",
   commit_info <- git2r::commit(repo = repo, message = commit)
   tag_info <- git2r::tag(object = repo, name = tag, message = tag)
   
+  # Push to github
   git2r::push(object = repo,
               refspec = paste0("refs/tags/", tag_info$name),
               credentials = git2r::cred_token())
   
-  # Push to github
-  git2r::push(object = repo, credentials = git2r::cred_token())
-  
-  
+
   # Creates a release -> Zenodo creates a DOI
   gh_repo <- git2r::branch_remote_url(git2r::branch_get_upstream(git2r::repository_head(commit_info$repo)))
   gh_repo <- substr(gh_repo, 1, nchar(gh_repo) - 4)  # removes ".git"
   gh_repo <- substr(gh_repo, 20, nchar(gh_repo))     # removes github domain
   
-  a <- gh::gh(paste0("POST /repos/", gh_repo, "/releases"), 
-         tag_name = tag,
-         )
+  release_info <- gh::gh(paste0("POST /repos/", gh_repo, "/releases"), 
+         tag_name = tag_info$name)
+  
   ### WPI
   
   # Gets DOI from Zenodo
