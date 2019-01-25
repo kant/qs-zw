@@ -27,10 +27,10 @@ abstract: >
 #     rmarkdown::render(file, encoding = encoding, output_format = "all")}) 
 output:
    rticles::agu_article:
-      keep_tex: true
+      keep_tex: false
    word_document:
       default
-bibliography: [qszw.bib, qszw-pkgs.bib]
+bibliography: "qszw-pkgs.bib,qszw.bib"
 header-includes: 
       - \usepackage{gensymb} 
       - \usepackage{soulutf8}
@@ -172,7 +172,7 @@ setnames(rao_data, "level", "lev")
 
 Here we use monthly geopotential fields from the NCEP/NCAR Reanalysis [@Kalnay1996] for the period `r period_rao[1]` to `r period_rao[2]` and compute one quasi-stationary wave for the whole period for each month, level and wavenumber. Amplitude and phase for each wavenumber was estimated by fitting a fourier transform for each latitude circle, level and monthly record.
 
-We analyzed the data using the statistical programming language R [@R-base], using data.table and metR packages [@R-data.table; @R-metR] to read and transform it and ggplot2 package [@R-ggplot2] to make the plots. The source code is available as Figshare repository [@Campitelli2019-figshare].
+We analyzed the data using the statistical programming language R [@R-base], using metR [@R-metR] and data.table [@R-data.table] packages to read and transform it, and ggplot2 package [@R-ggplot2] to plot it. The source code is available as Figshare repository [@Campitelli2019-figshare].
 
 # Results
 
