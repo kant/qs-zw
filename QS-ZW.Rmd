@@ -30,7 +30,7 @@ output:
       keep_tex: true
    word_document:
       default
-bibliography: [qszw.bib, qszw-pkgs.bib]
+bibliography: [qszw.bib,qszw-pkgs.bib]
 header-includes: 
       - \usepackage{gensymb} 
       - \usepackage{soulutf8}
@@ -131,11 +131,11 @@ options(op)
 
 # Introduction
 
-Zonal asymmetries of extratropical circulation in the Southern Hemisphere (SH) (hereafter called as “planetary waves”) strongly modulate weather systems and regional climate through latitudinal transport of heat, humidity, and momentum (REFS), and by contributing to the development of blocking events [e.g. @Trenberth1985]. The literature on the topic is dominated by two main methodologies that imply differnet definitions: some studies have defined them by removing zonal averages from time-mean fields [e.g. @Loon1972, @Quintanar1995a, @Raphael2004] while others defined them by removing zonal averages from the instantaneous (e.g. daily, monthly or seasonal) fields [e.g. @Rao2004, @Turner2017, @Irving2015].
+Zonal asymmetries of extratropical circulation in the Southern Hemisphere (hereafter called as “planetary waves”) strongly modulate weather systems and regional climate through latitudinal transport of heat, humidity, and momentum (REFS), and by contributing to the development of blocking events [e.g. @Trenberth1985]. 
 
-In Rossby wave theory, stationary waves are those with zero frequency or phase velocity (HOLTON). In practice, however, most studies have directly assumed the “quasi-stationary” nature of SH planetary waves based on @Loon1972. In this foundational study, the authors analyzed data from 1957 to 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recurr consistently in the same location and thus have a significant quasi-stationary component on top on the "moving" component. This is a qualitative conclusion but to our knowledge no study has quantified the level of stationarity of each wavenumber. 
+In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@Holton2012a]. In practice, however, most studies have assumed the “quasi-stationary” nature of southern hemisphere planetary waves based on @Loon1972. In this foundational study, the authors analyzed data from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recurr consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no study has quantified the level of stationarity of each wavenumber. 
 
-After more than four decades from the publication of @Loon1972, and considering the current availability of different global reanalysis datasets, in this study we assess the stationarity features of planetary waves in the SH, and extend @Loon1972's methodology into a quantitative measure of planetary wave stationarity, which we applied to both hemispheres. 
+After more than four decades from the publication of @Loon1972, and considering the current availability of different global reanalysis datasets, in this study we assess the stationarity features of planetary waves in the southern hemisphere, and extends @Loon1972's methodology into a quantitative measure of planetary wave stationarity, which we apply to both hemispheres. 
 
 # Methods
 
@@ -198,7 +198,7 @@ Equation \ref{eq:S} is equivalent to
 
 The numerator represents the sum of the zonal waves amplitudes projected onto the direction of the quasi-stationary wave. Waves that deviate from that direction decrease the overall stationarity in proportion to their amplitude.
 
-We used Equation \ref{eq:S2} to compute a timeseries of quasi-stationary wave stationarity. We first calculated $\alpha_{qs}$ for each month and then, applied Equation \ref{eq:S2} with a 15-year rolling window approximated using loess regression with degree 0.
+We used Equation \ref{eq:S2} to compute a timeseries of quasi-stationary wave stationarity. We first calculated $\alpha_{qs}$ for each month and then applied Equation \ref{eq:S2} with a 15-year rolling window approximated using loess regression with degree 0.
 
 ## Data
 
@@ -351,7 +351,7 @@ pw %>%
               as.table = FALSE)
 ```
 
-Because we computed $\hat{S}$ using the whole period, it represents the mean stationarity between. Figure \ref{fig:s-timeseries} shows how planetary wave stationarity changed for each wavenumber at each latitude. Planetary wave stationarity remained high and constant for wavenumbers 1 to 3 at `r lats`\degree N and 1 at `r lats`\degree S but wavenumbers 2 and 3 at `r lats`\degree S show interdecadal variations.
+Because we computed $\hat{S}$ using the whole period, it represents the mean stationarity between `r period_rao[1]` and `r period_rao[2]`. Figure \ref{fig:s-timeseries} shows how planetary wave stationarity changed for each wavenumber at each latitude. Planetary wave stationarity remained high and constant for wavenumbers 1 to 3 at `r lats`\degree N and 1 at `r lats`\degree S but wavenumbers 2 and 3 at `r lats`\degree S show interdecadal variations.
 
 Planetary wave 2 stationarity oscillated around `r round(pw[lat == -lats & k == 2, mean(S)], 2)` with maximums in the 50's, 70's and 00's. Planetary wave 3 stationarity jumped from zero to more than 0.5 in less than five years in the 50's and then oscillated around `r round(pw[lat == -lats & k == 3 & year(time) > 1960, mean(S)], 2)` with a strong maximum in the late 80's. These could indicate inhomogeneities caused by changes in the observational network --routine satellite observations began in 1979-- but the absense of similar breaks for wavenumbers 1 or 2 suggest they represent real changes in the atmospheric circulation with unknown cause.
 
@@ -366,6 +366,9 @@ Interanual and intradecadal variability in planetary wave stationarity may serve
 xxx
 
 (Silvestri and Vera (2009 )
+
+xxxx
+The literature on the topic is dominated by two main methodologies that imply differnet definitions: some studies have defined planetary waves by removing zonal averages from time-mean fields [e.g. @Loon1972, @Quintanar1995a, @Raphael2004] while others defined them by removing zonal averages from the instantaneous (e.g. daily, monthly or seasonal) fields [e.g. @Rao2004, @Turner2017, @Irving2015].
 
 First, researchers should be aware of which phenomena they want to study and use the appropriate methods. The mean amplitude of zonal waves could be appropriate to study the vertical propagation of Rossby waves, for example. But zonal wave amplitude could lead to misleading results if used as the basis of local impacts studies because they are probably more influenced by phase effects. 
 
