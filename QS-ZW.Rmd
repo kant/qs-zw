@@ -133,7 +133,7 @@ options(op)
 
 Zonal asymmetries of extratropical circulation in the Southern Hemisphere (hereafter called as “planetary waves”) strongly modulate weather systems and regional climate through latitudinal transport of heat, humidity, and momentum (REFS), and by contributing to the development of blocking events [e.g. @Trenberth1985]. 
 
-In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@Holton2012a]. In practice, however, most studies have assumed the “quasi-stationary” nature of southern hemisphere planetary waves based on @Loon1972. In this foundational study, the authors analyzed data from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recurr consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no study has quantified the level of stationarity of each wavenumber. 
+In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@Holton2012a]. In practice, however, most studies have assumed the “quasi-stationary” nature of southern hemisphere planetary waves based on @Loon1972. In this foundational study, the authors analyzed data from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recur consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no study has quantified the level of stationarity of each wavenumber. 
 
 After more than four decades from the publication of @Loon1972, and considering the current availability of different global reanalysis datasets, in this study we assess the stationarity features of planetary waves in the southern hemisphere, and extends @Loon1972's methodology into a quantitative measure of planetary wave stationarity, which we apply to both hemispheres. 
 
@@ -184,7 +184,7 @@ We use this latter property and use the quotient between $A_\mathrm{QS}$ and $\o
 \end{equation}
 \end{linenomath*}
 
-For a sample of $n$ completely random waves, the expected value of $\hat{S}$ is $n^{-1/2}$ because the average amplitude of the sum of $n$ waves with random phases and mean amplitude $A$ is $An^{-1/2}$ [@Pain2005]. For completely stationary waves $\hat{S} = 1$ irrespective of sample size.
+For a sample of $n$ completely random waves, the expected value of $\hat{S}$ is $n^{-1/2}$ because the average amplitude of the sum of $n$ waves with random phases and mean amplitude $A$ is $An^{-1/2}$ [@Pain2005]. For completely stationary waves $\hat{S} = 1$ irrespective of sample size. 
 
 $\hat{S}$ is used --sometimes as $2/\pi\arcsin \left (\hat{S} \right )$ [@Singer1967]-- in the meteorological literature in the context of wind steadiness [e.g @Hiscox2010]. To our knowledge this is the first time it has been applied to the study of atmospheric waves. 
 
@@ -196,7 +196,7 @@ Equation \ref{eq:S} is equivalent to
 \end{equation}
 \end{linenomath*}
 
-The numerator represents the sum of the zonal waves amplitudes projected onto the direction of the quasi-stationary wave. Waves that deviate from that direction decrease the overall stationarity in proportion to their amplitude.
+The numerator represents the sum of the zonal waves amplitudes projected onto the direction of the quasi-stationary wave. Waves that deviate from that direction decrease the overall stationarity in proportion to their amplitude. This definition of stationarity depends on the phase distribution and its relationship with amplitude instead of the phase velocity of waves. Thus, it's a statistical --rather than dynamical-- property. 
 
 We used Equation \ref{eq:S2} to compute a timeseries of quasi-stationary wave stationarity. We first calculated $\alpha_{qs}$ for each month and then applied Equation \ref{eq:S2} with a 15-year rolling window approximated using loess regression with degree 0.
 
@@ -289,7 +289,7 @@ Figure \ref{fig:rao} shows the seasonal cycle of the amplitude of planetary wave
 Figure \ref{fig:rao1} shows that at `r lats`\degree N for the three wavenumbers $A_\mathrm{QS}$ and $\overline{A_\mathrm{ZW}}$ have a similar seasonal cycle with similar vertical extent. In the southern hemisphere, however, this is true only for wavenumber 1 (Figure \ref{fig:rao2}). $A_\mathrm{QS2}$ is much smaller than  $\overline{A_\mathrm{ZW2}}$ and its seasonal cycle is less defined. $A_\mathrm{QS3}$ has a smaller magnitude than $\overline{A_\mathrm{ZW3}}$ end even though their overall structure is similar (one relative maximum in February-March in the middle troposphere and another in July-August that extends to the lower stratosphere), they differ in the details. $A_\mathrm{QS3}$ has a local minimum in November that is absent in $\overline{A_\mathrm{ZW3}}$. The relative contribution of each wavenumber is also different. While $\overline{A_\mathrm{ZW2}}$ dominates over $\overline{A_\mathrm{ZW3}}$ in the stratosphere and is of similar magnitude in the troposphere, $A_\mathrm{QS3}$ dominates over $A_\mathrm{QS2}$ throughout the year and in every level except in the aforementioned November minimum. 
 
 
-```{r stationarity, fig.cap = "Seasonal cycle of stationarity at 50\\degree S and 50\\degree N computed using Equation \\ref{eq:S}", fig.align="center", fig.width=5}
+```{r stationarity, fig.cap = "Seasonal cycle of stationarity at 50\\degree S and 50\\degree N computed using Equation \\ref{eq:S}.", fig.align="center", fig.width=5}
 black_contour <- 0.4
 rao_qs %>% 
    dcast(lev + month + lat + k ~ variable, value.var = "amplitude") %>% 
@@ -313,11 +313,9 @@ These observations are quantified in Figure \ref{fig:stationarity}, which shows 
 
 At `r lats`\degree N planetary waves 1, 2 and 3 are highly stationary in almost every month and level, and even more so planetary wave 1 at `r lats`\degree S. 
 
-In the southern hemisphere, planetary wave 2 stationarity has a semianual cycle. It reaches its maximum in April and in August-September, plummeting to a deep minimum in June. Planetary wave 3 stationarity peaks in February and slowly decreases towards a November deep minimum after witch increases sharply. 
+In the southern hemisphere, planetary wave 2 stationarity has a semiannual cycle. It reaches its maximum in April and in August-September, plummeting to a deep minimum in June. Planetary wave 3 stationarity peaks in February and slowly decreases towards a November deep minimum after witch increases sharply. 
 
-
-
-```{r s-timeseries, fig.cap = "Quasi-stationary wave stationarity for wavenumbers 1 to 3", fig.width=5}
+```{r s-timeseries, fig.cap = "Quasi-stationary wave stationarity for wavenumbers 1 to 3.", fig.width=5}
 pw <- rao_data %>%
    .[lev == 500, FitWave(gh, 1:3), by = .(lat, lev, time)]
 
@@ -353,35 +351,17 @@ pw %>%
 
 Because we computed $\hat{S}$ using the whole period, it represents the mean stationarity between `r period_rao[1]` and `r period_rao[2]`. Figure \ref{fig:s-timeseries} shows how planetary wave stationarity changed for each wavenumber at each latitude. Planetary wave stationarity remained high and constant for wavenumbers 1 to 3 at `r lats`\degree N and 1 at `r lats`\degree S but wavenumbers 2 and 3 at `r lats`\degree S show interdecadal variations.
 
-Planetary wave 2 stationarity oscillated around `r round(pw[lat == -lats & k == 2, mean(S)], 2)` with maximums in the 50's, 70's and 00's. Planetary wave 3 stationarity jumped from zero to more than 0.5 in less than five years in the 50's and then oscillated around `r round(pw[lat == -lats & k == 3 & year(time) > 1960, mean(S)], 2)` with a strong maximum in the late 80's. These could indicate inhomogeneities caused by changes in the observational network --routine satellite observations began in 1979-- but the absense of similar breaks for wavenumbers 1 or 2 suggest they represent real changes in the atmospheric circulation with unknown cause.
+Planetary wave 2 stationarity oscillated around `r round(pw[lat == -lats & k == 2, mean(S)], 1)` with maximums in the 50's, 70's and 00's. Planetary wave 3 stationarity jumped from zero to more than 0.5 in less than five years in the 50's and then oscillated around `r round(pw[lat == -lats & k == 3 & year(time) > 1960, mean(S)], 1)` with a strong maximum in the late 80's. These could indicate inhomogeneities caused by changes in the observational network --routine satellite observations began in 1979-- but the absence of similar breaks for wavenumbers 1 or 2 suggest they represent real changes in the atmospheric circulation with unknown cause.
 
 # Conclusions
 
-Using a quantitative measure of planetary wave stationarity we showed that, in the southern hemisphere, planetary wave 1 stationarity is high and constant throught the year and period, while waves 2 and 3 vary both in intraseasonal and interdecadal timescales. Planetary wave 3 stationarity, in particular, increased dramatically in the 50's. 
+We used a quantitative measure of planetary wave stationarity to show that in the southern hemisphere planetary wave 1 stationarity is high and constant throughout the year and period, while waves 2 and 3 vary both in intraseasonal and interdecadal timescales. Planetary wave 3 stationarity, in particular, increased dramatically in the 50's. In the northern hemisphere, planetary wave stationarity is higher and varies much less. 
 
-Plentary waves can be both forced by the surface and excited by internal variability. Assuming that the later process will not result in a phase preference, higher stationarity would be evidence of stronger forcing or, more strictly, stronger forcing response. In the northen hemisphere, topography and thermal contrast are the main forcings of plentary waves, which explains their highly and not variable stationary nature. In the southern hemisphere, only planetary wave 1 seems to be the result of mainly surface forcings. Planetary waves 2 and 3 seem to be composed of a comparable mix of internal variability and surface forcing. 
+Planetary waves can be both forced by the surface and excited by internal variability. Assuming that the later process will not result in a phase preference, higher stationarity would be evidence of stronger forcing or, more strictly, stronger forcing response. In the northern hemisphere, topography and thermal contrasts are the main forcings of planetary waves (REF), which explains their highly and not variable stationary nature. In the southern hemisphere, only planetary wave 1 seems to be the result of mainly surface forcings. Planetary waves 2 and 3 seem to be composed of a comparable mix of internal variability and surface forcing components. 
 
-Interanual and intradecadal variability in planetary wave stationarity may serve to study variability in surface forcing response cause either by the strengh of the forcing or the sensibility of mean state of the atmosphere. 
+Interannual and intradecadal variability in planetary wave stationarity may serve to study variability in surface forcing responses caused either by the strength of the forcing or the sensitivity of mean state of the atmosphere.  
 
-xxx
+Since in the southern hemisphere the amplitude of the mean planetary wave can differ greatly from the mean amplitude of planetary waves, care must be taken when interpreting the literature. Some studies analyze the former [e.g. @Loon1972, @Quintanar1995a, @Raphael2004] while others analyze the later [e.g. @Rao2004, @Turner2017, @Irving2015]. For instance, @Irving2015 compare their planetary wave activity index with @Raphael2004's wave 3 index and conclude that the later cannot account for events with waves far removed from their climatological position. However, being an index of the zonal wave component in phase with the quasi-stationary wave, this is by design. 
 
-(Silvestri and Vera (2009 )
+The explorations of both zonal waves and quasi-stationary waves can lead to novel levels of analysis. For example, @Smith2012 used their phase relationship to show that linear interference between the zonal waves 1 and quasi-stationary wave 1 was related to vertical wave activity transport at the tropopause. Here, we showed it can be used to define a metric of stationarity of quasi-stationary waves, but other applications are also possible.
 
-xxxx
-The literature on the topic is dominated by two main methodologies that imply differnet definitions: some studies have defined planetary waves by removing zonal averages from time-mean fields [e.g. @Loon1972, @Quintanar1995a, @Raphael2004] while others defined them by removing zonal averages from the instantaneous (e.g. daily, monthly or seasonal) fields [e.g. @Rao2004, @Turner2017, @Irving2015].
-
-First, researchers should be aware of which phenomena they want to study and use the appropriate methods. The mean amplitude of zonal waves could be appropriate to study the vertical propagation of Rossby waves, for example. But zonal wave amplitude could lead to misleading results if used as the basis of local impacts studies because they are probably more influenced by phase effects. 
-
-Secondly, comparison between results should also be made having this issues in mind. For instance, @Irving2015 compare their planetary wave activity index with @Raphael2004's wave 3 index and conclude that the later cannot account for events with waves far removed from their climatological position. However, being an index of the zonal wave component in phase with the quasi-stationary wave, this is by design. 
-
-Although having a consistent nomenclature across papers is important, we believe this problem can be ameliorated by researchers detailing their definitions and methodology. This is also good for clarity and reproducibility. Since planetary waves are generally more stationary in the northern hemisphere, these issues are more critical for studies of the southern hemisphere. 
-
-Thirdly, the explorations of both ZW and QS can lead to novel levels of analysis. Here, we showed it can be used to define a metric of stationarity of quasi-stationary waves, but other applications are also possible. @Smith2012 used the phase relationship between ZW1 and QS1 to show that linear interference between the QS1 and ZW1 was related to vertical wave activity transport at the tropopause. 
-
-
----
-
-We speculate that the level of stationarity responds to the nature of the forcings. Higly stationary planetary waves are explained mainly by stationary forcings while low stationary planetary waves respond mainly to the internal variation of the atmosphere. This suggests that in the southern midlatitudes, wave 2 and 3 consist of forced responses mixed with internat variability. Their annual cycle further suggests that the mean state of the atmosphere can modulate these responses. 
-
-
-*xx me falta un final acá xx*
