@@ -1,6 +1,6 @@
 ---
 journal: "Geophysical Research Letters"
-options: "draft,linenumbers"
+classoption: "draft,linenumbers"
 title: "How stationary are planetary waves in the Southern Hemisphere?"
 authors:
   - name: Elio Campitelli
@@ -22,12 +22,12 @@ keypoints:
   - "This distinction has theoretical and practical implications"
   - "The relationship between the mean ZW amplitude and QS amplitude yields an estimate of stationarity"
 abstract: >
-   Abstract goes here
+  Abstract goes here
 knit: (function(file, encoding, ...) {
     rmarkdown::render(file, encoding = encoding, output_format = "all")})
 output:
    rticles::agu_article:
-      keep_tex: true
+      keep_tex: false
    word_document:
       default
 bibliography: [qszw.bib,qszw-pkgs.bib]
@@ -43,10 +43,10 @@ params:
 ```{r setup, include=FALSE}
 # Some recommended settings. 
 knitr::opts_chunk$set(
-   echo = FALSE,
-   fig.pos = 'h',
-   out.extra = "",   # To force the use of figure enviroment
-   fig.cap = "Please caption every figure"
+  echo = FALSE,
+  fig.pos = 'h',
+  out.extra = "",   # To force the use of figure enviroment
+  fig.cap = "Please caption every figure"
 )
 
 # Notification
@@ -54,20 +54,20 @@ start.time <- unclass(Sys.time())
 min.time <- 10
 knit_doc <- knitr::knit_hooks$get("document")
 knitr::knit_hooks$set(document = function(x) {
-   took <- unclass(Sys.time()) - start.time
-   if (unclass(Sys.time()) - start.time >= min.time) {
-      notify("Done knitting!", 
-             paste0("Took ", round(took), " seconds"),
-             time = 5)
-   }  
-   knit_doc(x)
+  took <- unclass(Sys.time()) - start.time
+  if (unclass(Sys.time()) - start.time >= min.time) {
+    notify("Done knitting!", 
+           paste0("Took ", round(took), " seconds"),
+           time = 5)
+  }  
+  knit_doc(x)
 })
 
 name <- tools::file_path_sans_ext(knitr::current_input())
 knitr::opts_chunk$set(cache = TRUE,
                       warning = FALSE, 
                       message = FALSE,
-                      cache.extra = 2,
+                      cache.extra = 1,
                       cache.path = paste0("cache/", name, "/"),
                       fig.path = paste0("fig/", name, "/"),
                       fig.align = "center")
@@ -88,7 +88,7 @@ library(glue)
 here <- here::here
 
 gluec <- function(...) {
-   unname(vapply(c(...), function(x) glue(x), FUN.VALUE = "a"))
+  unname(vapply(c(...), function(x) glue(x), FUN.VALUE = "a"))
 }
 source(here("scripts/helperfun.R"))
 remove(ggplot)
@@ -100,23 +100,23 @@ map.SH <- geom_map2(data.world[lat %b% c(-90, 20)], color = "gray20")
 lev.breaks <- c(1000, 500, 300, 200, 100, 50, 10)
 
 theme_elio <- theme_minimal(base_size = 9) +
-   theme(
-      # text = element_text(family = font_rc),
-      legend.position = "bottom", legend.box = "vertical",
-      panel.spacing.y = unit(5, "mm"),
-      panel.spacing.x = unit(5, "mm"),
-      legend.spacing = unit(2, "mm"),
-      plot.margin = grid::unit(rep(3, 4), "mm"),
-      legend.title = element_blank(),
-      legend.box.spacing = unit(3, "mm"),
-      legend.margin = margin(t = -5),
-      panel.grid = element_line(color = "gray50", size = 0.2, linetype = 3),
-      panel.ontop = TRUE)
+  theme(
+    # text = element_text(family = font_rc),
+    legend.position = "bottom", legend.box = "vertical",
+    panel.spacing.y = unit(5, "mm"),
+    panel.spacing.x = unit(5, "mm"),
+    legend.spacing = unit(2, "mm"),
+    plot.margin = grid::unit(rep(3, 4), "mm"),
+    legend.title = element_blank(),
+    legend.box.spacing = unit(3, "mm"),
+    legend.margin = margin(t = -5),
+    panel.grid = element_line(color = "gray50", size = 0.2, linetype = 3),
+    panel.ontop = TRUE)
 theme_set(theme_elio)
 guide_colorstrip_bottom <- function(width = 25, height = 0.5, ...) {
-   guide_colorstrip(title.position = "top", title.hjust = 0.5,
-                    barheight = height,
-                    barwidth = width, ...)
+  guide_colorstrip(title.position = "top", title.hjust = 0.5,
+                   barheight = height,
+                   barwidth = width, ...)
 }
 # 
 # knitr::write_bib(c("base", "ggplot2", "metR", "data.table"), 
@@ -133,7 +133,7 @@ options(op)
 
 Zonal asymmetries of extratropical circulation in the Southern Hemisphere (hereafter called as “planetary waves”) strongly modulate weather systems and regional climate through latitudinal transport of heat, humidity, and momentum (REFS), and by contributing to the development of blocking events [e.g. @Trenberth1985]. 
 
-In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@Holton2012a]. In practice, however, most studies have assumed the “quasi-stationary” nature of southern hemisphere planetary waves based on @Loon1972. In this foundational study, the authors analyzed data from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recur consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no study has quantified the level of stationarity of each wavenumber. 
+In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@Holton2012]. In practice, however, most studies have assumed the “quasi-stationary” nature of southern hemisphere planetary waves based on @Loon1972. In this foundational study, the authors analyzed data from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recur consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no study has quantified the level of stationarity of each wavenumber. 
 
 After more than four decades from the publication of @Loon1972, and considering the current availability of different global reanalysis datasets, in this study we assess the stationarity features of planetary waves in the southern hemisphere, and extends @Loon1972's methodology into a quantitative measure of planetary wave stationarity, which we apply to both hemispheres. 
 
@@ -154,22 +154,43 @@ where $\mathrm{k}$ is wavenumber, $\lambda$ longitude, and $\mathrm{A_{x}}$ and 
 
 These definitions depend on which are the "instantaneous fields" and the averaging time-scales. A dataset of 365 daily mean fields defines 365 daily zonal waves and one annual quasi-stationary wave but 12 monthly quasi-stationary waves (per level and latitude). A 30 year dataset of monthly mean fields define 360 monthly zonal waves and one 30-year quasi-stationary wave. Monthly planetary waves are quasi-stationary waves in one case and zonal waves in the other. 
 
-```{r read-rao}
-period_rao <- c(1948, 2017)
+```{r set-period}
+period_rao <- c(1900, 2017)
 N <- diff(period_rao) + 1
 lats <- 50
 period_cap_rao <- glue("From monthly NCEP/NCAR Reanalysis, {period_rao[1]} to {period_rao[2]}")
-rao_data <- rbind(ReadNetCDF(here("DATA/NCEP Reanalysis/hgt.mon.mean.nc"), 
+subs_time <- gluec("{period_rao[1]}-01-01", "{period_rao[2]}-12-31")
+
+```
+
+```{r read-ncep, dependson = "set-period"}
+ncep <- rbind(ReadNetCDF(here("DATA/NCEP Reanalysis/hgt.mon.mean.nc"), 
                              c(gh = "hgt") ,
                              subset = list(lat = -lats, 
-                                           time = gluec("{period_rao[1]}-01-01",
-                                                        "{period_rao[2]}-12-31"))),
+                                           time = subs_time)),
                   ReadNetCDF(here("DATA/NCEP Reanalysis/hgt.mon.mean.nc"), 
                              c(gh = "hgt") ,
                              subset = list(lat = lats, 
-                                           time = gluec("{period_rao[1]}-01-01",
-                                                        "{period_rao[2]}-12-31"))))
-setnames(rao_data, "level", "lev")
+                                           time = subs_time))) %>% 
+  setnames("level", "lev")
+```
+
+```{r read-era, dependson = "set-period"}
+era <- rbind(ReadNetCDF(here("DATA/ERA/ERA20C_monthly_hgt.nc"), c(gh = "z"),
+                  subset = list(latitude = -lats, 
+                                time = subs_time)),
+             ReadNetCDF(here("DATA/ERA/ERA20C_monthly_hgt.nc"), c(gh = "z"),
+                  subset = list(latitude = lats, 
+                                time = subs_time))) %>% 
+  setnames(c("level", "latitude", "longitude"), 
+           c("lev", "lat", "lon")) %>% 
+  .[, gh := gh/9.8]
+```
+
+```{r rbind-data, dependson=c("read-era", "read-ncep")}
+data <- rbindlist(list(era = era, ncep = ncep),
+          idcol = "dataset")
+rm(era, ncep)
 ```
 
 ## Stationarity 
@@ -209,18 +230,18 @@ We analyzed the data using the statistical programming language R [@R-base], usi
 # Results
 
 ```{r compute-qs-zw-rao}
-qs <- rao_data %>% 
-   .[, .(gh = mean(gh)), by = .(lon, lat, lev, month(time))] %>% 
-   .[, FitWave(gh, 1:3), keyby = .(lat, lev, month)] %>% 
-   addkey(k) %>% 
-   .[, phase := phase*k] %>% 
-   .[, c("r2") := NULL]
+qs <- data %>% 
+  .[, .(gh = mean(gh)), by = .(dataset, lon, lat, lev, month(time))] %>% 
+  .[, FitWave(gh, 1:3), keyby = .(dataset, lat, lev, month)] %>% 
+  addkey(k) %>% 
+  .[, phase := phase*k] %>% 
+  .[, c("r2") := NULL]
 
-zw <- rao_data %>%
-   .[, FitWave(gh, 1:3), by = .(lat, lev, time)] %>% 
-   .[, .(amplitude = mean(amplitude),
-         phase = as.numeric(mean(circular(phase*k)))), 
-     keyby = .(k, lat, lev, month(time))] 
+zw <- data %>%
+  .[, FitWave(gh, 1:3), by = .(dataset, lat, lev, time)] %>% 
+  .[, .(amplitude = mean(amplitude),
+        phase = as.numeric(mean(circular(phase*k)))), 
+    keyby = .(dataset, k, lat, lev, month(time))] 
 rao_qs <- rbindlist(list(QS = qs,
                          ZW = zw), 
                     use.names = TRUE,
@@ -238,50 +259,52 @@ k_prefix <- AddPreffix("Wavenumber ")
 
 ```{r rao, fig.cap = glue("Seasonal cycle of amplitude of the geopotential planetary waves 1 to 3 {computed}."), fig.subcap=c("At 50\\degree N", "At 50\\degree S"), fig.width=5, fig.ncol=1}
 plot_crossection <- function(k, lat, binwidth) {
-   ks <- k
-   lats <- lat
-   gdata <- periodic(rao_qs[k == ks & lat == lats], month = 1:13)
-   levels(gdata$variable) <- math_levels
-   g <- periodic(gdata[k == ks], month = 1:13) %>% 
-      ggplot(aes(month, lev)) +
-      # geom_contour_fill(aes(z = value), binwidth = binwidth) +
-      geom_contour2(aes(z = amplitude), binwidth = binwidth) +
-      geom_text_contour(aes(z = amplitude), binwidth = binwidth, rotate = F, skip = 1,
-                        stroke = 0.2, size = 2) +
-      scale_y_level("Pressure (hPa)") +
-      scale_x_continuous("Month", breaks = 1:13, 
-                         labels = c(month.abb, "13" = "Jan"),
-                         expand = c(0, 0), minor_breaks = NULL) +
-      # scale_fill_viridis_c(guide = guide_colorstrip_bottom()) +
-      # coord_fixed(1.7) +
-      theme(aspect.ratio = 0.5) +
-      facet_grid(k ~ variable,
-                 labeller = labeller(k = k_prefix,
-                                     variable = label_parsed))
-   
-   if (k != 3) {
-      g <- g +
-         theme(axis.text.x = element_blank(), axis.title.x = element_blank())
-   }
-   if (k != 1) {
-      g <- g + 
-         theme(axis.title.y = element_blank(),
-               strip.text.x = element_blank(),
-               plot.margin = unit(c(-0, 1, 1, 1), "lines"))
-   }
-   return(g)
+  ks <- k
+  lats <- lat
+  gdata <- periodic(rao_qs[k == ks & lat == lats], month = 1:13)
+  gdata <- gdata[dataset == "ncep"]
+  levels(gdata$variable) <- math_levels
+  g <- periodic(gdata[k == ks], month = 1:13) %>% 
+    ggplot(aes(month, lev)) +
+    # geom_contour_fill(aes(z = value), binwidth = binwidth) +
+    geom_contour2(aes(z = amplitude), binwidth = binwidth) +
+    geom_text_contour(aes(z = amplitude), binwidth = binwidth, rotate = F, 
+                      skip = 1,
+                      stroke = 0.2, size = 2) +
+    scale_y_level("Pressure (hPa)") +
+    scale_x_continuous("Month", breaks = 1:13, 
+                       labels = c(month.abb, "13" = "Jan"),
+                       expand = c(0, 0), minor_breaks = NULL) +
+    # scale_fill_viridis_c(guide = guide_colorstrip_bottom()) +
+    # coord_fixed(1.7) +
+    theme(aspect.ratio = 0.5) +
+    facet_grid(k ~ variable,
+               labeller = labeller(k = k_prefix,
+                                   variable = label_parsed))
+  
+  if (k != 3) {
+    g <- g +
+      theme(axis.text.x = element_blank(), axis.title.x = element_blank())
+  }
+  if (k != 1) {
+    g <- g + 
+      theme(axis.title.y = element_blank(),
+            strip.text.x = element_blank(),
+            plot.margin = unit(c(-0, 1, 1, 1), "lines"))
+  }
+  return(g)
 }
 
 binwidths <- c(50, 10, 5)
 binwidths2 <- c(25, 10, 5)*2
 
 lapply(1:3, function(x) plot_crossection(x, lats, binwidths2[x]))  %>% 
-   Reduce("+", .) + 
-   plot_layout(ncol = 1) 
+  Reduce("+", .) + 
+  plot_layout(ncol = 1) 
 
 lapply(1:3, function(x) plot_crossection(x, -lats, binwidths[x]))  %>% 
-   Reduce("+", .) + 
-   plot_layout(ncol = 1) 
+  Reduce("+", .) + 
+  plot_layout(ncol = 1) 
 ```
 
 Figure \ref{fig:rao} shows the seasonal cycle of the amplitude of planetary waves at `r lats`\degree S and `r lats`\degree N using monthly fields from the NCEP/NCAR reanalysis [@Kalnay1996] between `r period_rao[1]` and `r period_rao[2]`. We computed the left column ($A_\mathrm{QS}$) as the amplitude of the average geopotential field for each month, level and wavenumber, and the right column ($\overline{A_\mathrm{ZW}}$) as the average amplitude of the `r N` individual fields. 
@@ -292,21 +315,22 @@ Figure \ref{fig:rao1} shows that at `r lats`\degree N for the three wavenumbers 
 ```{r stationarity, fig.cap = "Seasonal cycle of stationarity at 50\\degree S and 50\\degree N computed using Equation \\ref{eq:S}.", fig.align="center", fig.width=5}
 black_contour <- 0.4
 rao_qs %>% 
-   dcast(lev + month + lat + k ~ variable, value.var = "amplitude") %>% 
-   .[, S := QS/ZW] %>% 
-   .[, lat_f := factor(lat, levels = c(lats, -lats))] %>% 
-   ggplot(aes(month, lev)) +
-   geom_contour_fill(aes(z = S), binwidth = 0.1) +
-   geom_contour(aes(z = S), breaks = black_contour, color = "black", size = 0.2) +
-   scale_y_level("Pressure (hPa)") +
-   scale_x_continuous("Month", breaks = 1:13, 
-                      labels = c(month.abb, "13" = "Jan"),
-                      expand = c(0, 0), minor_breaks = NULL) +
-   scale_fill_viridis_c(guide = guide_colorstrip_bottom(15),
-                        breaks = MakeBreaks(0.1)) +
-   theme(aspect.ratio = 0.5) +
-   facet_grid(k ~ lat_f, labeller = labeller(k = k_prefix, 
-                                             lat_f = LatLabel))
+  .[dataset == "ncep"] %>%
+  dcast(lev + month + lat + k ~ variable, value.var = "amplitude") %>% 
+  .[, S := QS/ZW] %>% 
+  .[, lat_f := factor(lat, levels = c(lats, -lats))] %>% 
+  ggplot(aes(month, lev)) +
+  geom_contour_fill(aes(z = S), binwidth = 0.1) +
+  geom_contour(aes(z = S), breaks = black_contour, color = "black", size = 0.2) +
+  scale_y_level("Pressure (hPa)") +
+  scale_x_continuous("Month", breaks = 1:13, 
+                     labels = c(month.abb, "13" = "Jan"),
+                     expand = c(0, 0), minor_breaks = NULL) +
+  scale_fill_viridis_c(guide = guide_colorstrip_bottom(15),
+                       breaks = MakeBreaks(0.1)) +
+  theme(aspect.ratio = 0.5) +
+  facet_grid(k ~ lat_f, labeller = labeller(k = k_prefix, 
+                                            lat_f = LatLabel))
 ``` 
 
 These observations are quantified in Figure \ref{fig:stationarity}, which shows $\hat{S}$ for wavenumbers 1 to 3 computed using Equation \ref{eq:S} at `r lats`\degree N and `r lats`\degree S. We separate between high and low stationarity with the ad-hoc threshold of `r black_contour` (black line in Figure \ref{fig:stationarity}).  
@@ -315,39 +339,42 @@ At `r lats`\degree N planetary waves 1, 2 and 3 are highly stationary in almost 
 
 In the southern hemisphere, planetary wave 2 stationarity has a semiannual cycle. It reaches its maximum in April and in August-September, plummeting to a deep minimum in June. Planetary wave 3 stationarity peaks in February and slowly decreases towards a November deep minimum after witch increases sharply. 
 
-```{r s-timeseries, fig.cap = "Quasi-stationary wave stationarity for wavenumbers 1 to 3.", fig.width=5}
-pw <- rao_data %>%
-   .[lev == 500, FitWave(gh, 1:3), by = .(lat, lev, time)]
+```{r s-timeseries, fig.cap = "Quasi-stationary wave stationarity for wavenumbers 1 to 3 at 50\\degree S and 500hPa.", fig.width=5}
+pw <- data %>%
+  .[lev == 500, FitWave(gh, 1:3), by = .(lat, lev, time, dataset)]
 
 pw[, phase.mean := mean.phase(amplitude, phase, k), 
-   by = .(k, lat, lev, month(time))]
+   by = .(dataset, k, lat, lev, month(time))]
 pw[, cor := cos(k*(phase - phase.mean))]
 pw[, c("S", "S_se", "S_df") := predict(loess(cor ~ as.numeric(time), span = 10*12/.N,
-                        weights = amplitude,
-                        degree = 0), se = TRUE)[c("fit", "se.fit", "df")], 
-   by = .(k, lat, lev)]
+                                             weights = amplitude,
+                                             degree = 0), se = TRUE)[c("fit", "se.fit", "df")], 
+   by = .(dataset, k, lat, lev)]
 pw[, S_se1 := S_se*stats::qt(0.95 / 2 + .5, S_df)]
 
 pw %>% 
-   ggplot(aes(time, S)) +
-   geom_ribbon(aes(ymin = S - S_se1,
-                   ymax = S + S_se1, group = factor(k)),
-               alpha = 0.2) +
-   geom_line(aes(linetype = factor(k)), size = 1) +
-   stat_subset(aes(subset = time == max(time),
-                   # x = time + months(18),
-                   label = k), geom = ggrepel::GeomTextRepel, 
-               direction = "y", nudge_x = as.numeric(months(20))) +
-   scale_y_continuous(TeX("\\hat{S}")) +
-   scale_x_datetime("Time", breaks = function(x) pretty(x, 15), 
-                    date_labels = "%y",
-                    minor_breaks = NULL, 
-                    expand = c(0, 0, 0, as.numeric(months(36)))) +
-   scale_linetype_manual(guide = "none", values = c("1" = 1, "2" = 2, "3" = 3)) +
-   coord_cartesian(ylim = c(0, 1)) +
-   facet_wrap(~lat, ncol = 1, labeller = labeller(lat = LatLabel),
-              as.table = FALSE)
+  ggplot(aes(time, S)) +
+  geom_ribbon(aes(ymin = S - S_se1,
+                  ymax = S + S_se1, group = factor(k)),
+              alpha = 0.2) +
+  geom_line(aes(linetype = factor(k)), size = 1) +
+  stat_subset(aes(subset = time == max(time),
+                  # x = time + months(18),
+                  label = k), geom = ggrepel::GeomTextRepel, 
+              direction = "y", nudge_x = as.numeric(months(20))) +
+  scale_y_continuous(TeX("\\hat{S}")) +
+  scale_x_datetime("Time", breaks = function(x) pretty(x, 15), 
+                   date_labels = "%y",
+                   minor_breaks = NULL, 
+                   expand = c(0, 0, 0, as.numeric(months(36)))) +
+  scale_linetype_manual(guide = "none", values = c("1" = 1, "2" = 2, "3" = 3)) +
+  coord_cartesian(ylim = c(0, 1)) +
+  facet_grid(dataset~lat,labeller = labeller(lat = LatLabel),
+             as.table = FALSE)
 ```
+
+XXXX
+
 
 Because we computed $\hat{S}$ using the whole period, it represents the mean stationarity between `r period_rao[1]` and `r period_rao[2]`. Figure \ref{fig:s-timeseries} shows how planetary wave stationarity changed for each wavenumber at each latitude. Planetary wave stationarity remained high and constant for wavenumbers 1 to 3 at `r lats`\degree N and 1 at `r lats`\degree S but wavenumbers 2 and 3 at `r lats`\degree S show interdecadal variations.
 
