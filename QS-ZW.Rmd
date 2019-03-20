@@ -223,7 +223,7 @@ We used Equation \ref{eq:S2} to compute a timeseries of quasi-stationary wave st
 
 ## Data
 
-We use monthly geopotential fields from the NCEP/NCAR Reanalysis [@Kalnay1996] for the period `r period_rao[1]` to `r period_rao[2]` and compute one quasi-stationary wave for the whole period for each month, level and wavenumber. Amplitude and phase for each wavenumber was estimated by fitting a fourier transform for each latitude circle, level and monthly record.
+We use monthly geopotential fields from the NCEP/NCAR Reanalysis [@Kalnay1996] for the period `r period_rao[1]` to `r period_rao[2]` and compute one quasi-stationary wave for the whole period for each month, level and wavenumber. Amplitude and phase for each wavenumber was estimated by fitting a fourier transform for each latitude circle, level and monthly record. We also analyzed the ERA-20C [@Poli2016] and confirmed that we get similar results. 
 
 We analyzed the data using the statistical programming language R [@R-base], using data.table and metR packages [@R-data.table; @R-metR] to read and transform it and ggplot2 package [@R-ggplot2] to make the plots. The source code is available as Figshare repository [@Campitelli2019-figshare].
 
@@ -339,14 +339,15 @@ At `r lats`\degree N planetary waves 1, 2 and 3 are highly stationary in almost 
 
 In the southern hemisphere, planetary wave 2 stationarity has a semiannual cycle. It reaches its maximum in April and in August-September, plummeting to a deep minimum in June. Planetary wave 3 stationarity peaks in February and slowly decreases towards a November deep minimum after witch increases sharply. 
 
-```{r s-timeseries, fig.cap = "Quasi-stationary wave stationarity for wavenumbers 1 to 3 at 50\\degree S and 500hPa.", fig.width=5}
+```{r s-timeseries, fig.cap = "Quasi-stationary wave stationarity for wavenumbers 1 to 3 at 50\\degree S and 500hPa for the NCEP Reanalysis and ERA-20C.", fig.width=5}
 pw <- data %>%
   .[lev == 500, FitWave(gh, 1:3), by = .(lat, lev, time, dataset)]
 
 pw[, phase.mean := mean.phase(amplitude, phase, k), 
    by = .(dataset, k, lat, lev, month(time))]
 pw[, cor := cos(k*(phase - phase.mean))]
-pw[, c("S", "S_se", "S_df") := predict(loess(cor ~ as.numeric(time), span = 10*12/.N,
+pw[, c("S", "S_se", "S_df") := predict(loess(cor ~ as.numeric(time), 
+                                             span = 10*12/.N,
                                              weights = amplitude,
                                              degree = 0), se = TRUE)[c("fit", "se.fit", "df")], 
    by = .(dataset, k, lat, lev)]
@@ -369,7 +370,10 @@ pw %>%
                    expand = c(0, 0, 0, as.numeric(months(36)))) +
   scale_linetype_manual(guide = "none", values = c("1" = 1, "2" = 2, "3" = 3)) +
   coord_cartesian(ylim = c(0, 1)) +
-  facet_grid(dataset~lat,labeller = labeller(lat = LatLabel),
+  facet_grid(dataset~lat, 
+             labeller = labeller(lat = LatLabel,
+                                 dataset = c(era = "ERA20C", 
+                                             ncep = "NCEP")),
              as.table = FALSE)
 ```
 
