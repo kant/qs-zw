@@ -23,8 +23,8 @@ keypoints:
   - "The relationship between the mean ZW amplitude and QS amplitude yields an estimate of stationarity"
 abstract: >
   Abstract goes here
-knit: (function(file, encoding, ...) {
-    rmarkdown::render(file, encoding = encoding, output_format = "all")})
+#knit: (function(file, encoding, ...) {
+#    rmarkdown::render(file, encoding = encoding, output_format = "all")})
 output:
    rticles::agu_article:
       keep_tex: false
@@ -165,23 +165,23 @@ subs_time <- gluec("{period_rao[1]}-01-01", "{period_rao[2]}-12-31")
 
 ```{r read-ncep, dependson = "set-period"}
 ncep <- rbind(ReadNetCDF(here("DATA/NCEP Reanalysis/hgt.mon.mean.nc"), 
-                             c(gh = "hgt") ,
-                             subset = list(lat = -lats, 
-                                           time = subs_time)),
-                  ReadNetCDF(here("DATA/NCEP Reanalysis/hgt.mon.mean.nc"), 
-                             c(gh = "hgt") ,
-                             subset = list(lat = lats, 
-                                           time = subs_time))) %>% 
+                         c(gh = "hgt") ,
+                         subset = list(lat = -lats, 
+                                       time = subs_time)),
+              ReadNetCDF(here("DATA/NCEP Reanalysis/hgt.mon.mean.nc"), 
+                         c(gh = "hgt") ,
+                         subset = list(lat = lats, 
+                                       time = subs_time))) %>% 
   setnames("level", "lev")
 ```
 
 ```{r read-era, dependson = "set-period"}
 era <- rbind(ReadNetCDF(here("DATA/ERA/ERA20C_monthly_hgt.nc"), c(gh = "z"),
-                  subset = list(latitude = -lats, 
-                                time = subs_time)),
+                        subset = list(latitude = -lats, 
+                                      time = subs_time)),
              ReadNetCDF(here("DATA/ERA/ERA20C_monthly_hgt.nc"), c(gh = "z"),
-                  subset = list(latitude = lats, 
-                                time = subs_time))) %>% 
+                        subset = list(latitude = lats, 
+                                      time = subs_time))) %>% 
   setnames(c("level", "latitude", "longitude"), 
            c("lev", "lat", "lon")) %>% 
   .[, gh := gh/9.8]
@@ -189,7 +189,7 @@ era <- rbind(ReadNetCDF(here("DATA/ERA/ERA20C_monthly_hgt.nc"), c(gh = "z"),
 
 ```{r rbind-data, dependson=c("read-era", "read-ncep")}
 data <- rbindlist(list(era = era, ncep = ncep),
-          idcol = "dataset")
+                  idcol = "dataset")
 rm(era, ncep)
 ```
 
@@ -339,7 +339,7 @@ At `r lats`\degree N planetary waves 1, 2 and 3 are highly stationary in almost 
 
 In the southern hemisphere, planetary wave 2 stationarity has a semiannual cycle. It reaches its maximum in April and in August-September, plummeting to a deep minimum in June. Planetary wave 3 stationarity peaks in February and slowly decreases towards a November deep minimum after witch increases sharply. 
 
-```{r s-timeseries, fig.cap = "Quasi-stationary wave stationarity for wavenumbers 1 to 3 at 50\\degree S and 500hPa for the NCEP Reanalysis and ERA-20C.", fig.width=5}
+```{r s-timeseries, fig.cap = "Quasi-stationary wave stationarity for wavenumbers 1 to 3 at 50\\degree S and 500hPa for the NCEP Reanalysis and ERA-20C.", fig.width=5, fig.height=7}
 pw <- data %>%
   .[lev == 500, FitWave(gh, 1:3), by = .(lat, lev, time, dataset)]
 
@@ -353,38 +353,63 @@ pw[, c("S", "S_se", "S_df") := predict(loess(cor ~ as.numeric(time),
    by = .(dataset, k, lat, lev)]
 pw[, S_se1 := S_se*stats::qt(0.95 / 2 + .5, S_df)]
 
-pw %>% 
-  ggplot(aes(time, S)) +
+gdata <- pw %>% 
+  copy() %>% 
+  .[, panel := interaction(dataset, lat)]
+ggplot(gdata, aes(time, S)) +
+  geom_hline(yintercept = 0.4, color = "gray") +
   geom_ribbon(aes(ymin = S - S_se1,
                   ymax = S + S_se1, group = factor(k)),
-              alpha = 0.2) +
-  geom_line(aes(linetype = factor(k)), size = 1) +
-  stat_subset(aes(subset = time == max(time),
-                  # x = time + months(18),
-                  label = k), geom = ggrepel::GeomTextRepel, 
-              direction = "y", nudge_x = as.numeric(months(20))) +
-  scale_y_continuous(TeX("\\hat{S}")) +
+              alpha = 0.1) +
+  geom_line(aes(linetype = factor(k)), size = 0.5) +
+  directlabels::geom_dl(data = gdata[panel == "ncep.-50"],
+                        aes(label = k),
+                        method = "first.qp") +
+  #                          
+  # stat_subset(aes(subset = time == max(time),
+  #                 # x = time + months(18),
+  #                 label = k), geom = directlabels:::geom_dl(), 
+  #             direction = "y", nudge_x = as.numeric(months(20))) +
+  scale_y_continuous(TeX("\\hat{S}"), 
+                     minor_breaks = NULL) +
   scale_x_datetime("Time", breaks = function(x) pretty(x, 15), 
                    date_labels = "%y",
-                   minor_breaks = NULL, 
-                   expand = c(0, 0, 0, as.numeric(months(36)))) +
-  scale_linetype_manual(guide = "none", values = c("1" = 1, "2" = 2, "3" = 3)) +
+                   minor_breaks = NULL) +
+  scale_linetype_manual(guide = "none", 
+                        values = c("1" = "solid",
+                                   "2" = "dotted", 
+                                   "3" = "longdash")) +
   coord_cartesian(ylim = c(0, 1)) +
-  facet_grid(dataset~lat, 
-             labeller = labeller(lat = LatLabel,
-                                 dataset = c(era = "ERA20C", 
-                                             ncep = "NCEP")),
+  facet_wrap(~panel, ncol = 1,
+             labeller = labeller(panel = c("era.50" = "ERA20C - 50°N",
+                                   "era.-50" = "ERA20C - 50°S",
+                                   "ncep.50" = "NCEP - 50°N",
+                                   "ncep.-50" = "NCEP - 50°S")),
              as.table = FALSE)
 ```
-
-XXXX
-
 
 Because we computed $\hat{S}$ using the whole period, it represents the mean stationarity between `r period_rao[1]` and `r period_rao[2]`. The top row of Figure \ref{fig:s-timeseries} shows how planetary wave stationarity changed for each wavenumber at each latitude according to NCEP. Planetary wave stationarity remained high and constant for wavenumbers 1 to 3 at `r lats`\degree N and 1 at `r lats`\degree S but wavenumbers 2 and 3 at `r lats`\degree S show interdecadal variations.
 
 Planetary wave 2 stationarity oscillated around `r round(pw[lat == -lats & k == 2, mean(S)], 1)` with maximums in the 50's, 70's and 00's. Planetary wave 3 stationarity jumped from zero to more than 0.5 in less than five years in the 50's and then oscillated around `r round(pw[lat == -lats & k == 3 & year(time) > 1960, mean(S)], 1)` with a strong maximum in the late 80's. 
 
-The bottom row of Figure \ref{fig:s-timeseries} shows planetary wave stationarity according to ERA-20C. During the period of overlap with NCEP, they agree well. The only exception is during the 50's, when planetary wave 3 stationarity stays high in the ERA-20C data. This suggests that this feature is a problem with the NCEP data and not a real phenomenon. For the period before 1950, ERA-20C data has similar features than for the later period in mean value and variation in the southern hemisphere. In the north, there's an indication of higher stationarity and less variation for planetary waves 2 and 3. 
+The bottom row of Figure \ref{fig:s-timeseries} shows planetary wave stationarity according to ERA-20C. In the northern hemisphere it agrees well with NCEP during the period of overlap, both in mean value and variations. In the southern hemisphere is is only true for planetary wave 1. ERA-20C slightly overestimates planetary wave 2 stationarity around 1960 by about 40% compared to NCEP. But the most important difference is in planetary wave 3 stationarity. ERA-20C lacks the dramatic change present in NCEP before 1960 and instead has the same mean value and variability before and after that year. The result is that in ERA-20C planetary wave 3 is almost 8 times more stationary than in NCEP before 1960 (Figure \ref{fig:era_over_ncep}). This strongly suggest that the change in NCEP is an artifact of the reanalysis and not a real phenomenon.
+
+```{r era_over_ncep, fig.cap = "ERA-20C to NCEP ratio of planetary wave 3 stationarity at 50\\degree S and 500hPa.", fig.height=2, fig.width = 5}
+pw[, .(lat, time, dataset, S, k)] %>% 
+  .[k == 3 & lat == -lats] %>% 
+  dcast(lat + time + k ~ dataset, value.var = "S") %>% 
+  .[, ratio := era/ncep] %>%
+  .[complete.cases(.)] %>%
+  # .[year(time) > 1960] %>%
+  ggplot(aes(time, ratio)) +
+  geom_line() +
+  scale_y_log10(TeX("\\frac{\\hat{S}_{ERA20C}}{\\hat{S}_{NCEP}}"),
+                minor_breaks = NULL, breaks = c(1, 2, 4, 8)) +
+  scale_x_datetime("Time", breaks = function(x) pretty(x, 15), 
+                   date_labels = "%y",
+                   minor_breaks = NULL)
+```
+
 
 # Conclusions
 
