@@ -18,19 +18,18 @@ corresponding_author:
   - name: Elio Campitelli
     email: elio.campitelli@cima.fcen.uba.ar
 keypoints:  
-  - "Zonal waves and Quasi-stationary waves are disctinct but related phenomena"
-  - "This distinction has theoretical and practical implications"
-  - "The relationship between the mean ZW amplitude and QS amplitude yields an estimate of stationarity"
+  - "We devised a quantitative measure of planetary wave stationarity"
+  - "In the southern hemisphere planetary waves 2 and 3 have decadal variations in stationarity"
 abstract: >
-  Abstract goes here
-#knit: (function(file, encoding, ...) {
-#    rmarkdown::render(file, encoding = encoding, output_format = "all")})
+  Most studies of quasi stationary planetary waves have assumed the quasi stationary nature of southern hemisphere planetary waves based on @Loon1972, which was based on only 2 years of data before the advent of modern reanalysis. In this study, we devised a quantitative measure of planetary wave stationarity and applied it to both hemispheres using the NCEP Reanalyss [@Kalnay1996]. We show that in the southern hemisphere planetary wave 1 is highly stationary while planetary waves 2 and 3 have a comparable mixture of starionary and moving components with significant decadal variability. These variations can be used to study variability in surface forcing responses caused either by the strength of the forcing or the sensitivity of mean state of the atmosphere.
+knit: (function(file, encoding, ...) {
+    rmarkdown::render(file, encoding = encoding, output_format = "all")})
 output:
    rticles::agu_article:
       keep_tex: false
    word_document:
       default
-bibliography: "qszw.bib,qszw-pkgs.bib"
+bibliography: [qszw.bib, qszw-pkgs.bib]
 header-includes: 
       - \usepackage{gensymb} 
       - \usepackage{soulutf8}
@@ -129,13 +128,23 @@ writeLines(capture.output(sessioninfo::session_info()), session_file)
 options(op)
 ```
 
+```{r keypoints_check, cache = FALSE, echo=FALSE, results='asis', eval = TRUE}
+# This chunk adds a warning if any keypoint is longer than 100 characters. 
+# To disable it, you can remove it or set eval to FALSE.
+if (any(nchar(rmarkdown::metadata$keypoints) > 100)) {
+  cat("\\textcolor{red}{\\textbf{Warning}: keypoint(s)", 
+      knitr::combine_words(which(nchar(rmarkdown::metadata$keypoints) > 100)), 
+      "longer than 100 characters.}\\")
+}
+```
+
 # Introduction
 
 Zonal asymmetries of extratropical circulation in the Southern Hemisphere (hereafter called as “planetary waves”) strongly modulate weather systems and regional climate through latitudinal transport of heat, humidity, and momentum (REFS), and by contributing to the development of blocking events [e.g. @Trenberth1985]. 
 
-In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@Holton2012]. In practice, however, most studies have assumed the “quasi-stationary” nature of southern hemisphere planetary waves based on @Loon1972. In this foundational study, the authors analyzed data from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recur consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no study has quantified the level of stationarity of each wavenumber. 
+In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@Holton2012]. In practice, however, most studies have assumed the quasi-stationary nature of southern hemisphere planetary waves based on @Loon1972. In this foundational study, the authors analyzed data from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recur consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no study has quantified the level of stationarity of each wavenumber. 
 
-After more than four decades from the publication of @Loon1972, and considering the current availability of different global reanalysis datasets, in this study we assess the stationarity features of planetary waves in the southern hemisphere, and extends @Loon1972's methodology into a quantitative measure of planetary wave stationarity, which we apply to both hemispheres. 
+After more than four decades from the publication of @Loon1972, and considering the current availability of different global reanalysis datasets, in this study we assess the stationarity features of planetary waves in the southern hemisphere, and extend @Loon1972's methodology into a quantitative measure of planetary wave stationarity, which we apply to both hemispheres. 
 
 # Methods
 
