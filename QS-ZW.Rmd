@@ -21,7 +21,7 @@ keypoints:
   - "We devised a quantitative measure of planetary wave stationarity"
   - "In the southern hemisphere planetary waves 2 and 3 have decadal variations in stationarity"
 abstract: >
-  Most studies of quasi stationary planetary waves have assumed the quasi stationary nature of southern hemisphere planetary waves based on @Loon1972, which was based on only 2 years of data before the advent of modern reanalysis. In this study, we devised a quantitative measure of planetary wave stationarity and applied it to both hemispheres using the NCEP Reanalyss [@Kalnay1996]. We show that in the southern hemisphere planetary wave 1 is highly stationary while planetary waves 2 and 3 have a comparable mixture of starionary and moving components with significant decadal variability. These variations can be used to study variability in surface forcing responses caused either by the strength of the forcing or the sensitivity of mean state of the atmosphere.
+  Most studies of quasi stationary planetary waves have assumed the quasi stationary nature of southern hemisphere planetary waves based on @Loon1972, which was based on only 2 years of data before the advent of modern reanalysis. In this study, we devised a quantitative measure of planetary wave stationarity and applied it to both hemispheres using the NCEP Reanalysis. We show that in the southern hemisphere planetary wave 1 is highly stationary while planetary waves 2 and 3 have a comparable mixture of starionary and moving components with significant decadal variability. These variations can be used to study variability in surface forcing responses caused either by the strength of the forcing or the sensitivity of the atmosphere to the forcing.
 knit: (function(file, encoding, ...) {
     rmarkdown::render(file, encoding = encoding, output_format = "all")})
 output:
@@ -142,7 +142,7 @@ if (any(nchar(rmarkdown::metadata$keypoints) > 100)) {
 
 Zonal asymmetries of extratropical circulation in the Southern Hemisphere (hereafter called as “planetary waves”) strongly modulate weather systems and regional climate through latitudinal transport of heat, humidity, and momentum (REFS), and by contributing to the development of blocking events [e.g. @Trenberth1985]. 
 
-In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@Holton2012]. In practice, however, most studies have assumed the quasi-stationary nature of southern hemisphere planetary waves based on @Loon1972. In this foundational study, the authors analyzed data from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recur consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no study has quantified the level of stationarity of each wavenumber. 
+In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@Holton2012]. In practice, however, most studies have assumed the quasi-stationary nature of southern hemisphere planetary waves based on @Loon1972. In this foundational study, the authors analyzed data only from two years, from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recur consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no study has quantified the level of stationarity of each wavenumber. 
 
 After more than four decades from the publication of @Loon1972, and considering the current availability of different global reanalysis datasets, in this study we assess the stationarity features of planetary waves in the southern hemisphere, and extend @Loon1972's methodology into a quantitative measure of planetary wave stationarity, which we apply to both hemispheres. 
 
@@ -161,10 +161,10 @@ We define *planetary waves* as waves that extend along a full latitude circle. *
 
 where $\mathrm{k}$ is wavenumber, $\lambda$ longitude, and $\mathrm{A_{x}}$ and $\alpha_\mathrm{x}$, amplitude and phase, respectively. $\mathrm{ZWk}(t)$ depends on time, but not $\mathrm{QSk}$. 
 
-These definitions depend on which are the "instantaneous fields" and the averaging time-scales. A dataset of 365 daily mean fields defines 365 daily zonal waves and one annual quasi-stationary wave but 12 monthly quasi-stationary waves (per level and latitude). A 30 year dataset of monthly mean fields define 360 monthly zonal waves and one 30-year quasi-stationary wave. Monthly planetary waves are quasi-stationary waves in one case and zonal waves in the other. 
+These definitions depend on which are the "instantaneous fields" and the averaging time-scales. A dataset of 365 daily mean fields defines 365 daily zonal waves and one annual quasi-stationary wave but 12 monthly quasi-stationary waves (per level and latitude). A 30 year dataset of monthly mean fields define 360 monthly zonal waves and one 30-year quasi-stationary wave. Monthly planetary waves are quasi-stationary waves in the first case and zonal waves in the second, remarking that the definition of quasi-stationary waves is dependent of the time sampling considered.
 
 ```{r set-period}
-period_rao <- c(1900, 2017)
+period_rao <- c(1948, 2017)
 N <- diff(period_rao) + 1
 lats <- 50
 period_cap_rao <- glue("From monthly NCEP/NCAR Reanalysis, {period_rao[1]} to {period_rao[2]}")
@@ -217,7 +217,7 @@ rm(era, erai, ncep)
 
 ## Stationarity 
 
-From the properties of the superposition of waves we can deduce that, in general, the stationary phase $\alpha_\mathrm{QSk}$ does not equal $\overline{\alpha_\mathrm{ZWk}}$ and the stationary amplitude $A_\mathrm{QSk}$ is less or equal $\overline{A_\mathrm{ZWk}}$ [@Pain2005]. 
+From the properties of the superposition of waves we can deduce that, in general, the stationary phase $\alpha_\mathrm{QSk}$ does not equal $\overline{\alpha_\mathrm{ZWk}}$ and the stationary amplitude $A_\mathrm{QSk}$ is less or equal to $\overline{A_\mathrm{ZWk}}$ [@Pain2005]. 
 
 We use this latter property and use the quotient between $A_\mathrm{QS}$ and $\overline{A_\mathrm{ZW}}$ as a measure of quasi-stationary wave stationarity such as:
 
@@ -227,11 +227,11 @@ We use this latter property and use the quotient between $A_\mathrm{QS}$ and $\o
 \end{equation}
 \end{linenomath*}
 
-For a sample of $n$ completely random waves, the expected value of $\hat{S}$ is $n^{-1/2}$ because the average amplitude of the sum of $n$ waves with random phases and mean amplitude $A$ is $An^{-1/2}$ [@Pain2005]. For completely stationary waves $\hat{S} = 1$ irrespective of sample size. 
+For a sample of $n$ completely random waves, the expected value of $\hat{S}$ is $n^{-1/2}$ because the average amplitude of the sum of $n$ waves with random phases and mean amplitude $A$ is $An^{-1/2}$ [@Pain2005]. For completely stationary waves, $\hat{S}$ is equal to 1 regardless of sample size. 
 
-$\hat{S}$ is used --sometimes as $2/\pi\arcsin \left (\hat{S} \right )$ [@Singer1967]-- in the meteorological literature in the context of wind steadiness [e.g @Hiscox2010]. To our knowledge this is the first time it has been applied to the study of atmospheric waves. 
-
-Equation \ref{eq:S} is equivalent to
+$\hat{S}$ is used --sometimes as $2/\pi\arcsin \left (\hat{S} \right )$ [@Singer1967]-- in the meteorological literature in the context of wind steadiness [e.g @Hiscox2010]. To our knowledge this is the first time to be applied to the study of atmospheric waves. 
+ 
+$\hat{S}$ could be equivalent formulated as
 
 \begin{linenomath*}
 \begin{equation}\label{eq:S2}
@@ -239,7 +239,7 @@ Equation \ref{eq:S} is equivalent to
 \end{equation}
 \end{linenomath*}
 
-The numerator represents the sum of the zonal waves amplitudes projected onto the direction of the quasi-stationary wave. Waves that deviate from that direction decrease the overall stationarity in proportion to their amplitude. This definition of stationarity depends on the phase distribution and its relationship with amplitude instead of the phase velocity of waves. Thus, it's a statistical --rather than dynamical-- property. 
+The numerator represents the sum of the zonal waves amplitudes projected onto the direction of the quasi-stationary wave. Waves that deviate from that direction decrease the overall stationarity in proportion to their amplitude. This definition of stationarity depends on the phase distribution and its relationship with amplitude. And because it does not depend on the propagating properties of waves, it's a statistical --rather than dynamical-- property. 
 
 We used Equation \ref{eq:S2} to compute a timeseries of quasi-stationary wave stationarity. We first calculated $\alpha_{qs}$ for each month and then applied Equation \ref{eq:S2} with a 15-year rolling window approximated using loess regression with degree 0.
 
@@ -275,11 +275,10 @@ math_levels <- c(TeX("Amplitude of quasi-stationary wave ($A_{QS}$)"),
 ```
 
 ```{r captions}
-computed <- "computed as the amplitude of the mean wave ($A_\\mathrm{QSk}$) and as the mean amplitude of the monthly waves ($\\overline{A_\\mathrm{ZW} }$)"
 k_prefix <- AddPreffix("Wavenumber ")
 ```
 
-```{r rao, fig.cap = glue("Seasonal cycle of amplitude of the geopotential planetary waves 1 to 3 {computed}."), fig.subcap=c("At 50\\degree N", "At 50\\degree S"), fig.width=5, fig.ncol=1}
+```{r rao, fig.cap = "Seasonal cycle of amplitude of the geopotential planetary waves 1, 2 and 3 (top, middle and bottom rows, respectively) computed as the mean amplitude of the monthly waves ($\\overline{A_\\mathrm{ZW} }$, left column) the amplitude of the mean wave ($A_\\mathrm{QSk}$, right column)", fig.subcap=c("At 50\\degree N", "At 50\\degree S"), fig.width=5, fig.height=4, fig.ncol=1}
 plot_crossection <- function(k, lat, binwidth) {
   ks <- k
   lats <- lat
@@ -299,7 +298,7 @@ plot_crossection <- function(k, lat, binwidth) {
                        expand = c(0, 0), minor_breaks = NULL) +
     # scale_fill_viridis_c(guide = guide_colorstrip_bottom()) +
     # coord_fixed(1.7) +
-    theme(aspect.ratio = 0.5) +
+    theme(aspect.ratio = 0.4) +
     facet_grid(k ~ variable,
                labeller = labeller(k = k_prefix,
                                    variable = label_parsed))
@@ -331,10 +330,9 @@ lapply(1:3, function(x) plot_crossection(x, -lats, binwidths[x]))  %>%
 
 Figure \ref{fig:rao} shows the seasonal cycle of the amplitude of planetary waves at `r lats`\degree S and `r lats`\degree N using monthly fields from the NCEP/NCAR reanalysis [@Kalnay1996] between `r period_rao[1]` and `r period_rao[2]`. We computed the left column ($A_\mathrm{QS}$) as the amplitude of the average geopotential field for each month, level and wavenumber, and the right column ($\overline{A_\mathrm{ZW}}$) as the average amplitude of the `r N` individual fields. 
 
-Figure \ref{fig:rao1} shows that at `r lats`\degree N for the three wavenumbers $A_\mathrm{QS}$ and $\overline{A_\mathrm{ZW}}$ have a similar seasonal cycle with similar vertical extent. In the southern hemisphere, however, this is true only for wavenumber 1 (Figure \ref{fig:rao2}). $A_\mathrm{QS2}$ is much smaller than  $\overline{A_\mathrm{ZW2}}$ and its seasonal cycle is less defined. $A_\mathrm{QS3}$ has a smaller magnitude than $\overline{A_\mathrm{ZW3}}$ end even though their overall structure is similar (one relative maximum in February-March in the middle troposphere and another in July-August that extends to the lower stratosphere), they differ in the details. $A_\mathrm{QS3}$ has a local minimum in November that is absent in $\overline{A_\mathrm{ZW3}}$. The relative contribution of each wavenumber is also different. While $\overline{A_\mathrm{ZW2}}$ dominates over $\overline{A_\mathrm{ZW3}}$ in the stratosphere and is of similar magnitude in the troposphere, $A_\mathrm{QS3}$ dominates over $A_\mathrm{QS2}$ throughout the year and in every level except in the aforementioned November minimum. 
+Figure \ref{fig:rao1} shows that at `r lats`\degree N for the three wavenumbers $A_\mathrm{QS}$ and $\overline{A_\mathrm{ZW}}$ have a similar seasonal cycle with similar vertical extent. In the southern hemisphere, however, this is true only for wavenumber 1 (Figure \ref{fig:rao2}). $A_\mathrm{QS2}$ has much lower values than $\overline{A_\mathrm{ZW2}}$ and its seasonal cycle is less defined. $A_\mathrm{QS3}$ has a smaller magnitude than $\overline{A_\mathrm{ZW3}}$ end even though their overall structure is similar (one relative maximum in February-March in the middle troposphere and another in July-August that extends to the lower stratosphere), they differ in the details. $A_\mathrm{QS3}$ has a local minimum in November that is absent in $\overline{A_\mathrm{ZW3}}$. The relative contribution of each wavenumber is also different. While $\overline{A_\mathrm{ZW2}}$ dominates over $\overline{A_\mathrm{ZW3}}$ in the stratosphere and is of similar magnitude in the troposphere, $A_\mathrm{QS3}$ dominates over $A_\mathrm{QS2}$ throughout the year and in every level except in the aforementioned November minimum. 
 
-
-```{r stationarity, fig.cap = "Seasonal cycle of stationarity at 50\\degree S and 50\\degree N computed using Equation \\ref{eq:S}.", fig.align="center", fig.width=5}
+```{r stationarity, fig.cap = "Seasonal cycle of stationarity of the geopotential planetary waves 1, 2 and 3 (top, middle and bottom rows, respectively) at 50\\degree N and 50\\degree S (left and right columns, respectively) computed using Equation \\ref{eq:S}. The black line marks $\\hat{S} = 0.4$ for reference.", fig.align="center", fig.width=5}
 black_contour <- 0.4
 rao_qs %>% 
   .[dataset == "ncep"] %>% 
@@ -351,18 +349,18 @@ rao_qs %>%
                      expand = c(0, 0), minor_breaks = NULL) +
   scale_fill_viridis_c(guide = guide_colorstrip_bottom(15),
                        breaks = MakeBreaks(0.1)) +
-  theme(aspect.ratio = 0.5) +
+  theme(aspect.ratio = 0.4) +
   facet_grid(k ~ lat_f, labeller = labeller(k = k_prefix, 
                                             lat_f = LatLabel))
 ``` 
 
-These observations are quantified in Figure \ref{fig:stationarity}, which shows $\hat{S}$ for wavenumbers 1 to 3 computed using Equation \ref{eq:S} at `r lats`\degree N and `r lats`\degree S. We separate between high and low stationarity with the ad-hoc threshold of `r black_contour` (black line in Figure \ref{fig:stationarity}).  
+The differences between $A_\mathrm{QS}$ and $\overline{A_\mathrm{ZW}}$ are quantified in Figure \ref{fig:stationarity}, which shows $\hat{S}$ for wavenumbers 1 to 3 computed using Equation \ref{eq:S} at `r lats`\degree N and `r lats`\degree S. 
 
 At `r lats`\degree N planetary waves 1, 2 and 3 are highly stationary in almost every month and level, and even more so planetary wave 1 at `r lats`\degree S. 
 
-In the southern hemisphere, planetary wave 2 stationarity has a semiannual cycle. It reaches its maximum in April and in August-September, plummeting to a deep minimum in June. Planetary wave 3 stationarity peaks in February and slowly decreases towards a November deep minimum after witch increases sharply. 
+In the southern hemisphere, planetary wave 2 stationarity has a semiannual cycle. It reaches its maximum in April and in August-September, decreasing to a deep minimum centered in June. Planetary wave 3 stationarity peaks in February and slowly decreases towards a November deep minimum after which increases sharply. 
 
-```{r s-timeseries, fig.cap = "Quasi-stationary wave stationarity for wavenumbers 1 to 3 at 50\\degree S and 500hPa for the NCEP Reanalysis and ERA-20C.", fig.width=5, fig.height=4}
+```{r s-timeseries, fig.cap = "Stationarity for wavenumbers 1 to 3 at 50\\degree N and  50\\degree S (top and bottom panels, respectively) at 500hPa.", fig.width=5, fig.height=4}
 pw <- data %>%
   .[lev == 500, FitWave(gh, 1:3), by = .(lat, lev, time, dataset)]
 
@@ -402,12 +400,11 @@ ggplot(gdata, aes(time, S)) +
              as.table = FALSE)
 ```
 
-Because we computed $\hat{S}$ using the whole period, it represents the mean stationarity between `r period_rao[1]` and `r period_rao[2]`. Figure \ref{fig:s-timeseries} shows how planetary wave stationarity changed for each wavenumber at each latitude. Planetary wave stationarity remained high and constant for wavenumbers 1 to 3 at `r lats`\degree N and 1 at `r lats`\degree S but wavenumbers 2 and 3 at `r lats`\degree S show interdecadal variations.
+As we computed $\hat{S}$ using the whole period for Figure \ref{fig:stationarity}, it represents the mean stationarity between `r period_rao[1]` and `r period_rao[2]`. To analyse changes of stationarity over time, we computed $\hat{S}$ using 10 year overlaping intervals for each wavenumber at both studied latitudes (Figure \ref{fig:s-timeseries}). Planetary wave stationarity remained high and constant for wavenumbers 1 to 3 at `r lats`\degree N and 1 at `r lats`\degree S but wavenumbers 2 and 3 at `r lats`\degree S show interdecadal variations.
 
 Planetary wave 2 stationarity oscillated around `r round(pw[lat == -lats & k == 2, mean(S)], 1)` with maximums in the 50's, 70's and 00's. Planetary wave 3 stationarity jumped from zero to more than 0.5 in less than five years in the 50's and then oscillated around `r round(pw[lat == -lats & k == 3 & year(time) > 1960, mean(S)], 1)` with a strong maximum in the late 80's. 
 
 Results from ERA Interim (not shown) coincide during the period of overlap (1979-2018), suggesting that the observed decadal variations are not an artifact of the reanalysis. For the later period, the sudden shift in planetary wave 3 stationarity between 1950 and 1960 is probably spurious and we couldn't find it using data from ERA 20C (not shown).  
-
 
 # Conclusions
 

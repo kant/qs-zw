@@ -1,0 +1,1285 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.26)  1 APR 2019 12:05
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**QS-ZW.tex
+(./QS-ZW.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(./agujournal2018.cls
+Document Class: agujournal2018 08/23/2018
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./trackchanges.sty
+Package: trackchanges 2009/04/22 v0.7.0 TrackChanges file 
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count79
+\calc@Bcount=\count80
+\calc@Adimen=\dimen104
+\calc@Bdimen=\dimen105
+\calc@Askip=\skip41
+\calc@Bskip=\skip42
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count81
+\calc@Cskip=\skip43
+) (/usr/share/texlive/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks15
+\SOUL@lasttoken=\toks16
+\SOUL@cmds=\toks17
+\SOUL@buffer=\toks18
+\SOUL@token=\toks19
+\SOUL@spaceskip=\skip44
+\SOUL@ttwidth=\dimen106
+\SOUL@uldp=\dimen107
+\SOUL@ulht=\dimen108
+) (/usr/share/texlive/texmf-dist/tex/latex/morefloats/morefloats.sty
+Package: morefloats 2015/07/22 v1.0h Raise limit of unprocessed floats (HMM)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package morefloats Info: Maximum number of possible floats asked for: 36
+(morefloats)             (i.e. 18 more floats).
+(morefloats)             LaTeX might run out of memory before this
+(morefloats)             (in which case it will notify you).
+)
+\c@userid=\count82
+\c@changenumber=\count83
+\c@storefootnote=\count84
+\c@numeditors=\count85
+\c@maxeditors=\count86
+) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count87
+\output=\toks20
+\linenoprevgraf=\count88
+\linenumbersep=\dimen109
+\linenumberwidth=\dimen110
+\c@linenumber=\count89
+\c@pagewiselinenumber=\count90
+\c@LN@truepage=\count91
+\c@internallinenumber=\count92
+\c@internallinenumbers=\count93
+\quotelinenumbersep=\dimen111
+\bframerule=\dimen112
+\bframesep=\dimen113
+\bframebox=\box26
+LaTeX Info: Redefining \\ on input line 3056.
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip45
+\RaggedLeftLeftskip=\skip46
+\RaggedRightLeftskip=\skip47
+\CenteringRightskip=\skip48
+\RaggedLeftRightskip=\skip49
+\RaggedRightRightskip=\skip50
+\CenteringParfillskip=\skip51
+\RaggedLeftParfillskip=\skip52
+\RaggedRightParfillskip=\skip53
+\JustifyingParfillskip=\skip54
+\CenteringParindent=\skip55
+\RaggedLeftParindent=\skip56
+\RaggedRightParindent=\skip57
+\JustifyingParindent=\skip58
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count94
+\rotFPtop=\skip59
+\rotFPbot=\skip60
+\rot@float@box=\box27
+\rot@mess@toks=\toks21
+) (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box28
+\UL@hyphenbox=\box29
+\UL@skip=\skip61
+\UL@hook=\toks22
+\UL@height=\dimen114
+\UL@pe=\count95
+\UL@pixel=\dimen115
+\ULC@box=\box30
+Package: ulem 2012/05/18
+\ULdepth=\dimen116
+)
+\draftskip=\count96
+\c@section=\count97
+\c@subsection=\count98
+\c@subsubsection=\count99
+\c@paragraph=\count100
+\c@subparagraph=\count101
+\c@figure=\count102
+\c@table=\count103
+\abovecaptionskip=\skip62
+\belowcaptionskip=\skip63
+\c@appendnum=\count104
+\bibindent=\dimen117
+(/usr/share/texlive/texmf-dist/tex/latex/apacite/apacite.sty
+Package: apacite 2013/07/21 v6.03 APA citation
+\c@BibCnt=\count105
+\bibleftmargin=\skip64
+\bibindent=\skip65
+\bibparsep=\skip66
+\bibitemsep=\skip67
+\biblabelsep=\skip68
+) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip69
+\bibsep=\skip70
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count106
+)
+LaTeX Info: Redefining \BBA on input line 1149.
+) (/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/soulutf8.sty
+Package: soulutf8 2016/05/16 v1.1 Permit use of UTF-8 characters in soul (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->{\small \ifx \@captype 
+\xfigure \vskip \abovecaptionskip \fi {\ifturnofflinenums \else \ifnumlines \in
+ternallinenumbers \fi \fi \sbox \@tempboxa {\bf #1.\quad \rm #2}\ifdim \wd \@te
+mpboxa >.9\hsize \bf #1.\quad \rm \relax #2\par \else {\centering \bf #1.\rm \q
+uad #2 \vskip 1sp} \fi } \ifx \@captype \xfigure \else \vskip \belowcaptionskip
+ \fi }.
+\c@ContinuedFloat=\count107
+Package caption Info: rotating package is loaded.
+)
+\c@KVtest=\count108
+\sf@farskip=\skip71
+\sf@captopadj=\dimen125
+\sf@capskip=\skip72
+\sf@nearskip=\skip73
+\c@subfigure=\count109
+\c@subfigure@save=\count110
+\c@lofdepth=\count111
+\c@subtable=\count112
+\c@subtable@save=\count113
+\c@lotdepth=\count114
+\sf@top=\skip74
+\sf@bottom=\skip75
+) (./QS-ZW.aux)
+\openout1 = `QS-ZW.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count115
+\scratchdimen=\dimen126
+\scratchbox=\box31
+\nofMPsegments=\count116
+\nofMParguments=\count117
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count118
+\MPscratchDim=\dimen127
+\MPnumerator=\count119
+\makeMPintoPDFobject=\count120
+\everyMPtoPDFconversion=\toks24
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+)) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+
+Package trackchanges Warning: TrackChanges is not compatable with the 
+(trackchanges)                'ulem' package.
+(trackchanges)                Use the 'soul' package instead.
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 71.
+\c@maskedRefs=\count121
+(/usr/share/texlive/texmf-dist/tex/latex/apacite/english.apc
+File: english.apc 2013/07/21 v6.03 apacite language file
+LaTeX Info: Redefining \BPBI on input line 129.
+LaTeX Info: Redefining \BHBI on input line 130.
+)
+LaTeX Info: Redefining \celsius on input line 71.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 71.
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 71.
+Package gensymb Info: Using \Omega for \ohm on input line 71.
+
+Package gensymb Warning: Not defining \micro.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 113.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 113.
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no ­ in font cmbx10!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 122.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 122.
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ³ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no © in font cmr8!
+
+Overfull \hbox (0.40451pt too wide) in paragraph at lines 152--154
+[]\OT1/cmr/m/n/10 In the south-ern hemi-sphere plan-e-tary waves 2 and 3 have d
+ecadal vari-a-tions in 
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (11.04349pt too wide) in paragraph at lines 168--180
+\OT1/cmr/m/n/10 Most stud-ies of quasi sta-tion-ary plan-e-tary waves have as-s
+umed the quasi sta-tion-ary na- 
+ []
+
+
+Overfull \hbox (18.51573pt too wide) in paragraph at lines 168--180
+\OT1/cmr/m/n/10 ture of south-ern hemi-sphere plan-e-tary waves based on van Lo
+on and Jenne (1972), which 
+ []
+
+
+Overfull \hbox (13.12683pt too wide) in paragraph at lines 168--180
+\OT1/cmr/m/n/10 was based on only 2 years of data be-fore the ad-vent of mod-er
+n re-anal-y-sis. In this study, 
+ []
+
+
+Overfull \hbox (11.48798pt too wide) in paragraph at lines 168--180
+\OT1/cmr/m/n/10 we de-vised a quan-ti-ta-tive mea-sure of plan-e-tary wave sta-
+tion-ar-ity and ap-plied it to both 
+ []
+
+
+Overfull \hbox (19.40453pt too wide) in paragraph at lines 168--180
+\OT1/cmr/m/n/10 hemi-spheres us-ing the NCEP Re-anal-y-sis. We show that in the
+ south-ern hemi-sphere plan- 
+ []
+
+
+Overfull \hbox (12.9046pt too wide) in paragraph at lines 168--180
+\OT1/cmr/m/n/10 e-tary wave 1 is highly sta-tion-ary while plan-e-tary waves 2 
+and 3 have a com-pa-ra-ble mix- 
+ []
+
+
+Overfull \hbox (21.87692pt too wide) in paragraph at lines 168--180
+\OT1/cmr/m/n/10 ture of star-i-onary and mov-ing com-po-nents with sig-nif-i-ca
+nt decadal vari-abil-ity. These vari- 
+ []
+
+
+Overfull \hbox (9.32123pt too wide) in paragraph at lines 168--180
+\OT1/cmr/m/n/10 a-tions can be used to study vari-abil-ity in sur-face forc-ing
+ re-sponses caused ei-ther by the 
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 182.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 182.
+
+
+Overfull \hbox (7.54344pt too wide) in paragraph at lines 184--189
+[]\OT1/cmr/m/n/10 Zonal asym-me-tries of ex-tra-t-rop-i-cal cir-cu-la-tion in t
+he South-ern Hemi-sphere (here- 
+ []
+
+
+Overfull \hbox (5.8768pt too wide) in paragraph at lines 184--189
+\OT1/cmr/m/n/10 after called as ``plan-e-tary waves'') strongly mod-u-late weat
+her sys-tems and re-gional cli- 
+ []
+
+
+Overfull \hbox (5.40479pt too wide) in paragraph at lines 184--189
+\OT1/cmr/m/n/10 mate through lat-i-tu-di-nal trans-port of heat, hu-mid-ity, an
+d mo-men-tum (REFS), and by 
+ []
+
+
+Overfull \hbox (15.87663pt too wide) in paragraph at lines 190--203
+[]\OT1/cmr/m/n/10 In Rossby wave the-ory, sta-tion-ary waves are those with zer
+o fre-quency or phase ve- 
+ []
+
+
+Overfull \hbox (26.62683pt too wide) in paragraph at lines 190--203
+\OT1/cmr/m/n/10 loc-ity (Holton & Hakim, 2012). In prac-tice, how-ever, most st
+ud-ies have as-sumed the quasi- 
+ []
+
+
+Overfull \hbox (14.15465pt too wide) in paragraph at lines 190--203
+\OT1/cmr/m/n/10 stationary na-ture of south-ern hemi-sphere plan-e-tary waves b
+ased on van Loon and Jenne 
+ []
+
+
+Overfull \hbox (11.84918pt too wide) in paragraph at lines 190--203
+\OT1/cmr/m/n/10 (1972). In this foun-da-tional study, the au-thors an-a-lyzed d
+ata only from two years, from 
+ []
+
+
+Overfull \hbox (0.82129pt too wide) in paragraph at lines 190--203
+\OT1/cmr/m/n/10 1957 and 1958 and found that while ex-tra-t-rop-i-cal waves wit
+h wavenum-ber 1 to 6 had 
+ []
+
+
+Overfull \hbox (21.26581pt too wide) in paragraph at lines 190--203
+\OT1/cmr/m/n/10 com-pa-ra-ble am-pli-tudes in daily fields, only wavenum-bers 1
+ and 3 con-tributed sig-nif-i-cantly 
+ []
+
+
+Overfull \hbox (16.7935pt too wide) in paragraph at lines 190--203
+\OT1/cmr/m/n/10 to the cli-ma-to-log-i-cal field. From that, they con-cluded th
+at only waves 1 and 3 re-cur con- 
+ []
+
+
+Overfull \hbox (13.59909pt too wide) in paragraph at lines 190--203
+\OT1/cmr/m/n/10 sis-tently in the same lo-ca-tion and thus have a sig-nif-i-can
+t quasi-stationary com-po-nent on 
+ []
+
+
+Overfull \hbox (6.98799pt too wide) in paragraph at lines 190--203
+\OT1/cmr/m/n/10 top of a ``mov-ing'' com-po-nent. This was a qual-i-ta-tive con
+-clu-sion and to our knowl-edge 
+ []
+
+
+Overfull \hbox (9.57132pt too wide) in paragraph at lines 204--210
+[]\OT1/cmr/m/n/10 After more than four decades from the pub-li-ca-tion of van L
+oon and Jenne (1972), 
+ []
+
+
+Overfull \hbox (24.82135pt too wide) in paragraph at lines 204--210
+\OT1/cmr/m/n/10 and con-sid-er-ing the cur-rent avail-abil-ity of dif-fer-ent g
+lobal re-anal-y-sis datasets, in this study 
+ []
+
+
+Overfull \hbox (4.37672pt too wide) in paragraph at lines 204--210
+\OT1/cmr/m/n/10 we as-sess the sta-tion-ar-ity fea-tures of plan-e-tary waves i
+n the south-ern hemi-sphere, and 
+ []
+
+
+Overfull \hbox (5.54361pt too wide) in paragraph at lines 204--210
+\OT1/cmr/m/n/10 ex-tend van Loon and Jenne (1972)'s method-ol-ogy into a quan-t
+i-ta-tive mea-sure of plan- 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[2]
+Overfull \hbox (9.0245pt too wide) in paragraph at lines 215--219
+[]\OT1/cmr/m/n/10 We de-fine \OT1/cmr/m/it/10 plan-e-tary waves \OT1/cmr/m/n/10
+ as waves that ex-tend along a full lat-i-tude cir-cle. \OT1/cmr/m/it/10 Zonal 
+
+ []
+
+
+Overfull \hbox (18.14102pt too wide) in paragraph at lines 215--219
+\OT1/cmr/m/it/10 waves \OT1/cmr/m/n/10 (ZW) are plan-e-tary waves of the ``in-s
+tan-ta-neous'' fields and \OT1/cmr/m/it/10 quasi-stationary waves 
+ []
+
+
+Overfull \hbox (13.5099pt too wide) in paragraph at lines 227--231
+[]\OT1/cmr/m/n/10 where $k$ is wavenum-ber, $\OML/cmm/m/it/10 ^^U$ \OT1/cmr/m/n
+/10 lon-gi-tude, and $[]$ and $\OML/cmm/m/it/10 []$\OT1/cmr/m/n/10 , am-pli-tu
+de and phase, re-spec- 
+ []
+
+
+Overfull \hbox (5.84894pt too wide) in paragraph at lines 232--241
+[]\OT1/cmr/m/n/10 These def-i-ni-tions de-pend on which are the ``in-stan-ta-ne
+ous fields'' and the av-er-ag- 
+ []
+
+
+Overfull \hbox (15.18236pt too wide) in paragraph at lines 232--241
+\OT1/cmr/m/n/10 ing time-scales. A dataset of 365 daily mean fields de-fines 36
+5 daily zonal waves and one 
+ []
+
+
+Overfull \hbox (8.54352pt too wide) in paragraph at lines 232--241
+\OT1/cmr/m/n/10 an-nual quasi-stationary wave but 12 monthly quasi-stationary w
+aves (per level and lat- 
+ []
+
+
+Overfull \hbox (1.15462pt too wide) in paragraph at lines 232--241
+\OT1/cmr/m/n/10 i-tude). A 30 year dataset of monthly mean fields de-fine 360 m
+onthly zonal waves and 
+ []
+
+
+Overfull \hbox (10.32124pt too wide) in paragraph at lines 232--241
+\OT1/cmr/m/n/10 one 30-year quasi-stationary wave. Monthly plan-e-tary waves ar
+e quasi-stationary waves 
+ []
+
+
+Overfull \hbox (3.26564pt too wide) in paragraph at lines 232--241
+\OT1/cmr/m/n/10 in the first case and zonal waves in the sec-ond, re-mark-ing t
+hat the def-i-ni-tion of quasi- 
+ []
+
+
+Overfull \hbox (7.68227pt too wide) in paragraph at lines 244--249
+[]\OT1/cmr/m/n/10 From the prop-er-ties of the su-per-po-si-tion of waves we ca
+n de-duce that, in gen-eral, 
+ []
+
+
+Overfull \hbox (2.4835pt too wide) in paragraph at lines 244--249
+\OT1/cmr/m/n/10 the sta-tion-ary phase $\OML/cmm/m/it/10 []$ \OT1/cmr/m/n/10 d
+oes not equal $[]$ and the sta-tion-ary am-pli-tude $\OML/cmm/m/it/10 A[]$ \OT1
+/cmr/m/n/10 is 
+ []
+
+
+Overfull \hbox (12.05379pt too wide) in paragraph at lines 250--253
+[]\OT1/cmr/m/n/10 We use this lat-ter prop-erty and use the quo-tient be-tween 
+$\OML/cmm/m/it/10 A[]$ \OT1/cmr/m/n/10 and $[]$ as a mea- 
+ []
+
+
+Overfull \hbox (7.02026pt too wide) in paragraph at lines 260--265
+[]\OT1/cmr/m/n/10 For a sam-ple of $\OML/cmm/m/it/10 n$ \OT1/cmr/m/n/10 com-ple
+tely ran-dom waves, the ex-pected value of $[]$ is $\OML/cmm/m/it/10 n[]$ \OT1/
+cmr/m/n/10 be- 
+ []
+
+
+Overfull \hbox (6.46243pt too wide) in paragraph at lines 260--265
+\OT1/cmr/m/n/10 cause the av-er-age am-pli-tude of the sum of $\OML/cmm/m/it/10
+ n$ \OT1/cmr/m/n/10 waves with ran-dom phases and mean am- 
+ []
+
+
+Overfull \hbox (3.62909pt too wide) in paragraph at lines 260--265
+\OT1/cmr/m/n/10 pli-tude $\OML/cmm/m/it/10 A$ \OT1/cmr/m/n/10 is $\OML/cmm/m/it
+/10 An[]$ \OT1/cmr/m/n/10 (Pain, 2005). For com-pletely sta-tion-ary waves, $[]
+$ is equal to 1 re- 
+ []
+
+[3]
+Overfull \hbox (3.4634pt too wide) in paragraph at lines 266--271
+[]$[]$ \OT1/cmr/m/n/10 is used --sometimes as $2\OML/cmm/m/it/10 =^^Y [] []$ \O
+T1/cmr/m/n/10 (Singer, 1967)-- in the me-te-o-ro-log-i-cal lit- 
+ []
+
+
+Overfull \hbox (0.73788pt too wide) in paragraph at lines 266--271
+\OT1/cmr/m/n/10 er-a-ture in the con-text of wind steadi-ness (e.g His-cox, Mil
+ler, & Nappo, 2010). To our 
+ []
+
+
+Overfull \hbox (2.87666pt too wide) in paragraph at lines 280--287
+[]\OT1/cmr/m/n/10 The nu-mer-a-tor rep-re-sents the sum of the zonal waves am-p
+li-tudes pro-jected onto 
+ []
+
+
+Overfull \hbox (3.46013pt too wide) in paragraph at lines 280--287
+\OT1/cmr/m/n/10 the di-rec-tion of the quasi-stationary wave. Waves that de-vi-
+ate from that di-rec-tion de- 
+ []
+
+
+Overfull \hbox (2.73796pt too wide) in paragraph at lines 280--287
+\OT1/cmr/m/n/10 crease the over-all sta-tion-ar-ity in pro-por-tion to their am
+-pli-tude. This def-i-ni-tion of sta- 
+ []
+
+
+Overfull \hbox (0.21024pt too wide) in paragraph at lines 280--287
+\OT1/cmr/m/n/10 tion-ar-ity de-pends on the phase dis-tri-bu-tion and its re-la
+-tion-ship with am-pli-tude. And 
+ []
+
+
+Overfull \hbox (0.599pt too wide) in paragraph at lines 280--287
+\OT1/cmr/m/n/10 be-cause it does not de-pend on the prop-a-gat-ing prop-er-ties
+ of waves, it's a sta-tis-ti-cal -- 
+ []
+
+
+Overfull \hbox (1.07117pt too wide) in paragraph at lines 288--292
+[]\OT1/cmr/m/n/10 We used Equa-tion 4[] to com-pute a time-series of quasi-stat
+ionary wave sta-tion-ar- 
+ []
+
+
+Overfull \hbox (8.32556pt too wide) in paragraph at lines 288--292
+\OT1/cmr/m/n/10 ity. We first cal-cu-lated $\OML/cmm/m/it/10 []$ \OT1/cmr/m/n/
+10 for each month and then ap-plied Equa-tion 4[] with a 15-year 
+ []
+
+
+Overfull \hbox (9.93234pt too wide) in paragraph at lines 295--302
+[]\OT1/cmr/m/n/10 We use monthly geopo-ten-tial fields from the NCEP/NCAR Re-an
+al-y-sis (Kalnay et 
+ []
+
+
+Overfull \hbox (26.73802pt too wide) in paragraph at lines 295--302
+\OT1/cmr/m/n/10 al.[], 1996) for the pe-riod 1948 to 2017 and com-pute one quas
+i-stationary wave for the whole 
+ []
+
+
+Overfull \hbox (11.68236pt too wide) in paragraph at lines 295--302
+\OT1/cmr/m/n/10 pe-riod for each month, level and wavenum-ber. Am-pli-tude and 
+phase for each wavenum- 
+ []
+
+
+Overfull \hbox (21.32129pt too wide) in paragraph at lines 295--302
+\OT1/cmr/m/n/10 ber was es-ti-mated by fit-ting a fourier trans-form for each l
+at-i-tude cir-cle, level and monthly 
+ []
+
+
+Overfull \hbox (3.09906pt too wide) in paragraph at lines 295--302
+\OT1/cmr/m/n/10 record. We also an-a-lyzed data from ERA In-terim (Up-pala et a
+l.[], 2011) and con-firmed 
+ []
+
+
+Overfull \hbox (17.71011pt too wide) in paragraph at lines 303--308
+[]\OT1/cmr/m/n/10 We an-a-lyzed the data us-ing the sta-tis-ti-cal pro-gram-min
+g lan-guage R (R Core Team, 
+ []
+
+
+Overfull \hbox (6.09915pt too wide) in paragraph at lines 303--308
+\OT1/cmr/m/n/10 2018), us-ing data.table (Dowle & Srini-vasan, 2018) and metR (
+Campitelli, 2018) pack- 
+ []
+
+
+Overfull \hbox (8.43246pt too wide) in paragraph at lines 303--308
+\OT1/cmr/m/n/10 ages to read and trans-form it and gg-plot2 pack-age (Wick-ham,
+ 2016) to make the plots. 
+ []
+
+<fig/QS-ZW/rao-1.pdf, id=28, 344.28625pt x 254.9525pt>
+File: fig/QS-ZW/rao-1.pdf Graphic file (type pdf)
+<use fig/QS-ZW/rao-1.pdf>
+Package pdftex.def Info: fig/QS-ZW/rao-1.pdf  used on input line 313.
+(pdftex.def)             Requested size: 344.2854pt x 254.95186pt.
+<fig/QS-ZW/rao-2.pdf, id=29, 340.27126pt x 254.9525pt>
+File: fig/QS-ZW/rao-2.pdf Graphic file (type pdf)
+<use fig/QS-ZW/rao-2.pdf>
+Package pdftex.def Info: fig/QS-ZW/rao-2.pdf  used on input line 313.
+(pdftex.def)             Requested size: 340.27042pt x 254.95186pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
+[]\OT1/cmr/m/n/10 Figure  1: |Sea-sonal cy-cle of am-pli-tude of the geopo-ten-
+tial plan-e-tary waves 1, 2 and 3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
+\OT1/cmr/m/n/10 (top, mid-dle and bot-tom rows, re-spec-tively) com-puted as th
+e mean am-pli-tude of the
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (12.25175pt too wide) in paragraph at lines 320--327
+[]\OT1/cmr/m/n/10 Figure 1[] shows the sea-sonal cy-cle of the am-pli-tude of p
+lan-e-tary waves at 50$[]$S and 
+ []
+
+
+Overfull \hbox (3.75186pt too wide) in paragraph at lines 320--327
+\OT1/cmr/m/n/10 50$[]$N us-ing monthly fields from the NCEP/NCAR re-anal-y-sis 
+(Kalnay et al.[], 1996) be- 
+ []
+
+
+Overfull \hbox (6.23795pt too wide) in paragraph at lines 320--327
+\OT1/cmr/m/n/10 tween 1948 and 2017. We com-puted the left col-umn ($\OML/cmm/m
+/it/10 A[]$\OT1/cmr/m/n/10 ) as the am-pli-tude of the av- 
+ []
+
+
+Overfull \hbox (30.1373pt too wide) in paragraph at lines 320--327
+\OT1/cmr/m/n/10 er-age geopo-ten-tial field for each month, level and wavenum-b
+er, and the right col-umn ($[]$) 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[4]
+Overfull \hbox (18.48439pt too wide) in paragraph at lines 328--346
+[]\OT1/cmr/m/n/10 Figure 1a[] shows that at 50$[]$N for the three wavenum-bers 
+$\OML/cmm/m/it/10 A[]$ \OT1/cmr/m/n/10 and $[]$ have a sim- 
+ []
+
+
+Overfull \hbox (17.01563pt too wide) in paragraph at lines 328--346
+\OT1/cmr/m/n/10 i-lar sea-sonal cy-cle with sim-i-lar ver-ti-cal ex-tent. In th
+e south-ern hemi-sphere, how-ever, this 
+ []
+
+
+Overfull \hbox (11.89076pt too wide) in paragraph at lines 328--346
+\OT1/cmr/m/n/10 is true only for wavenum-ber 1 (Fig-ure 1b[]). $\OML/cmm/m/it/1
+0 A[]$ \OT1/cmr/m/n/10 has much lower val-ues than $[]$ and 
+ []
+
+
+Overfull \hbox (30.80743pt too wide) in paragraph at lines 328--346
+\OT1/cmr/m/n/10 its sea-sonal cy-cle is less de-fined. $\OML/cmm/m/it/10 A[]$ \
+OT1/cmr/m/n/10 has a smaller mag-ni-tude than $[]$ end even though 
+ []
+
+
+Overfull \hbox (7.07124pt too wide) in paragraph at lines 328--346
+\OT1/cmr/m/n/10 their over-all struc-ture is sim-i-lar (one rel-a-tive max-i-mu
+m in February-March in the mid- 
+ []
+
+
+Overfull \hbox (18.48795pt too wide) in paragraph at lines 328--346
+\OT1/cmr/m/n/10 dle tro-po-sphere and an-other in July-August that ex-tends to 
+the lower strato-sphere), they 
+ []
+
+
+Overfull \hbox (20.33524pt too wide) in paragraph at lines 328--346
+\OT1/cmr/m/n/10 dif-fer in the de-tails. $\OML/cmm/m/it/10 A[]$ \OT1/cmr/m/n/10
+ has a lo-cal min-i-mum in Novem-ber that is ab-sent in $[]$. The 
+ []
+
+
+Overfull \hbox (7.26572pt too wide) in paragraph at lines 328--346
+\OT1/cmr/m/n/10 rel-a-tive con-tri-bu-tion of each wavenum-ber is also dif-fer-
+ent. While $[]$ dom-i-nates over 
+ []
+
+
+Overfull \hbox (1.02968pt too wide) in paragraph at lines 328--346
+[]$ \OT1/cmr/m/n/10 in the strato-sphere and is of sim-i-lar mag-ni-tude in the
+ tro-po-sphere, $\OML/cmm/m/it/10 A[]$ \OT1/cmr/m/n/10 dom-i- 
+ []
+
+
+Overfull \hbox (35.08519pt too wide) in paragraph at lines 328--346
+\OT1/cmr/m/n/10 nates over $\OML/cmm/m/it/10 A[]$ \OT1/cmr/m/n/10 through-out t
+he year and in ev-ery level ex-cept in the afore-men-tioned Novem- 
+ []
+
+<fig/QS-ZW/stationarity-1.pdf, id=34, 344.28625pt x 248.93pt>
+File: fig/QS-ZW/stationarity-1.pdf Graphic file (type pdf)
+<use fig/QS-ZW/stationarity-1.pdf>
+Package pdftex.def Info: fig/QS-ZW/stationarity-1.pdf  used on input line 349.
+(pdftex.def)             Requested size: 344.2854pt x 248.92938pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+[]\OT1/cmr/m/n/10 Figure  2: |Sea-sonal cy-cle of sta-tion-ar-ity of the geopo-
+ten-tial plan-e-tary waves 1, 2 and 3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+\OT1/cmr/m/n/10 (top, mid-dle and bot-tom rows, re-spec-tively) at 50$[]$N and 
+50$[]$S (left and right columns,
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (5.78984pt too wide) in paragraph at lines 356--360
+[]\OT1/cmr/m/n/10 The dif-fer-ences be-tween $\OML/cmm/m/it/10 A[]$ \OT1/cmr/m/
+n/10 and $[]$ are quan-ti-fied in Fig-ure 2[], which shows $[]$ 
+ []
+
+
+Overfull \hbox (3.72403pt too wide) in paragraph at lines 361--364
+[]\OT1/cmr/m/n/10 At 50$[]$N plan-e-tary waves 1, 2 and 3 are highly sta-tion-a
+ry in al-most ev-ery month 
+ []
+
+
+Overfull \hbox (10.34898pt too wide) in paragraph at lines 365--370
+[]\OT1/cmr/m/n/10 In the south-ern hemi-sphere, plan-e-tary wave 2 sta-tion-ar-
+ity has a semi-an-nual cy-cle. 
+ []
+
+
+Overfull \hbox (0.73787pt too wide) in paragraph at lines 365--370
+\OT1/cmr/m/n/10 It reaches its max-i-mum in April and in August-September, de-c
+reas-ing to a deep min- 
+ []
+
+
+Overfull \hbox (11.68237pt too wide) in paragraph at lines 365--370
+\OT1/cmr/m/n/10 i-mum cen-tered in June. Plan-e-tary wave 3 sta-tion-ar-ity pea
+ks in Febru-ary and slowly de- 
+ []
+
+<fig/QS-ZW/s-timeseries-1.pdf, id=35, 345.29pt x 266.9975pt>
+File: fig/QS-ZW/s-timeseries-1.pdf Graphic file (type pdf)
+<use fig/QS-ZW/s-timeseries-1.pdf>
+Package pdftex.def Info: fig/QS-ZW/s-timeseries-1.pdf  used on input line 373.
+(pdftex.def)             Requested size: 345.28914pt x 266.99683pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
+[]\OT1/cmr/m/n/10 Figure  3: |Sta-tion-ar-ity for wavenum-bers 1 to 3 at 50$[]$
+N and 50$[]$S (top and bot-tom pan-els,
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (14.1683pt too wide) in paragraph at lines 380--388
+[]\OT1/cmr/m/n/10 As we com-puted $[]$ us-ing the whole pe-riod for Fig-ure 2[]
+, it rep-re-sents the mean sta- 
+ []
+
+
+Overfull \hbox (11.48792pt too wide) in paragraph at lines 380--388
+\OT1/cmr/m/n/10 tion-ar-ity be-tween 1948 and 2017. To anal-yse changes of sta-
+tion-ar-ity over time, we com- 
+ []
+
+
+Overfull \hbox (18.30736pt too wide) in paragraph at lines 380--388
+\OT1/cmr/m/n/10 puted $[]$ us-ing 10 year over-lap-ing in-ter-vals for each wav
+enum-ber at both stud-ied lat-i-tudes 
+ []
+
+
+Overfull \hbox (1.29352pt too wide) in paragraph at lines 380--388
+\OT1/cmr/m/n/10 (Fig-ure 3[]). Plan-e-tary wave sta-tion-ar-ity re-mained high 
+and con-stant for wavenum-bers 
+ []
+
+
+Overfull \hbox (9.1129pt too wide) in paragraph at lines 380--388
+\OT1/cmr/m/n/10 1 to 3 at 50$[]$N and 1 at 50$[]$S but wavenum-bers 2 and 3 at 
+50$[]$S show in-ter-decadal vari- 
+ []
+
+
+Overfull \hbox (19.0713pt too wide) in paragraph at lines 389--393
+[]\OT1/cmr/m/n/10 Planetary wave 2 sta-tion-ar-ity os-cil-lated around 0.5 with
+ max-i-mums in the 50's, 70's 
+ []
+
+
+Overfull \hbox (10.34909pt too wide) in paragraph at lines 389--393
+\OT1/cmr/m/n/10 and 00's. Plan-e-tary wave 3 sta-tion-ar-ity jumped from zero t
+o more than 0.5 in less than 
+ []
+
+
+Overfull \hbox (9.0435pt too wide) in paragraph at lines 389--393
+\OT1/cmr/m/n/10 five years in the 50's and then os-cil-lated around 0.6 with a 
+strong max-i-mum in the late 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[5]
+Overfull \hbox (17.62679pt too wide) in paragraph at lines 394--399
+[]\OT1/cmr/m/n/10 Results from ERA In-terim (not shown) co-in-cide dur-ing the 
+pe-riod of over-lap (1979- 
+ []
+
+
+Overfull \hbox (9.37686pt too wide) in paragraph at lines 394--399
+\OT1/cmr/m/n/10 2018), sug-gest-ing that the ob-served decadal vari-a-tions are
+ not an ar-ti-fact of the re-anal- 
+ []
+
+
+Overfull \hbox (17.62683pt too wide) in paragraph at lines 394--399
+\OT1/cmr/m/n/10 y-sis. For the later pe-riod, the sud-den shift in plan-e-tary 
+wave 3 sta-tion-ar-ity be-tween 1950 
+ []
+
+
+Overfull \hbox (0.43243pt too wide) in paragraph at lines 394--399
+\OT1/cmr/m/n/10 and 1960 is prob-a-bly spu-ri-ous and we couldn't find it us-in
+g data from ERA 20C (not 
+ []
+
+
+Overfull \hbox (12.76566pt too wide) in paragraph at lines 402--407
+[]\OT1/cmr/m/n/10 We used a quan-ti-ta-tive mea-sure of plan-e-tary wave sta-ti
+on-ar-ity to show that in the 
+ []
+
+
+Overfull \hbox (9.7102pt too wide) in paragraph at lines 402--407
+\OT1/cmr/m/n/10 south-ern hemi-sphere plan-e-tary wave 1 sta-tion-ar-ity is hig
+h and con-stant through-out the 
+ []
+
+
+Overfull \hbox (32.21019pt too wide) in paragraph at lines 402--407
+\OT1/cmr/m/n/10 year and pe-riod, while waves 2 and 3 vary both in in-trasea-so
+nal and in-ter-decadal timescales. 
+ []
+
+
+Overfull \hbox (8.43233pt too wide) in paragraph at lines 402--407
+\OT1/cmr/m/n/10 In the north-ern hemi-sphere, plan-e-tary wave sta-tion-ar-ity 
+is higher and varies much less.  
+ []
+
+
+Overfull \hbox (15.349pt too wide) in paragraph at lines 408--418
+[]\OT1/cmr/m/n/10 Planetary waves can be both forced by the sur-face and ex-cit
+ed by in-ter-nal vari-abil- 
+ []
+
+
+Overfull \hbox (14.29341pt too wide) in paragraph at lines 408--418
+\OT1/cmr/m/n/10 ity. As-sum-ing that the later pro-cess will not re-sult in a p
+hase pref-er-ence, higher sta-tion- 
+ []
+
+
+Overfull \hbox (5.15456pt too wide) in paragraph at lines 408--418
+\OT1/cmr/m/n/10 ar-ity would be ev-i-dence of stronger forc-ing or, more strict
+ly, stronger forc-ing re-sponse. 
+ []
+
+
+Overfull \hbox (8.90463pt too wide) in paragraph at lines 408--418
+\OT1/cmr/m/n/10 In the north-ern hemi-sphere, to-pog-ra-phy and ther-mal con-tr
+asts are the main forc-ings of 
+ []
+
+
+Overfull \hbox (9.18246pt too wide) in paragraph at lines 408--418
+\OT1/cmr/m/n/10 plan-e-tary waves (REF), which ex-plains their highly and not v
+ari-able sta-tion-ary na-ture. 
+ []
+
+
+Overfull \hbox (12.54343pt too wide) in paragraph at lines 408--418
+\OT1/cmr/m/n/10 In the south-ern hemi-sphere, only plan-e-tary wave 1 seems to 
+be the re-sult of mainly sur- 
+ []
+
+
+Overfull \hbox (10.29347pt too wide) in paragraph at lines 408--418
+\OT1/cmr/m/n/10 face forc-ings. Plan-e-tary waves 2 and 3 seem to be com-posed 
+of a com-pa-ra-ble mix of in- 
+ []
+
+
+Overfull \hbox (6.34908pt too wide) in paragraph at lines 419--423
+[]\OT1/cmr/m/n/10 Interannual and in-tradecadal vari-abil-ity in plan-e-tary wa
+ve sta-tion-ar-ity may serve 
+ []
+
+
+Overfull \hbox (16.26569pt too wide) in paragraph at lines 419--423
+\OT1/cmr/m/n/10 to study vari-abil-ity in sur-face forc-ing re-sponses caused e
+i-ther by the strength of the forc- 
+ []
+
+
+Overfull \hbox (2.9323pt too wide) in paragraph at lines 424--435
+[]\OT1/cmr/m/n/10 Since in the south-ern hemi-sphere the am-pli-tude of the mea
+n plan-e-tary wave can 
+ []
+
+
+Overfull \hbox (12.59904pt too wide) in paragraph at lines 424--435
+\OT1/cmr/m/n/10 dif-fer greatly from the mean am-pli-tude of plan-e-tary waves,
+ care must be taken when in- 
+ []
+
+
+Overfull \hbox (18.1824pt too wide) in paragraph at lines 424--435
+\OT1/cmr/m/n/10 ter-pret-ing the lit-er-a-ture. Some stud-ies an-a-lyze the for
+-mer (e.g.  van Loon & Jenne, 1972, 
+ []
+
+
+Overfull \hbox (20.87686pt too wide) in paragraph at lines 424--435
+\OT1/cmr/m/n/10 Quin-ta-nar and Me-choso (1995), Raphael (2004)) while oth-ers 
+an-a-lyze the later (e.g.  Rao, 
+ []
+
+
+Overfull \hbox (25.21027pt too wide) in paragraph at lines 424--435
+\OT1/cmr/m/n/10 Fer-nan-dez, & Fran-chito, 2004, Turner, Hosk-ing, Brace-gir-dl
+e, Phillips, and Mar-shall (2017), 
+ []
+
+
+Overfull \hbox (11.40475pt too wide) in paragraph at lines 424--435
+\OT1/cmr/m/n/10 Irv-ing and Sim-monds (2015)). For in-stance, Irv-ing and Sim-m
+onds (2015) com-pare their 
+ []
+
+
+Overfull \hbox (14.51575pt too wide) in paragraph at lines 424--435
+\OT1/cmr/m/n/10 plan-e-tary wave ac-tiv-ity in-dex with Raphael (2004)'s wave 3
+ in-dex and con-clude that the 
+ []
+
+
+Overfull \hbox (3.23788pt too wide) in paragraph at lines 424--435
+\OT1/cmr/m/n/10 later can-not ac-count for events with waves far re-moved from 
+their cli-ma-to-log-i-cal po-si- 
+ []
+
+
+Overfull \hbox (41.73799pt too wide) in paragraph at lines 424--435
+\OT1/cmr/m/n/10 tion. How-ever, be-ing an in-dex of the zonal wave com-po-nent 
+in phase with the quasi-stationary 
+ []
+
+[6]
+Overfull \hbox (12.51566pt too wide) in paragraph at lines 436--443
+[]\OT1/cmr/m/n/10 The ex-plo-rations of both zonal waves and quasi-stationary w
+aves can lead to novel 
+ []
+
+
+Overfull \hbox (11.87688pt too wide) in paragraph at lines 436--443
+\OT1/cmr/m/n/10 lev-els of anal-y-sis. For ex-am-ple, Smith and Kush-ner (2012)
+ used their phase re-la-tion-ship 
+ []
+
+
+Overfull \hbox (7.96002pt too wide) in paragraph at lines 436--443
+\OT1/cmr/m/n/10 to show that lin-ear in-ter-fer-ence be-tween the zonal waves 1
+ and quasi-stationary wave 1 
+ []
+
+
+Overfull \hbox (17.46005pt too wide) in paragraph at lines 436--443
+\OT1/cmr/m/n/10 was re-lated to ver-ti-cal wave ac-tiv-ity trans-port at the tr
+opopause. Here, we showed it can 
+ []
+
+
+Overfull \hbox (3.84903pt too wide) in paragraph at lines 436--443
+\OT1/cmr/m/n/10 be used to de-fine a met-ric of sta-tion-ar-ity of quasi-statio
+nary waves, but other ap-pli-ca- 
+ []
+
+(./QS-ZW.bbl
+Underfull \hbox (badness 1092) in paragraph at lines 40--55
+[]\OT1/cmr/m/n/10 Campitelli, E.  (2019).  \OT1/cmr/m/it/10 How sta-tion-ary ar
+e plan-e-tary waves in the South-ern Hemi- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--117
+\OT1/cmr/m/n/10 in a sta-ble bound-ary layer.  \OT1/cmr/m/it/10 Jour-nal of Geo
+-phys-i-cal Re-search: At-mo-spheres\OT1/cmr/m/n/10 , 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--117
+\OT1/cmr/m/it/10 115\OT1/cmr/m/n/10 (D21).  Re-trieved from $\OT1/cmtt/m/n/10 h
+ttps :// agupubs [] .onlinelibrary [] .wiley [] .com / 
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 157--177
+[]\OT1/cmr/m/n/10 Irving, D., & Sim-monds, I.  (2015, dec).  A novel ap-proach 
+to di-ag-nos-ing South- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--177
+\OT1/cmr/m/n/10 ern Hemi-sphere plan-e-tary wave ac-tiv-ity and its in-flu-ence
+ on re-gional cli- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--177
+\OT1/cmr/m/n/10 mate vari-abil-ity.  \OT1/cmr/m/it/10 Jour-nal of Cli-mate\OT1/
+cmr/m/n/10 , \OT1/cmr/m/it/10 28\OT1/cmr/m/n/10 (23), 9041--9057.  Re-trieved f
+rom 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--177
+\OT1/cmtt/m/n/10 http :// journals [] .ametsoc [] .org / doi / 10 [] .1175 / JC
+LI [] -D [] -15 [] -0287 [] .1$   \OT1/cmr/m/n/10 doi: 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--210
+[]\OT1/cmr/m/n/10 Kalnay, E., Kana-mitsu, M., Kistler, R., Collins, W., Deaven,
+ D., Gandin, L., 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--210
+\OT1/cmr/m/n/10 ... Joseph, D.  (1996).  The NCEP/NCAR 40-year re-anal-y-sis pr
+oject. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--210
+\OT1/cmr/m/it/10 Bul-letin of the Amer-i-can Me-te-o-ro-log-i-cal So-ci-ety\OT1
+/cmr/m/n/10 , \OT1/cmr/m/it/10 77\OT1/cmr/m/n/10 (3), 437--471.  doi: 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[7]
+Underfull \hbox (badness 3942) in paragraph at lines 278--292
+[]\OT1/cmr/m/n/10 R Core Team.  (2018).  R: A lan-guage and en-vi-ron-ment for 
+sta-tis-ti-cal com-put-ing 
+ []
+
+
+Underfull \hbox (badness 2970) in paragraph at lines 332--348
+[]\OT1/cmr/m/n/10 Raphael, M. N.  (2004, dec).  A zonal wave 3 in-dex for the S
+outh-ern Hemi-sphere. 
+ []
+
+
+Underfull \hbox (badness 6268) in paragraph at lines 360--378
+\OT1/cmr/m/it/10 6\OT1/cmr/m/n/10 (6), 1033--1038.  Re-trieved from $\OT1/cmtt/
+m/n/10 http :// journals [] .ametsoc [] .org / doi / abs / 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--378
+\OT1/cmtt/m/n/10 10 [] .1175 / 1520 [] -0450{\ % }281967{\ % }29006{\ % }3C1033
+{\ % }3ASOTW{\ % }3E2 [] .0 [] 
+ []
+
+
+Underfull \hbox (badness 3861) in paragraph at lines 392--408
+\OT1/cmr/m/n/10 tra-t-rop-i-cal stratosphere-troposphere in-ter-ac-tions.  \OT1
+/cmr/m/it/10 Jour-nal of Geo-phys-i-cal Re- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--441
+[]\OT1/cmr/m/n/10 Trenberth, K. E., & Mo, K. C.  (1985).  Block-ing in the Sout
+h-ern Hemi- 
+ []
+
+
+Underfull \hbox (badness 8000) in paragraph at lines 422--441
+\OT1/cmr/m/n/10 sphere.  \OT1/cmr/m/it/10 Monthly Weather Re-view\OT1/cmr/m/n/1
+0 , \OT1/cmr/m/it/10 113\OT1/cmr/m/n/10 (1), 3--21.  Re-trieved from $\OT1/cmtt
+/m/n/10 http :// 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--441
+\OT1/cmtt/m/n/10 journals [] .ametsoc [] .org / doi / abs / 10 [] .1175 / 1520 
+[] -0493{\ % }281985{\ % 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--441
+\OT1/cmtt/m/n/10 }29113{\ % }3C0003{\ % }3ABITSH{\ % }3E2 [] .0 [] .CO{\ % }3B2
+$   \OT1/cmr/m/n/10 doi: $10 [] .1175 / 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--476
+\OT1/cmr/m/n/10 Vari-abil-ity and trends in the South-ern Hemi-sphere high lat-
+i-tude, quasi- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--476
+\OT1/cmr/m/n/10 stationary plan-e-tary waves.  \OT1/cmr/m/it/10 In-ter-na-tiona
+l Jour-nal of Cli-ma-tol-ogy\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 37\OT1/cmr/m/n/1
+0 (5), 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--509
+[]\OT1/cmr/m/n/10 Uppala, S. M., Healy, S. B., Bal-maseda, M. A., de Ros-nay, P
+., Isak-sen, L., van de 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[8]) [9] [10 <./fig/QS-ZW/rao-1.pdf> <./fig/QS-ZW/rao-2.pdf>] [11 <./fig/QS-ZW/
+stationarity-1.pdf> <./fig/QS-ZW/s-timeseries-1.pdf>] (./QS-ZW.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.45pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5054 strings out of 492982
+ 74161 string characters out of 6134896
+ 150917 words of memory out of 5000000
+ 8535 multiletter control sequences out of 15000+600000
+ 9028 words of font info for 33 fonts, out of 8000000 for 9000
+ 1147 hyphenation exceptions out of 8191
+ 50i,10n,49p,444b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt9.pfb>
+Output written on QS-ZW.pdf (11 pages, 357629 bytes).
+PDF statistics:
+ 152 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
