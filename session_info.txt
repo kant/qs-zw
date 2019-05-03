@@ -1,6 +1,6 @@
 - Session info -----------------------------------------------------------------------------------
  setting  value                         
- version  R version 3.6.0 (2019-04-26)  
+ version  R version 3.5.3 (2019-03-11)  
  os       elementary OS 5.0 Juno        
  system   x86_64, linux-gnu             
  ui       X11                           
@@ -84,7 +84,7 @@
  xfun             0.6        2019-04-02 [1] CRAN (R 3.5.3)                              
  yaml             2.2.0      2018-07-25 [1] CRAN (R 3.5.1)                              
 
-[1] /home/elio/R/x86_64-pc-linux-gnu-library/3.6
+[1] /home/elio/R/x86_64-pc-linux-gnu-library/3.5
 [2] /usr/local/lib/R/site-library
 [3] /usr/lib/R/site-library
 [4] /usr/lib/R/library
