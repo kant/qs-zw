@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.22)  3 MAY 2019 17:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.22)  3 MAY 2019 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -331,57 +331,57 @@ e (1972). How-ever, that
  []
 
 
-Overfull \hbox (5.15465pt too wide) in paragraph at lines 168--184
+Overfull \hbox (23.12689pt too wide) in paragraph at lines 168--184
 \OT1/cmr/m/n/10 study con-sid-ered only 2 years of data (1957-1958) be-fore the
- ad-vent of mod-ern re-anal- 
+ ad-vent of re-anal-y-sis datasets. 
  []
 
 
-Overfull \hbox (26.18233pt too wide) in paragraph at lines 168--184
-\OT1/cmr/m/n/10 y-sis datasets. In this study, we as-sessed the sta-tion-ary co
-n-di-tions in the SH and con-trasted 
+Overfull \hbox (18.46011pt too wide) in paragraph at lines 168--184
+\OT1/cmr/m/n/10 In this study, we as-sessed the sta-tion-ary con-di-tions in th
+e SH and con-trasted it with that 
  []
 
 
-Overfull \hbox (6.18237pt too wide) in paragraph at lines 168--184
-\OT1/cmr/m/n/10 it with that of the North-ern Hemi-sphere us-ing the NCEP/NCAR 
-re-anal-y-sis from 1948 
+Overfull \hbox (8.40459pt too wide) in paragraph at lines 168--184
+\OT1/cmr/m/n/10 of the North-ern Hemi-sphere us-ing the NCEP/NCAR re-anal-y-sis
+ from 1948 to 2017. We 
  []
 
 
-Overfull \hbox (9.87685pt too wide) in paragraph at lines 168--184
-\OT1/cmr/m/n/10 to 2017. We also de-vised a quan-ti-ta-tive mea-sure of planeta
-ry-wave sta-tion-ar-ity and ap- 
+Overfull \hbox (6.2935pt too wide) in paragraph at lines 168--184
+\OT1/cmr/m/n/10 also de-vised a quan-ti-ta-tive mea-sure of planetary-wave sta-
+tion-ar-ity. We con-firm that in 
  []
 
 
-Overfull \hbox (11.26569pt too wide) in paragraph at lines 168--184
-\OT1/cmr/m/n/10 plied it to both hemi-spheres. We con-firm that in the SH plan-
-e-tary wave 1 is highly sta- 
+Overfull \hbox (2.18236pt too wide) in paragraph at lines 168--184
+\OT1/cmr/m/n/10 the SH plan-e-tary wave 1 is highly sta-tion-ary. Plan-e-tary w
+aves 2 and 3 have a com-pa- 
  []
 
 
-Overfull \hbox (14.01576pt too wide) in paragraph at lines 168--184
-\OT1/cmr/m/n/10 tion-ary. How-ever, plan-e-tary waves 2 and 3 have a com-pa-ra-
-ble mix-ture of sta-tion-ary and 
+Overfull \hbox (10.71031pt too wide) in paragraph at lines 168--184
+\OT1/cmr/m/n/10 ra-ble mix-ture of sta-tion-ary and mov-ing com-po-nents with s
+ig-nif-i-cant vari-abil-ity from in- 
  []
 
 
-Overfull \hbox (19.71025pt too wide) in paragraph at lines 168--184
-\OT1/cmr/m/n/10 mov-ing com-po-nents with sig-nif-i-cant vari-abil-ity from in-
-ter-sea-sonal and decadal timescales. 
+Overfull \hbox (4.15456pt too wide) in paragraph at lines 168--184
+\OT1/cmr/m/n/10 ter-sea-sonal and decadal timescales. A deeper knowl-edge of th
+ose vari-a-tions could help 
  []
 
 
-Overfull \hbox (16.26572pt too wide) in paragraph at lines 168--184
-\OT1/cmr/m/n/10 A deeper knowl-edge of those vari-a-tions could help in the fu-
-ture to bet-ter un-der-stand the 
+Overfull \hbox (2.21016pt too wide) in paragraph at lines 168--184
+\OT1/cmr/m/n/10 in the fu-ture to bet-ter un-der-stand the vari-abil-ity in the
+ re-sponses of mid-latitudes at- 
  []
 
 
-Overfull \hbox (1.1824pt too wide) in paragraph at lines 168--184
-\OT1/cmr/m/n/10 vari-abil-ity in the re-sponses of mid-latitudes at-mo-spheric 
-cir-cu-la-tion to sur-face forc-ing 
+Overfull \hbox (6.82121pt too wide) in paragraph at lines 168--184
+\OT1/cmr/m/n/10 mo-spheric cir-cu-la-tion to sur-face forc-ing caused ei-ther b
+y its strength, or the sen-si-tiv-ity 
  []
 
 
@@ -1223,9 +1223,27 @@ pos-i-tory can be found
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [7]
-Overfull \hbox (10.51558pt too wide) in paragraph at lines 475--477
-[]\OT1/cmr/m/n/10 Funding for this reaserch was made pos-si-ble by the Cen-ter 
-for Oceanic and At-mo- 
+Overfull \hbox (5.26569pt too wide) in paragraph at lines 479--483
+[]\OT1/cmr/m/n/10 ``Climate Ser-vices Through Knowl-edge Co-Production: A Euro-
+South Amer-i-can 
+ []
+
+
+Overfull \hbox (24.07127pt too wide) in paragraph at lines 479--483
+\OT1/cmr/m/n/10 Ini-tia-tive For Strength-en-ing So-ci-etal Adap-ta-tion Re-spo
+nse to Ex-treme Events (CLI- 
+ []
+
+
+Overfull \hbox (7.76552pt too wide) in paragraph at lines 483--486
+[]\OT1/cmr/m/n/10 ``Interacciones en-tre pa-trones clim^^Saticos de gran es-cal
+a y su im-pacto en el sur de 
+ []
+
+
+Overfull \hbox (24.3769pt too wide) in paragraph at lines 483--486
+\OT1/cmr/m/n/10 Su-dam^^Serica''. UBA-CYT 20020170100428BA. Uni-ver-sity of Bue
+nos Aires, Ar-gentina.  
  []
 
 (./QS-ZW.bbl
@@ -1265,7 +1283,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--177
 -phys-i-cal Re-search: At-mo-spheres\OT1/cmr/m/n/10 , 
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 217--234
 []\OT1/cmr/m/n/10 Irving, D., & Sim-monds, I.  (2015, De-cem-ber).  A Novel Ap-
 proach to Di-ag-nos- 
@@ -1285,9 +1303,6 @@ Underfull \hbox (badness 5696) in paragraph at lines 217--234
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[8]
 Underfull \hbox (badness 10000) in paragraph at lines 246--267
 []\OT1/cmr/m/n/10 Kalnay, E., Kana-mitsu, M., Kistler, R., Collins, W., Deaven,
  D., Gandin, L., 
@@ -1381,15 +1396,15 @@ l Re-search: At-mo-spheres\OT1/cmr/m/n/10 ,
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[9]
 Underfull \hbox (badness 1371) in paragraph at lines 511--526
 []\OT1/cmr/m/n/10 Trenberth, K. E.  (1980, Septem-ber).  Plan-e-tary Waves at 5
 00 mb in the South-ern 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[9]
 Underfull \hbox (badness 2418) in paragraph at lines 540--555
 []\OT1/cmr/m/n/10 Trenberth, K. F., & Mo, K. C.  (1985, Jan-uary).  Block-ing i
 n the South-ern Hemi- 
@@ -1421,10 +1436,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 4777 strings out of 494530
- 70544 string characters out of 6176016
+ 4778 strings out of 494530
+ 70552 string characters out of 6176016
  151206 words of memory out of 5000000
- 8368 multiletter control sequences out of 15000+600000
+ 8369 multiletter control sequences out of 15000+600000
  9028 words of font info for 33 fonts, out of 8000000 for 9000
  20 hyphenation exceptions out of 8191
  50i,10n,49p,475b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1446,7 +1461,7 @@ lio/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/elio/.
 TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/elio/.TinyTe
 X/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/elio/.TinyTeX/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on QS-ZW.pdf (13 pages, 355688 bytes).
+Output written on QS-ZW.pdf (13 pages, 356047 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  107 compressed objects within 2 object streams
