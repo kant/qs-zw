@@ -90,9 +90,24 @@ gluec <- function(...) {
 source(here("scripts/helperfun.R"))
 remove(ggplot)
 
-data.world <- BuildMap(res = 1, smooth = 1)
+
+map_simple <- function(wrap = c(0, 360), out = "sf") {
+  map <- maps::map("world", fill = TRUE, 
+                   col = "transparent", plot = FALSE, wrap = c(0, 360))
+  IDs <- vapply(strsplit(map$names, ":"), function(x) x[1], 
+                "")
+  proj <- sp::CRS("+proj=longlat +datum=WGS84")
+  map <- maptools::map2SpatialPolygons(map, IDs = IDs, 
+                                       proj4string = proj)
+  
+  simple <- rmapshaper::ms_simplify(map, keep = 0.015)
+  simple
+}
+
+data.world <- subset(fortify(map_simple()), lat <= 0)
+# data.world <- BuildMap(res = 1, smooth = 1)
 map.world <- geom_map2(data.world)
-map.SH <- geom_map2(data.world[lat %b% c(-90, 20)], color = "gray20")
+map.SH <- geom_map2(subset(data.world, lat %b% c(-90, 20)), color = "gray20")
 
 lev.breaks <- c(1000, 500, 300, 200, 100, 50, 10)
 
@@ -166,22 +181,37 @@ These definitions depend on which are the "instantaneous fields" and the averagi
 ```{r set-period}
 period_rao <- c(1948, 2017)
 N <- diff(period_rao) + 1
-lats <- 50
+lats <- c(45:65)
 period_cap_rao <- glue("From monthly NCEP/NCAR Reanalysis, {period_rao[1]} to {period_rao[2]}")
 subs_time <- gluec("{period_rao[1]}-01-01", "{period_rao[2]}-12-31")
 
 ```
 
+```{r raphael}
+zw3_raphael <- function(lon, lat, gh, time, rollmean = TRUE) {
+  data <- data.table(lat = lat, lon = lon, gh = gh, time = time)
+  data <- data[lat %~% -49][lon %~% 50 | lon %~% 166 | lon %~% (360-76)]
+  
+  if (isTRUE(rollmean)) {
+    data[, gh := RcppRoll::roll_mean(gh, 3, fill = NA), by = .(lon, lat)] 
+  }
+  
+  data[is.finite(gh), gh := (gh - mean(gh))/sd(gh), by = .(lon, lat, month(time))]
+  data[, .(raphael = mean(gh)), by = time]
+}
+```
+
 ```{r read-ncep, dependson = "set-period"}
-ncep <- rbind(ReadNetCDF(here("DATA/NCEP Reanalysis/hgt.mon.mean.nc"), 
-                         c(gh = "hgt") ,
-                         subset = list(lat = -lats, 
-                                       time = subs_time)),
-              ReadNetCDF(here("DATA/NCEP Reanalysis/hgt.mon.mean.nc"), 
-                         c(gh = "hgt") ,
-                         subset = list(lat = lats, 
-                                       time = subs_time))) %>% 
-  setnames("level", "lev")
+ncep <- ReadNetCDF(here("DATA/NCEP Reanalysis/hgt.mon.mean.nc"), 
+                   c(gh = "hgt") ,
+                   subset = list(lat = list(lats, -lats), 
+                                 time = subs_time)) %>% 
+  setnames("level", "lev") %>% 
+  .[, dataset := "ncep"] 
+
+raphael <- ncep[lev == 500, zw3_raphael(lon, lat, gh, time)]
+
+  .[, .(gh = mean(gh)), by = .(lev, time, lon, hemisphere = ifelse(sign(lat) > 0, "NH", "SH"))]
 ```
 
 ```{r read-era20, dependson = "set-period"}
@@ -253,17 +283,17 @@ We analyzed the data using the statistical programming language R [@R-base], usi
 
 ```{r compute-qs-zw-rao}
 qs <- data %>% 
-  .[, .(gh = mean(gh)), by = .(dataset, lon, lat, lev, month(time))] %>% 
-  .[, FitWave(gh, 1:3), keyby = .(dataset, lat, lev, month)] %>% 
+  .[, .(gh = mean(gh)), by = .(dataset, lon, hemisphere, lev, month(time))] %>% 
+  .[, FitWave(gh, 1:3), keyby = .(dataset, hemisphere, lev, month)] %>% 
   addkey(k) %>% 
   .[, phase := phase*k] %>% 
   .[, c("r2") := NULL]
 
 zw <- data %>%
-  .[, FitWave(gh, 1:3), by = .(dataset, lat, lev, time)] %>% 
+  .[, FitWave(gh, 1:3), by = .(dataset, hemisphere, lev, time)] %>% 
   .[, .(amplitude = mean(amplitude),
         phase = as.numeric(mean(circular(phase*k)))), 
-    keyby = .(dataset, k, lat, lev, month(time))] 
+    keyby = .(dataset, k, hemisphere, lev, month(time))] 
 rao_qs <- rbindlist(list(QS = qs,
                          ZW = zw), 
                     use.names = TRUE,
@@ -279,10 +309,10 @@ k_prefix <- AddPreffix("Wavenumber ")
 ```
 
 ```{r rao, fig.cap = "Seasonal cycle of amplitude of the geopotential height planetary waves 1, 2 and 3 (top, middle and bottom rows, respectively) computed as the mean amplitude of the monthly waves ($\\overline{A_\\mathrm{ZW} }$, left column) the amplitude of the mean wave ($A_\\mathrm{QSk}$, right column)", fig.subcap=c("At 50\\degree N", "At 50\\degree S"), fig.width=5, fig.height=4, fig.ncol=1}
-plot_crossection <- function(k, lat, binwidth) {
+plot_crossection <- function(k, hemisphere, binwidth) {
   ks <- k
-  lats <- lat
-  gdata <- periodic(rao_qs[k == ks & lat == lats], month = 1:13)
+  hem <- hemisphere
+  gdata <- periodic(rao_qs[k == ks & hemisphere == hem], month = 1:13)
   gdata <- gdata[dataset == "ncep"]
   levels(gdata$variable) <- math_levels
   g <- periodic(gdata[k == ks], month = 1:13) %>% 
@@ -319,11 +349,11 @@ plot_crossection <- function(k, lat, binwidth) {
 binwidths <- c(50, 10, 5)
 binwidths2 <- c(25, 10, 5)*2
 
-lapply(1:3, function(x) plot_crossection(x, lats, binwidths2[x]))  %>% 
+lapply(1:3, function(x) plot_crossection(x, "NH", binwidths2[x]))  %>% 
   Reduce("+", .) + 
   plot_layout(ncol = 1) 
 
-lapply(1:3, function(x) plot_crossection(x, -lats, binwidths[x]))  %>% 
+lapply(1:3, function(x) plot_crossection(x, "SH", binwidths[x]))  %>% 
   Reduce("+", .) + 
   plot_layout(ncol = 1) 
 ```
@@ -337,20 +367,21 @@ black_contour <- 0.4
 rao_qs %>% 
   .[dataset == "ncep"] %>% 
   # .[lev >= 10] %>%
-  dcast(lev + month + lat + k ~ variable, value.var = "amplitude") %>% 
+  dcast(lev + month + hemisphere + k ~ variable, value.var = "amplitude") %>% 
   .[, S := QS/ZW] %>% 
-  .[, lat_f := factor(lat, levels = c(lats, -lats))] %>% 
+  # .[, lat_f := factor(hemisphere, levels = c(lats, -lats))] %>% 
+  ggperiodic::periodic(month = c(1, 13)) %>% 
   ggplot(aes(month, lev)) +
   geom_contour_fill(aes(z = S), binwidth = 0.1) +
   geom_contour(aes(z = S), breaks = black_contour, color = "black", size = 0.2) +
   scale_y_level("Pressure (hPa)") +
-  scale_x_continuous("Month", breaks = 1:13, 
+  scale_x_continuous("Month", breaks = 1:13,
                      labels = c(month.abb, "13" = "Jan"),
                      expand = c(0, 0), minor_breaks = NULL) +
   scale_fill_viridis_c(guide = guide_colorstrip_bottom(15),
                        breaks = MakeBreaks(0.1)) +
   theme(aspect.ratio = 0.4) +
-  facet_grid(k ~ lat_f, labeller = labeller(k = k_prefix, 
+  facet_grid(k ~ hemisphere, labeller = labeller(k = k_prefix, 
                                             lat_f = LatLabel))
 ``` 
 
@@ -362,16 +393,16 @@ In the SH, planetary wave 2 stationarity has a semiannual cycle. It reaches its 
 
 ```{r s-timeseries, fig.cap = "Stationarity for wavenumbers 1 to 3 at 50\\degree N and  50\\degree S (top and bottom panels, respectively) at 500hPa.", fig.width=5, fig.height=4}
 pw <- data %>%
-  .[lev == 500, FitWave(gh, 1:3), by = .(lat, lev, time, dataset)]
+  .[lev == 500, FitWave(gh, 1:3), by = .(hemisphere, lev, time, dataset)]
 
 pw[, phase.mean := mean.phase(amplitude, phase, k), 
-   by = .(dataset, k, lat, lev, month(time))]
+   by = .(dataset, k, hemisphere, lev, month(time))]
 pw[, cor := cos(k*(phase - phase.mean))]
 pw[, c("S", "S_se", "S_df") := predict(loess(cor ~ as.numeric(time), 
                                              span = 10*12/.N,
                                              weights = amplitude,
                                              degree = 0), se = TRUE)[c("fit", "se.fit", "df")], 
-   by = .(dataset, k, lat, lev)]
+   by = .(dataset, k, hemisphere, lev)]
 pw[, S_se1 := S_se*stats::qt(0.95 / 2 + .5, S_df)]
 
 gdata <- pw %>% 
@@ -396,7 +427,7 @@ ggplot(gdata, aes(time, S)) +
                                    "2" = "dotted", 
                                    "3" = "longdash")) +
   coord_cartesian(ylim = c(0, 1)) +
-  facet_wrap(~lat, ncol = 1, labeller = labeller(lat = LatLabel),
+  facet_wrap(~hemisphere, ncol = 1, labeller = labeller(lat = LatLabel),
              as.table = FALSE)
 ```
 
