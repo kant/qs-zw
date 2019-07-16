@@ -64,7 +64,7 @@ name <- tools::file_path_sans_ext(knitr::current_input())
 knitr::opts_chunk$set(cache = TRUE,
                       warning = FALSE, 
                       message = FALSE,
-                      cache.extra = 1,
+                      cache.extra = 2,
                       cache.path = paste0("cache/", name, "/"),
                       fig.path = paste0("fig/", name, "/"),
                       fig.align = "center")
@@ -209,9 +209,8 @@ ncep <- ReadNetCDF(here("DATA/NCEP Reanalysis/hgt.mon.mean.nc"),
   setnames("level", "lev") %>% 
   .[, dataset := "ncep"] 
 
-raphael <- ncep[lev == 500, zw3_raphael(lon, lat, gh, time)]
-
-  .[, .(gh = mean(gh)), by = .(lev, time, lon, hemisphere = ifelse(sign(lat) > 0, "NH", "SH"))]
+ncep_mean <- ncep[, .(gh = mean(gh)), 
+             by = .(lev, time, lon, hemisphere = ifelse(sign(lat) > 0, "NH", "SH"))]
 ```
 
 ```{r read-era20, dependson = "set-period"}
@@ -244,7 +243,7 @@ raphael <- ncep[lev == 500, zw3_raphael(lon, lat, gh, time)]
 #                   idcol = "dataset")
 # rm(era, erai, ncep)
 
-data <- ncep[, dataset := "ncep"]
+data <- ncep_mean[, dataset := "ncep"]
 ```
 
 ## Stationarity 
@@ -272,6 +271,8 @@ $\hat{S}$ could be equivalent formulated as
 The numerator represents the sum of the zonal waves amplitudes projected onto the direction of the quasi-stationary wave. Waves that deviate from that direction decrease the overall stationarity in proportion to their amplitude. This definition of stationarity depends on the phase distribution and its relationship with amplitude. As it does not depend on the propagating properties of waves, it's a statistical --rather than dynamical-- property. 
 
 We used Equation \ref{eq:S2} to compute a timeseries of quasi-stationary wave stationarity. We first calculated $\alpha_{qs}$ for each month and then applied Equation \ref{eq:S2} with a 15-year rolling window approximated using loess regression with degree 0.
+
+A variety of indices that are used in the literature to study zonal waves / planetary waves. @raphael2004 explicitly defined a "zonal wave 3 index" based on averaging the (temporal) anomalies of the three-monthly geopotential height mean at three points that roughly coincide with the position of the climatological zonal wave 3 ridges. @turner2017, on the other hand, used the fourier amplitude of the wave 3. To make these indices more intercomparable between themselves and our data, we replicate them with slight diferences. We compute @raphael2004 baed on monthly means instead of three-monthly means and we compute @turner2017's fourier amplitude at 50°S instead of using the mean geopotential height between 55°S and 65°S.
 
 ## Data
 
@@ -398,10 +399,10 @@ pw <- data %>%
 pw[, phase.mean := mean.phase(amplitude, phase, k), 
    by = .(dataset, k, hemisphere, lev, month(time))]
 pw[, cor := cos(k*(phase - phase.mean))]
-pw[, c("S", "S_se", "S_df") := predict(loess(cor ~ as.numeric(time), 
+pw[, c("S", "S_se", "S_df") := suppressWarnings(predict(loess(cor ~ as.numeric(time), 
                                              span = 10*12/.N,
                                              weights = amplitude,
-                                             degree = 0), se = TRUE)[c("fit", "se.fit", "df")], 
+                                             degree = 0), se = TRUE)[c("fit", "se.fit", "df")]), 
    by = .(dataset, k, hemisphere, lev)]
 pw[, S_se1 := S_se*stats::qt(0.95 / 2 + .5, S_df)]
 
@@ -431,9 +432,99 @@ ggplot(gdata, aes(time, S)) +
              as.table = FALSE)
 ```
 
+
 As we computed $\hat{S}$ using the whole period for Figure \ref{fig:stationarity}, it represents the mean stationarity between `r period_rao[1]` and `r period_rao[2]`. So, to analyse stationarity chances over time, we computed $\hat{S}$ using 10 -ear overlapping intervals for each wavenumber at both studied latitudes (Figure \ref{fig:s-timeseries}). Planetary wave stationarity remained high and constant for wavenumbers 1 to 3 at `r lats`\degree N and 1 at `r lats`\degree S but wavenumbers 2 and 3 at `r lats`\degree S show interdecadal variations. Planetary wave 2 stationarity oscillated around `r round(pw[lat == -lats & k == 2, mean(S)], 1)` with maximums in the 50's, 70's and 00's. Planetary wave 3 stationarity jumped from zero to more than 0.5 in less than five years in the 50's and then oscillated around `r round(pw[lat == -lats & k == 3 & year(time) > 1960, mean(S)], 1)` with a strong maximum in the late 80's. 
 
 The study was also made using ERA Interim reanalysis  and the results for  the overlapping period are similar (not shown). The latter suggest that the observed decadal variations are not an artifact of the reanalysis. However, The sudden shift in planetary wave 3 stationarity observed between 1950 and 1960 is probably spurious and we couldn’t find it using data from ERA 20C (not shown).
+
+
+## Comparison with other indices
+
+(This needs to be integrated)
+
+```{r indices-compute}
+raphael <- ncep[lev == 500, zw3_raphael(lon, lat, gh, time, rollmean = FALSE)]
+
+zw500 <- ncep[lev == 500, ]
+  
+raphael <- ncep[lev == 500] %>% 
+  .[, gha := Anomaly(gh), by = .(lat, time)] %>% 
+  .[, c(zw3_raphael(lon, lat, gh, time, rollmean = FALSE),
+             list(raphael_zonal = zw3_raphael(lon, lat, gha, time, rollmean = FALSE)$raphael))]
+  
+  
+proj <- ncep[lat %~% -49] %>% 
+  # .[hemisphere == "SH"] %>% 
+  .[lev == 500, FitWave(gh, 3), by = .(lev, time, dataset)] %>% 
+  .[, phase.mean := mean.phase(amplitude, phase, k), 
+    by = .(dataset, k)] %>% 
+  .[, proj := amplitude*cos(k*(phase - phase.mean))] 
+  
+
+both <- proj[, .(time, proj, amplitude)] %>% 
+  .[raphael, on = "time"]
+
+
+cor_stat <- function(data, xpos = 0.5, ypos = 0.5, positon = NULL, digits = 2) {
+  rx <- range(data$x)
+  ry <- range(data$y)
+  # browser()
+  with(data, data.frame(cor = signif(cor(x, y), digits),
+                        x = rx[1] + xpos*diff(rx),
+                        y = ry[1] + ypos*diff(ry)))
+}
+
+proj_cap <- "Amplitude of ZW3 projected onto QS3"
+ampl_cap <- "Amplitude of ZW3 (Turner et.al. (2017)"
+raphael_cap <- "Raphael (2004) ZW3 index"
+
+cors <- both[, .(original = cor(proj, raphael),
+                 zonal = cor(proj, raphael_zonal), 
+                 amplitude = cor(proj, amplitude))]
+
+```
+
+```{r, index-comparison}
+both %>% 
+  .[, .(time, raphael, proj, amplitude)] %>% 
+  melt(id.vars = c("time", "proj")) %>% 
+  ggplot(aes(value, proj)) +
+  geom_point(size = 0.4, alpha = 0.5) +
+  stat_rasa(fun = cor_stat, geom = "text", xpos = 0.2, ypos = 0.7,
+            aes(label = paste0("cor = ", stat(cor)))) + 
+  scale_y_continuous(proj_cap) +
+  scale_x_continuous("") +
+  facet_wrap(~variable, scales = "free",strip.position = "bottom", ncol = 2,
+             labeller = labeller(variable = c(raphael = raphael_cap, 
+                                              amplitude = ampl_cap))) +
+  theme(strip.placement = "outside", strip.text = element_text(size = 10))
+```
+
+
+Figure \ref{fig:index-comparison} shows the relationship between the amplitude of the projection of the zonal wave 3 onto the climatological wave 3 and two zonal wave indeces propsed in the literature. @raphael2004's index is highly correlated with ours (correlation = `r signif(cors$original, 2)`) and the relationship is quite linear in nature. The relationship with @turner2017's approach is very different. While the correlation is not low (`r signif(cors$amplitude, 2)`), but the relationship is far from linear. 
+
+The stark differneces in the shape of the relationship illustrate how 
+
+
+
+```{r, raphael-comparison, fig.cap = "",  fig.width=7, fig.height=5}
+both %>% 
+  .[, .(time, raphael, proj, amplitude)] %>% 
+  melt(id.vars = c("time", "raphael")) %>% 
+  ggplot(aes(value, raphael)) +
+  geom_point(size = 0.4, alpha = 0.5) +
+  scale_x_continuous("") +
+  scale_y_continuous("ZW3 index from Raphael 2004") +
+  stat_rasa(fun = cor_stat, geom = "text", aes(label = paste0("cor = ", stat(cor))),
+            xpos = 100, ypos = -2) +
+  facet_wrap(~variable, scales = "free",
+             labeller = labeller(variable = c(proj = "Amplitude of ZW3 projected into QS3",
+                                              amplitude = "Amplitude of ZW3 (Turner et. al. 2017)")))
+```
+
+
+Figure \ref{fig:raphael-comparison} @raphael2004's original zonal wave 3 index with the amplitude of the zonal wave 3 projected onto the climatological wave 3 (left) and with the ZW3 amplitude (right) and illustrates that @raphael2004's index is not a measure of the amplitude of the zonal wave 3, but on its projection onto the climatolgical wave. Moreover, if @raphael2004's index is computed using zonal anomalies instead of the original temporal anomalies, then it becomes almost identical to the projected zonal wave 3 (correlation = `r signif(cors$zonal, 2)`). 
+
 
 
 # Conclusions

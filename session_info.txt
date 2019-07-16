@@ -1,6 +1,16 @@
-─ Session info ───────────────────────────────────────────────────────────────────────────────────
+- Session info -----------------------------------------------------------------------------------
+ setting  value                         
+ version  R version 3.6.1 (2019-07-05)  
+ os       elementary OS 5.0 Juno        
+ system   x86_64, linux-gnu             
+ ui       X11                           
+ language en_US                         
+ collate  en_US.UTF-8                   
+ ctype    en_US.UTF-8                   
+ tz       America/Argentina/Buenos_Aires
+ date     2019-07-16                    
 
-─ Packages ───────────────────────────────────────────────────────────────────────────────────────
+- Packages ---------------------------------------------------------------------------------------
  package        * version    date       lib source                              
  akima          * 0.6-2      2016-12-20 [1] CRAN (R 3.6.0)                      
  assertthat       0.2.1      2019-03-21 [1] CRAN (R 3.6.0)                      
@@ -22,7 +32,6 @@
  desc             1.2.0      2018-05-01 [1] CRAN (R 3.6.0)                      
  devtools       * 2.0.2      2019-04-08 [1] CRAN (R 3.6.0)                      
  digest           0.6.20     2019-07-04 [1] CRAN (R 3.6.0)                      
- directlabels     2018.05.22 2018-05-25 [1] CRAN (R 3.6.0)                      
  dotCall64        1.0-0      2018-07-30 [1] CRAN (R 3.6.0)                      
  dplyr            0.8.0.1    2019-02-15 [1] CRAN (R 3.6.0)                      
  e1071            1.7-2      2019-06-05 [1] CRAN (R 3.6.0)                      
@@ -39,18 +48,14 @@
  ggforce        * 0.2.2.9000 2019-05-03 [1] Github (thomasp85/ggforce@9ee02ca)  
  ggperiodic     * 1.0.0      2019-03-12 [1] CRAN (R 3.6.0)                      
  ggplot2        * 3.2.0.9000 2019-07-04 [1] Github (tidyverse/ggplot2@7f317d4)  
- gh               1.0.1      2017-07-16 [1] CRAN (R 3.6.0)                      
- git2r            0.26.1     2019-06-29 [1] CRAN (R 3.6.0)                      
  glue           * 1.3.1.9000 2019-05-23 [1] Github (tidyverse/glue@ea0edcb)     
  gridExtra        2.3        2017-09-09 [1] CRAN (R 3.6.0)                      
  gtable           0.3.0      2019-03-25 [1] CRAN (R 3.6.0)                      
  here             0.1        2017-05-28 [1] CRAN (R 3.6.0)                      
  hms              0.4.2      2018-03-10 [1] CRAN (R 3.6.0)                      
  htmltools        0.3.6      2017-04-28 [1] CRAN (R 3.6.0)                      
- htmlwidgets      1.3        2018-09-30 [1] CRAN (R 3.6.0)                      
  httpcode         0.2.0      2016-11-14 [1] CRAN (R 3.6.0)                      
  httr             1.4.0      2018-12-11 [1] CRAN (R 3.6.0)                      
- irlba            2.3.3      2019-02-05 [1] CRAN (R 3.6.0)                      
  jqr              1.1.0      2018-10-22 [1] CRAN (R 3.6.0)                      
  jsonlite         1.6        2018-12-07 [1] CRAN (R 3.6.0)                      
  jsonvalidate     1.1.0      2019-06-25 [1] CRAN (R 3.6.0)                      
@@ -65,28 +70,22 @@
  maptools         0.9-5      2019-02-18 [1] CRAN (R 3.6.0)                      
  MASS             7.3-51.1   2018-11-01 [4] CRAN (R 3.5.1)                      
  Matrix           1.2-17     2019-03-22 [4] CRAN (R 3.5.3)                      
- mblm             0.12.1     2019-01-26 [1] CRAN (R 3.6.0)                      
  memoise          1.1.0      2017-04-21 [1] CRAN (R 3.6.0)                      
  metR           * 0.4.0      2019-07-11 [1] Github (eliocamp/metR@b2adc41)      
  munsell          0.5.0      2018-06-12 [1] CRAN (R 3.6.0)                      
  mvtnorm          1.0-11     2019-06-19 [1] CRAN (R 3.6.0)                      
- ncdf4            1.16.1     2019-03-11 [1] CRAN (R 3.6.0)                      
  operator.tools   1.6.3      2017-02-28 [1] CRAN (R 3.6.0)                      
- packrat          0.5.0      2018-11-14 [1] CRAN (R 3.6.0)                      
  patchwork      * 0.0.1      2019-05-03 [1] Github (thomasp85/patchwork@fd7958b)
  pillar           1.4.2      2019-06-29 [1] CRAN (R 3.6.0)                      
  pkgbuild         1.0.3      2019-03-20 [1] CRAN (R 3.6.0)                      
  pkgconfig        2.0.2      2018-08-16 [1] CRAN (R 3.6.0)                      
  pkgload          1.0.2      2018-10-29 [1] CRAN (R 3.6.0)                      
- plotly           4.9.0      2019-04-10 [1] CRAN (R 3.6.0)                      
  plyr             1.8.4      2016-06-08 [1] CRAN (R 3.6.0)                      
  polyclip         1.10-0     2019-03-14 [1] CRAN (R 3.6.0)                      
  prettyunits      1.0.2      2015-07-13 [1] CRAN (R 3.6.0)                      
  processx         3.3.0      2019-03-10 [1] CRAN (R 3.6.0)                      
- proj4            1.0-8      2012-08-05 [1] CRAN (R 3.6.0)                      
  ps               1.3.0      2018-12-21 [1] CRAN (R 3.6.0)                      
  purrr            0.3.2      2019-03-15 [1] CRAN (R 3.6.0)                      
- quadprog         1.5-7      2019-05-06 [1] CRAN (R 3.6.0)                      
  R6               2.4.0      2019-02-14 [1] CRAN (R 3.6.0)                      
  Rcpp             1.0.1      2019-03-17 [1] CRAN (R 3.6.0)                      
  RcppRoll       * 0.3.0      2018-06-05 [1] CRAN (R 3.6.0)                      
@@ -101,30 +100,25 @@
  rmarkdown        1.13       2019-05-22 [1] CRAN (R 3.6.0)                      
  rprojroot        1.3-2      2018-01-03 [1] CRAN (R 3.6.0)                      
  rstudioapi       0.10       2019-03-19 [1] CRAN (R 3.6.0)                      
- rworldmap      * 1.3-6      2016-02-03 [1] CRAN (R 3.6.0)                      
+ rticles          0.8        2019-05-14 [1] CRAN (R 3.6.0)                      
  scales           1.0.0      2018-08-09 [1] CRAN (R 3.6.0)                      
  sessioninfo      1.1.1      2018-11-05 [1] CRAN (R 3.6.0)                      
  sf               0.7-5      2019-07-03 [1] CRAN (R 3.6.0)                      
- sp             * 1.3-1      2018-06-05 [1] CRAN (R 3.6.0)                      
+ sp               1.3-1      2018-06-05 [1] CRAN (R 3.6.0)                      
  spam             2.2-2      2019-03-08 [1] CRAN (R 3.6.0)                      
  sticky           0.5.2      2017-03-20 [1] CRAN (R 3.6.0)                      
  stringi        * 1.4.3      2019-03-12 [1] CRAN (R 3.6.0)                      
  stringr          1.4.0      2019-02-10 [1] CRAN (R 3.6.0)                      
  testthat         2.1.1      2019-04-23 [1] CRAN (R 3.6.0)                      
  tibble           2.1.3      2019-06-06 [1] CRAN (R 3.6.0)                      
- tidyr            0.8.3      2019-03-01 [1] CRAN (R 3.6.0)                      
  tidyselect       0.2.5      2018-10-11 [1] CRAN (R 3.6.0)                      
  tweenr           1.0.1      2018-12-14 [1] CRAN (R 3.6.0)                      
- udunits2         0.13       2016-11-17 [1] CRAN (R 3.6.0)                      
  units            0.6-3      2019-05-03 [1] CRAN (R 3.6.0)                      
  usethis        * 1.5.0      2019-04-07 [1] CRAN (R 3.6.0)                      
  V8               2.3        2019-07-02 [1] CRAN (R 3.6.0)                      
- viridisLite      0.3.0      2018-02-01 [1] CRAN (R 3.6.0)                      
- WaveletComp      1.1        2018-03-18 [1] CRAN (R 3.6.0)                      
  withr            2.1.2      2018-03-15 [1] CRAN (R 3.6.0)                      
  xfun             0.8        2019-06-25 [1] CRAN (R 3.6.0)                      
  yaml             2.2.0      2018-07-25 [1] CRAN (R 3.6.0)                      
- zoo              1.8-6      2019-05-28 [1] CRAN (R 3.6.0)                      
 
 [1] /home/elio/R/x86_64-pc-linux-gnu-library/3.6
 [2] /usr/local/lib/R/site-library
