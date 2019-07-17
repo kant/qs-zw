@@ -311,6 +311,18 @@ wave stationarity. We first calculated \(\alpha_{qs}\) for each month
 and then applied Equation \ref{eq:S2} with a 15-year rolling window
 approximated using loess regression with degree 0.
 
+A variety of indices that are used in the literature to study zonal
+waves / planetary waves. \citet{raphael2004} explicitly defined a
+``zonal wave 3 index'' based on averaging the (temporal) anomalies of
+the three-monthly geopotential height mean at three points that roughly
+coincide with the position of the climatological zonal wave 3 ridges.
+\citet{turner2017}, on the other hand, used the fourier amplitude of the
+wave 3. To make these indices more intercomparable between themselves
+and our data, we replicate them with slight diferences. We compute
+\citet{raphael2004} baed on monthly means instead of three-monthly means
+and we compute \citet{turner2017}'s fourier amplitude at 50S instead of
+using the mean geopotential height between 55S and 65S.
+
 \subsection{Data}
 
 We use monthly geopotential height fields from the NCEP/NCAR Reanalysis
@@ -339,18 +351,22 @@ Figshare repository \citep{Campitelli2019-figshare}.
 \end{figure}
 
 Figure \ref{fig:rao} shows the seasonal cycle of the amplitude of
-planetary waves at 50\degree S and 50\degree N based on the monthly-mean
-geopotential height fields computed between 1948 and 2017. We computed
-the left column (\(A_\mathrm{QS}\)) as the amplitude of the average
-geopotential height field for each month, level and wavenumber, and the
-right column (\(\overline{A_\mathrm{ZW}}\)) as the average amplitude of
-the 70 individual fields.
+planetary waves at 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57,
+58, 59, 60, 61, 62, 63, 64, 65\degree S and 45, 46, 47, 48, 49, 50, 51,
+52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65\degree N based on
+the monthly-mean geopotential height fields computed between 1948 and
+2017. We computed the left column (\(A_\mathrm{QS}\)) as the amplitude
+of the average geopotential height field for each month, level and
+wavenumber, and the right column (\(\overline{A_\mathrm{ZW}}\)) as the
+average amplitude of the 70 individual fields.
 
-Figure \ref{fig:rao1} shows that at 50\degree N \(A_\mathrm{QS}\) and
-\(\overline{A_\mathrm{ZW}}\) have a similar seasonal cycle with similar
-vertical extent for the three wavenumbers. At 50\degree S this is true
-only for wavenumber 1 (Figure \ref{fig:rao2}). However,
-\(A_\mathrm{QS2}\) has much lower values than
+Figure \ref{fig:rao1} shows that at 45, 46, 47, 48, 49, 50, 51, 52, 53,
+54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65\degree N
+\(A_\mathrm{QS}\) and \(\overline{A_\mathrm{ZW}}\) have a similar
+seasonal cycle with similar vertical extent for the three wavenumbers.
+At 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61,
+62, 63, 64, 65\degree S this is true only for wavenumber 1 (Figure
+\ref{fig:rao2}). However, \(A_\mathrm{QS2}\) has much lower values than
 \(\overline{A_\mathrm{ZW2}}\) and its seasonal cycle is less defined.
 Moreover, \(A_\mathrm{QS3}\) has a smaller magnitude than
 \(\overline{A_\mathrm{ZW3}}\) end even though their overall structure is
@@ -377,11 +393,16 @@ the aforementioned November minimum.
 The differences between \(A_\mathrm{QS}\) and
 \(\overline{A_\mathrm{ZW}}\) are quantified in Figure
 \ref{fig:stationarity}, which shows \(\hat{S}\) for wavenumbers 1 to 3
-computed using Equation \ref{eq:S} at 50\degree N and 50\degree S.
+computed using Equation \ref{eq:S} at 45, 46, 47, 48, 49, 50, 51, 52,
+53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65\degree N and 45, 46,
+47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64,
+65\degree S.
 
-At 50\degree N, planetary waves 1, 2 and 3 are highly stationary in
-almost every month and level, and even more so planetary wave 1 at
-50\degree S.
+At 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61,
+62, 63, 64, 65\degree N, planetary waves 1, 2 and 3 are highly
+stationary in almost every month and level, and even more so planetary
+wave 1 at 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+60, 61, 62, 63, 64, 65\degree S.
 
 In the SH, planetary wave 2 stationarity has a semiannual cycle. It
 reaches its maximum in April and in August-September, decreasing to a
@@ -403,13 +424,16 @@ As we computed \(\hat{S}\) using the whole period for Figure
 and 2017. So, to analyse stationarity chances over time, we computed
 \(\hat{S}\) using 10 -ear overlapping intervals for each wavenumber at
 both studied latitudes (Figure \ref{fig:s-timeseries}). Planetary wave
-stationarity remained high and constant for wavenumbers 1 to 3 at
-50\degree N and 1 at 50\degree S but wavenumbers 2 and 3 at 50\degree S
-show interdecadal variations. Planetary wave 2 stationarity oscillated
-around 0.5 with maximums in the 50's, 70's and 00's. Planetary wave 3
-stationarity jumped from zero to more than 0.5 in less than five years
-in the 50's and then oscillated around 0.6 with a strong maximum in the
-late 80's.
+stationarity remained high and constant for wavenumbers 1 to 3 at 45,
+46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
+64, 65\degree N and 1 at 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
+57, 58, 59, 60, 61, 62, 63, 64, 65\degree S but wavenumbers 2 and 3 at
+45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62,
+63, 64, 65\degree S show interdecadal variations. Planetary wave 2
+stationarity oscillated around 0.3 with maximums in the 50's, 70's and
+00's. Planetary wave 3 stationarity jumped from zero to more than 0.5 in
+less than five years in the 50's and then oscillated around 0.6 with a
+strong maximum in the late 80's.
 
 The study was also made using ERA Interim reanalysis and the results for
 the overlapping period are similar (not shown). The latter suggest that
@@ -417,6 +441,38 @@ the observed decadal variations are not an artifact of the reanalysis.
 However, The sudden shift in planetary wave 3 stationarity observed
 between 1950 and 1960 is probably spurious and we couldn't find it using
 data from ERA 20C (not shown).
+
+\subsection{Comparison with other indices}
+
+(This needs to be integrated)
+
+\begin{figure}[h]
+
+{\centering \includegraphics{fig/QS-ZW/index-comparison-1} 
+
+}
+
+\caption{Raphael (2003) and Turner et.al. indices compared with the amplitude of the zonal wave projected onto the climatological zonal wave. All of them computed at 500hPa and 50\degree S.}\label{fig:index-comparison}
+\end{figure}
+
+Figure \ref{fig:index-comparison} shows the relationship between the
+amplitude of the projection of the zonal wave 3 onto the climatological
+wave 3 and two zonal wave indeces propsed in the literature.
+\citet{raphael2004}'s index is highly correlated with ours (correlation
+= 0.73) and the relationship is quite linear in nature. Negative values
+of \citet{raphael2004}'s index are generally associated to zonal waves
+with negative projection onto the climatological mean. The main
+difference between \citet{raphael2004}'s index is that it consideres
+temporal anomalies instead of zonal anomalies. Computing the index using
+zonal anomalies instead increases the correlation to 0.95.
+
+The relationship with \citet{turner2017}'s approach is very different.
+While the correlation is not low (0.59), but the relationship is far
+from linear. Mainly, \citet{turner2017}'s index fails to capture the
+fact that in a considerable number of dates, zonal wave 3 has a big
+amplitude but with negative centers where climatologically there are
+positive centers. Since this leads to oposite patterns of circulation,
+corrlations derived from this index are not physically meaningful.
 
 \section{Conclusions}
 
