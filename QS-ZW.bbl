@@ -1,0 +1,621 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Campitelli%
+}{%
+Campitelli%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+R-metR}
+\APACinsertmetastar {%
+R-metR}%
+\begin{APACrefauthors}%
+Campitelli, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {metR: Tools for Easier Analysis of Meteorological
+  Fields} {metr: Tools for easier analysis of meteorological fields}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
+\newblock
+\begin{APACrefURL} \url{https://github.com/eliocamp/metR} \end{APACrefURL}
+\newblock
+\APACrefnote{R package version 0.2.9000}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Campitelli%
+}{%
+Campitelli%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+Campitelli2019-figshare}
+\APACinsertmetastar {%
+Campitelli2019-figshare}%
+\begin{APACrefauthors}%
+Campitelli, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {How Stationary Are Planetary Waves in the {{SH}}?:
+  Supplementary Data} {How stationary are planetary waves in the {{SH}}?:
+  Supplementary data}.{\BBCQ}
+\newblock
+
+\newblock
+\begin{APACrefDOI} \doi{10.6084/m9.figshare.7599890} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chen%
+\ \BBA {} Trenberth%
+}{%
+Chen%
+\ \BBA {} Trenberth%
+}{%
+{\protect \APACyear {1988}}%
+}]{%
+chen1988}
+\APACinsertmetastar {%
+chen1988}%
+\begin{APACrefauthors}%
+Chen, S\BHBI C.%
+\BCBT {}\ \BBA {} Trenberth, K\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1988}{{\APACmonth{02}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Forced {{Planetary Waves}} in the {{Northern Hemisphere
+  Winter}}: {{Wave}}-{{Coupled Orographic}} and {{Thermal Forcings}}} {Forced
+  {{Planetary Waves}} in the {{Northern Hemisphere Winter}}: {{Wave}}-{{Coupled
+  Orographic}} and {{Thermal Forcings}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the Atmospheric Sciences}{45}{4}{682-704}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0469(1988)045<0682:FPWITN>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dee%
+\ \protect \BOthers {.}}{%
+Dee%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+dee2011}
+\APACinsertmetastar {%
+dee2011}%
+\begin{APACrefauthors}%
+Dee, D\BPBI P.%
+, Uppala, S\BPBI M.%
+, Simmons, A\BPBI J.%
+, Berrisford, P.%
+, Poli, P.%
+, Kobayashi, S.%
+\BDBL {}Vitart, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{{\APACmonth{04}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The {{ERA}}-{{Interim}} Reanalysis: Configuration and
+  Performance of the Data Assimilation System} {The {{ERA}}-{{Interim}}
+  reanalysis: Configuration and performance of the data assimilation
+  system}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Quarterly Journal of the Royal Meteorological
+  Society}{137}{656}{553-597}.
+\newblock
+\begin{APACrefDOI} \doi{10.1002/qj.828} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dowle%
+\ \BBA {} Srinivasan%
+}{%
+Dowle%
+\ \BBA {} Srinivasan%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+R-data.table}
+\APACinsertmetastar {%
+R-data.table}%
+\begin{APACrefauthors}%
+Dowle, M.%
+\BCBT {}\ \BBA {} Srinivasan, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {data.table: Extension of `data.frame`} {data.table:
+  Extension of `data.frame`}{\BBCQ}\ [\bibcomputersoftwaremanual].
+\newblock
+\begin{APACrefURL} \url{http://r-datatable.com} \end{APACrefURL}
+\newblock
+\APACrefnote{R package version 1.11.9}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hiscox%
+, Miller%
+\BCBL {}\ \BBA {} Nappo%
+}{%
+Hiscox%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+hiscox2010}
+\APACinsertmetastar {%
+hiscox2010}%
+\begin{APACrefauthors}%
+Hiscox, A\BPBI L.%
+, Miller, D\BPBI R.%
+\BCBL {}\ \BBA {} Nappo, C\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Plume Meander and Dispersion in a Stable Boundary Layer}
+  {Plume meander and dispersion in a stable boundary layer}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Geophysical Research:
+  Atmospheres}{115}{D21}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1029/2010JD014102} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Holton%
+\ \BBA {} Hakim%
+}{%
+Holton%
+\ \BBA {} Hakim%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+holton2012}
+\APACinsertmetastar {%
+holton2012}%
+\begin{APACrefauthors}%
+Holton, J\BPBI R.%
+\BCBT {}\ \BBA {} Hakim, G\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2012}.
+\newblock
+\APACrefbtitle {An Introduction to Dynamic Meteorology: {{Fifth}} Edition} {An
+  introduction to dynamic meteorology: {{Fifth}} edition}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/C2009-0-63394-8} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Irving%
+\ \BBA {} Simmonds%
+}{%
+Irving%
+\ \BBA {} Simmonds%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+irving2015}
+\APACinsertmetastar {%
+irving2015}%
+\begin{APACrefauthors}%
+Irving, D.%
+\BCBT {}\ \BBA {} Simmonds, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{{\APACmonth{12}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A {{Novel Approach}} to {{Diagnosing Southern Hemisphere
+  Planetary Wave Activity}} and {{Its Influence}} on {{Regional Climate
+  Variability}}} {A {{Novel Approach}} to {{Diagnosing Southern Hemisphere
+  Planetary Wave Activity}} and {{Its Influence}} on {{Regional Climate
+  Variability}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Climate}{28}{23}{9041-9057}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/JCLI-D-15-0287.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kalnay%
+\ \protect \BOthers {.}}{%
+Kalnay%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1996}}%
+}]{%
+kalnay1996}
+\APACinsertmetastar {%
+kalnay1996}%
+\begin{APACrefauthors}%
+Kalnay, E.%
+, Kanamitsu, M.%
+, Kistler, R.%
+, Collins, W.%
+, Deaven, D.%
+, Gandin, L.%
+\BDBL {}Joseph, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1996}{{\APACmonth{03}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The {{NCEP}}/{{NCAR}} 40-{{Year Reanalysis Project}}}
+  {The {{NCEP}}/{{NCAR}} 40-{{Year Reanalysis Project}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Bulletin of the American Meteorological
+  Society}{77}{3}{437-472}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0477(1996)077<0437:TNYRP>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pain%
+}{%
+Pain%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+pain2005}
+\APACinsertmetastar {%
+pain2005}%
+\begin{APACrefauthors}%
+Pain, H\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Simple {{Harmonic Motion}}} {Simple {{Harmonic
+  Motion}}}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {The {{Physics}} of {{Vibrations}} and {{Waves}}} {The
+  {{Physics}} of {{Vibrations}} and {{Waves}}}\ (\BPG~1-35).
+\newblock
+\APACaddressPublisher{}{{John Wiley \& Sons, Ltd}}.
+\newblock
+\begin{APACrefDOI} \doi{10.1002/0470016957.ch1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Poli%
+\ \protect \BOthers {.}}{%
+Poli%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+poli2016}
+\APACinsertmetastar {%
+poli2016}%
+\begin{APACrefauthors}%
+Poli, P.%
+, Hersbach, H.%
+, Dee, D\BPBI P.%
+, Berrisford, P.%
+, Simmons, A\BPBI J.%
+, Vitart, F.%
+\BDBL {}Fisher, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{{\APACmonth{03}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{{ERA}}-{{20C}}: {{An Atmospheric Reanalysis}} of the
+  {{Twentieth Century}}} {{{ERA}}-{{20C}}: {{An Atmospheric Reanalysis}} of the
+  {{Twentieth Century}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Climate}{29}{11}{4083-4097}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/JCLI-D-15-0556.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Quintanar%
+\ \BBA {} Mechoso%
+}{%
+Quintanar%
+\ \BBA {} Mechoso%
+}{%
+{\protect \APACyear {1995}}%
+}]{%
+quintanar1995a}
+\APACinsertmetastar {%
+quintanar1995a}%
+\begin{APACrefauthors}%
+Quintanar, A\BPBI I.%
+\BCBT {}\ \BBA {} Mechoso, C\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1995}{{\APACmonth{11}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Quasi-{{Stationary Waves}} in the {{Southern
+  Hemisphere}}. {{Part II}}: {{Generation Mechanisms}}} {Quasi-{{Stationary
+  Waves}} in the {{Southern Hemisphere}}. {{Part II}}: {{Generation
+  Mechanisms}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Climate}{8}{11}{2673-2690}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0442(1995)008<2673:QSWITS>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{R Core Team}%
+}{%
+{R Core Team}%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+R-base}
+\APACinsertmetastar {%
+R-base}%
+\begin{APACrefauthors}%
+{R Core Team}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {R: A Language and Environment for Statistical Computing}
+  {R: A language and environment for statistical computing}{\BBCQ}\
+  [\bibcomputersoftwaremanual].
+\newblock
+\APACaddressPublisher{Vienna, Austria}{}.
+\newblock
+\begin{APACrefURL} \url{https://www.R-project.org/} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rao%
+, Fernandez%
+\BCBL {}\ \BBA {} Franchito%
+}{%
+Rao%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2004}}%
+}]{%
+rao2004}
+\APACinsertmetastar {%
+rao2004}%
+\begin{APACrefauthors}%
+Rao, B\BPBI V.%
+, Fernandez, J\BPBI P\BPBI R.%
+\BCBL {}\ \BBA {} Franchito, S\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{{\APACmonth{03}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Quasi-Stationary Waves in the {{Southern Hemisphere}}
+  during {{El Ni{\~n}o}} and {{La Ni{\~n}a}} Events} {Quasi-stationary waves in
+  the {{Southern Hemisphere}} during {{El Ni{\~n}o}} and {{La Ni{\~n}a}}
+  events}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Annales Geophysicae}{22}{3}{789-806}.
+\newblock
+\begin{APACrefDOI} \doi{10.5194/angeo-22-789-2004} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Singer%
+}{%
+Singer%
+}{%
+{\protect \APACyear {1967}}%
+}]{%
+singer1967}
+\APACinsertmetastar {%
+singer1967}%
+\begin{APACrefauthors}%
+Singer, I\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1967}{{\APACmonth{12}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Steadiness of the {{Wind}}} {Steadiness of the
+  {{Wind}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Applied Meteorology}{6}{6}{1033-1038}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0450(1967)006<1033:SOTW>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Smith%
+\ \BBA {} Kushner%
+}{%
+Smith%
+\ \BBA {} Kushner%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+smith2012}
+\APACinsertmetastar {%
+smith2012}%
+\begin{APACrefauthors}%
+Smith, K\BPBI L.%
+\BCBT {}\ \BBA {} Kushner, P\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{{\APACmonth{07}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Linear Interference and the Initiation of Extratropical
+  Stratosphere-Troposphere Interactions: {{LIN INTERFERENCE AND STRAT NAM}}}
+  {Linear interference and the initiation of extratropical
+  stratosphere-troposphere interactions: {{LIN INTERFERENCE AND STRAT
+  NAM}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Geophysical Research:
+  Atmospheres}{117}{D13}{n/a-n/a}.
+\newblock
+\begin{APACrefDOI} \doi{10.1029/2012JD017587} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+K\BPBI E.~Trenberth%
+}{%
+K\BPBI E.~Trenberth%
+}{%
+{\protect \APACyear {1980}}%
+}]{%
+trenberth1980a}
+\APACinsertmetastar {%
+trenberth1980a}%
+\begin{APACrefauthors}%
+Trenberth, K\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1980}{{\APACmonth{09}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Planetary {{Waves}} at 500 Mb in the {{Southern
+  Hemisphere}}} {Planetary {{Waves}} at 500 mb in the {{Southern
+  Hemisphere}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monthly Weather Review}{108}{9}{1378-1389}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0493(1980)108<1378:PWAMIT>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+K\BPBI F.~Trenberth%
+\ \BBA {} Mo%
+}{%
+K\BPBI F.~Trenberth%
+\ \BBA {} Mo%
+}{%
+{\protect \APACyear {1985}}%
+}]{%
+trenberth1985}
+\APACinsertmetastar {%
+trenberth1985}%
+\begin{APACrefauthors}%
+Trenberth, K\BPBI F.%
+\BCBT {}\ \BBA {} Mo, K\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1985}{{\APACmonth{01}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Blocking in the {{Southern Hemisphere}}} {Blocking in
+  the {{Southern Hemisphere}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monthly Weather Review}{113}{1}{3-21}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0493(1985)113<0003:BITSH>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Turner%
+, Hosking%
+, Bracegirdle%
+, Phillips%
+\BCBL {}\ \BBA {} Marshall%
+}{%
+Turner%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+turner2017}
+\APACinsertmetastar {%
+turner2017}%
+\begin{APACrefauthors}%
+Turner, J.%
+, Hosking, J\BPBI S.%
+, Bracegirdle, T\BPBI J.%
+, Phillips, T.%
+\BCBL {}\ \BBA {} Marshall, G\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{{\APACmonth{04}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Variability and Trends in the {{Southern Hemisphere}}
+  High Latitude, Quasi-Stationary Planetary Waves: {{SOUTHERN HEMISPHERE
+  PLANETARY WAVES}}} {Variability and trends in the {{Southern Hemisphere}}
+  high latitude, quasi-stationary planetary waves: {{SOUTHERN HEMISPHERE
+  PLANETARY WAVES}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal of
+  Climatology}{37}{5}{2325-2336}.
+\newblock
+\begin{APACrefDOI} \doi{10.1002/joc.4848} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{van Loon}%
+\ \BBA {} Jenne%
+}{%
+{van Loon}%
+\ \BBA {} Jenne%
+}{%
+{\protect \APACyear {1972}}%
+}]{%
+vanloon1972}
+\APACinsertmetastar {%
+vanloon1972}%
+\begin{APACrefauthors}%
+{van Loon}, H.%
+\BCBT {}\ \BBA {} Jenne, R\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1972}{{\APACmonth{02}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Zonal Harmonic Standing Waves in the Southern
+  Hemisphere} {The zonal harmonic standing waves in the southern
+  hemisphere}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Geophysical Research}{77}{6}{992-1003}.
+\newblock
+\begin{APACrefDOI} \doi{10.1029/JC077i006p00992} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wickham%
+}{%
+Wickham%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+R-ggplot2}
+\APACinsertmetastar {%
+R-ggplot2}%
+\begin{APACrefauthors}%
+Wickham, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2016}.
+\newblock
+\APACrefbtitle {ggplot2: Elegant Graphics for Data Analysis} {ggplot2: Elegant
+  graphics for data analysis}.
+\newblock
+\APACaddressPublisher{}{Springer-Verlag New York}.
+\newblock
+\begin{APACrefURL} \url{http://ggplot2.org} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

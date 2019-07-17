@@ -175,7 +175,7 @@ of the Northern Hemisphere using the NCEP/NCAR reanalysis from 1948 to
 2017. We also devised a quantitative measure of planetary-wave
 stationarity. We confirm that in the SH planetary wave 1 is highly
 stationary. Planetary waves 2 and 3 have a comparable mixture of
-stationary and moving components with significant variability from
+stationary and moving components with significant variability on
 interseasonal and decadal timescales. A deeper knowledge of those
 variations could help in the future to better understand the variability
 in the responses of mid-latitudes atmospheric circulation to surface
@@ -223,6 +223,19 @@ of a ``moving'' component. This was a qualitative conclusion and to our
 knowledge no further study has actually quantified the level of
 stationarity associated to each wavenumber.
 
+Since in the SH the amplitude of the mean planetary wave can differ
+greatly from the mean amplitude of planetary waves, care must be taken
+when interpreting the literature. XXXX
+
+Some studies analyze the former \citep[e.g.~][\citet{quintanar1995a},
+\citet{raphael2004}]{vanloon1972} while others analyze the later
+\citep[e.g.~][\citet{turner2017}, \citet{irving2015}]{rao2004}. For
+instance, \citet{irving2015} compare their planetary wave activity index
+with \citet{raphael2004}'s wave 3 index and conclude that the later
+cannot account for events with waves far removed from their
+climatological position. However, being an index of the zonal wave
+component in phase with the quasi-stationary wave, this is by design.
+
 After more than four decades from the publication of
 \citet{vanloon1972}, and considering the current availability of
 different global reanalysis datasets, in this study we assess the
@@ -248,9 +261,9 @@ planetary waves of the time-mean field such that:
 \end{linenomath*}
 
 where \(\mathrm{k}\) is wavenumber, \(\lambda\) longitude, and
-\(\mathrm{A_{x}}\) and \(\alpha_\mathrm{x}\), amplitude and phase,
-respectively. \(\mathrm{ZWk}(t)\) depends on time, but not
-\(\mathrm{QSk}\).
+\(\mathrm{A_{ZWk}}\), \(\alpha_\mathrm{ZWk}\) \(\mathrm{A_{QSk}}\) and
+\(\alpha_\mathrm{QSk}\), are the amplitudes and phases of each wave.
+\(\mathrm{ZWk}(t)\) depends on time, but not \(\mathrm{QSk}\).
 
 These definitions depend on which are the ``instantaneous fields'' and
 the averaging time-scales. For example, a dataset of 365 daily mean
@@ -270,12 +283,13 @@ general, the stationary phase \(\alpha_\mathrm{QSk}\) does not equal
 \(\overline{\alpha_\mathrm{ZWk}}\), and that the stationary amplitude
 \(A_\mathrm{QSk}\) is less or equal to \(\overline{A_\mathrm{ZWk}}\)
 \citep{pain2005}. We use this latter property and use the quotient
-between \(A_\mathrm{QS}\) and \(\overline{A_\mathrm{ZW}}\) to define a
-measure of quasi-stationary wave stationarity:
+between \(A_\mathrm{QSk}\) and \(\overline{A_\mathrm{ZWk}}\) to define,
+for each wavenumber \(k\), a measure of quasi-stationary wave
+stationarity:
 
 \begin{linenomath*}
 \begin{equation}\label{eq:S}
-\hat{S} = \frac{A_\mathrm{QS}}{\overline{A_\mathrm{ZW}}}
+\hat{S_k} = \frac{A_\mathrm{QSk}}{\overline{A_\mathrm{ZWk}}}
 \end{equation}
 \end{linenomath*}
 
@@ -294,7 +308,7 @@ first time that this approach is applied to study atmospheric waves.
 
 \begin{linenomath*}
 \begin{equation}\label{eq:S2}
-\hat{S} =   \frac{\sum_t A_\mathrm{ZW}(t) \cos  \left [\alpha_\mathrm{zw}(t) - \alpha_{qs} \right ]}{\sum_t A_\mathrm{ZW}(t)}
+\hat{S_k} =   \frac{\sum_t A_\mathrm{ZWk}(t) \cos  \left [\alpha_\mathrm{ZWk}(t) - \alpha_{QSk} \right ]}{\sum_t A_\mathrm{ZWk}(t)}
 \end{equation}
 \end{linenomath*}
 
@@ -307,7 +321,7 @@ on the propagating properties of waves, it's a statistical --rather than
 dynamical-- property.
 
 We used Equation \ref{eq:S2} to compute a timeseries of quasi-stationary
-wave stationarity. We first calculated \(\alpha_{qs}\) for each month
+wave stationarity. We first calculated \(\alpha_{QSk}\) for each month
 and then applied Equation \ref{eq:S2} with a 15-year rolling window
 approximated using loess regression with degree 0.
 
@@ -329,9 +343,10 @@ We use monthly geopotential height fields from the NCEP/NCAR Reanalysis
 \citep{kalnay1996} for the period 1948 to 2017 and compute one
 quasi-stationary wave for the whole period for each month, level and
 wavenumber. Amplitude and phase for each wavenumber was estimated by
-fitting a fourier transform to each latitude circle, level and monthly
-record. For comparison, we also analyzed data from ERA-Interim
-\citep{dee2011} and ERA-20C \citep{poli2016}.
+fitting a fourier transform to the mean geopotential height between
+45\textbackslash degree and 65\textbackslash degree South and North for
+each level and monthly record. For comparison, we also analyzed data
+from ERA-Interim \citep{dee2011} and ERA-20C \citep{poli2016}.
 
 We analyzed the data using the statistical programming language R
 \citep{R-base}, using data.table \citep{R-data.table} and metR
@@ -343,7 +358,7 @@ Figshare repository \citep{Campitelli2019-figshare}.
 
 \begin{figure}[h]
 
-{\centering \subfloat[At 50\degree N\label{fig:rao1}]{\includegraphics{fig/QS-ZW/rao-1} }\newline\subfloat[At 50\degree S\label{fig:rao2}]{\includegraphics{fig/QS-ZW/rao-2} }
+{\centering \subfloat[Northern Hemisphere.\label{fig:rao1}]{\includegraphics{fig/QS-ZW/rao-1} }\newline\subfloat[Southern Hemisphere.\label{fig:rao2}]{\includegraphics{fig/QS-ZW/rao-2} }
 
 }
 
@@ -351,25 +366,21 @@ Figshare repository \citep{Campitelli2019-figshare}.
 \end{figure}
 
 Figure \ref{fig:rao} shows the seasonal cycle of the amplitude of
-planetary waves at 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57,
-58, 59, 60, 61, 62, 63, 64, 65\degree S and 45, 46, 47, 48, 49, 50, 51,
-52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65\degree N based on
-the monthly-mean geopotential height fields computed between 1948 and
-2017. We computed the left column (\(A_\mathrm{QS}\)) as the amplitude
-of the average geopotential height field for each month, level and
-wavenumber, and the right column (\(\overline{A_\mathrm{ZW}}\)) as the
-average amplitude of the 70 individual fields.
+planetary waves N based on monthly mean geopotential height fields
+computed between 1948 and 2017. We computed the left column
+(\(A_\mathrm{QS}\)) as the amplitude of the average geopotential height
+field for each month, level and wavenumber, and the right column
+(\(\overline{A_\mathrm{ZW}}\)) as the average amplitude of the 70
+individual fields.
 
-Figure \ref{fig:rao1} shows that at 45, 46, 47, 48, 49, 50, 51, 52, 53,
-54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65\degree N
+Figure \ref{fig:rao1} shows that in the Northern Hemisphere
 \(A_\mathrm{QS}\) and \(\overline{A_\mathrm{ZW}}\) have a similar
 seasonal cycle with similar vertical extent for the three wavenumbers.
-At 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61,
-62, 63, 64, 65\degree S this is true only for wavenumber 1 (Figure
+In the Southern Hemisphere this is true only for wavenumber 1 (Figure
 \ref{fig:rao2}). However, \(A_\mathrm{QS2}\) has much lower values than
 \(\overline{A_\mathrm{ZW2}}\) and its seasonal cycle is less defined.
 Moreover, \(A_\mathrm{QS3}\) has a smaller magnitude than
-\(\overline{A_\mathrm{ZW3}}\) end even though their overall structure is
+\(\overline{A_\mathrm{ZW3}}\) and even though their overall structure is
 similar (one relative maximum in February-March in the middle
 troposphere and another in July-August that extends to the lower
 stratosphere), they differ in the details. \(A_\mathrm{QS3}\) has a
@@ -393,16 +404,11 @@ the aforementioned November minimum.
 The differences between \(A_\mathrm{QS}\) and
 \(\overline{A_\mathrm{ZW}}\) are quantified in Figure
 \ref{fig:stationarity}, which shows \(\hat{S}\) for wavenumbers 1 to 3
-computed using Equation \ref{eq:S} at 45, 46, 47, 48, 49, 50, 51, 52,
-53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65\degree N and 45, 46,
-47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64,
-65\degree S.
+computed using Equation \ref{eq:S}.
 
-At 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61,
-62, 63, 64, 65\degree N, planetary waves 1, 2 and 3 are highly
+In the Nothern Hemisphere, planetary waves 1, 2 and 3 are highly
 stationary in almost every month and level, and even more so planetary
-wave 1 at 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
-60, 61, 62, 63, 64, 65\degree S.
+wave 1 in the Southern Hemisphere.
 
 In the SH, planetary wave 2 stationarity has a semiannual cycle. It
 reaches its maximum in April and in August-September, decreasing to a
@@ -422,25 +428,22 @@ deep minimum after which increases sharply.
 As we computed \(\hat{S}\) using the whole period for Figure
 \ref{fig:stationarity}, it represents the mean stationarity between 1948
 and 2017. So, to analyse stationarity chances over time, we computed
-\(\hat{S}\) using 10 -ear overlapping intervals for each wavenumber at
+\(\hat{S}\) using 10-year overlapping intervals for each wavenumber at
 both studied latitudes (Figure \ref{fig:s-timeseries}). Planetary wave
-stationarity remained high and constant for wavenumbers 1 to 3 at 45,
-46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
-64, 65\degree N and 1 at 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-57, 58, 59, 60, 61, 62, 63, 64, 65\degree S but wavenumbers 2 and 3 at
-45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62,
-63, 64, 65\degree S show interdecadal variations. Planetary wave 2
-stationarity oscillated around 0.3 with maximums in the 50's, 70's and
-00's. Planetary wave 3 stationarity jumped from zero to more than 0.5 in
-less than five years in the 50's and then oscillated around 0.6 with a
-strong maximum in the late 80's.
+stationarity remained high and constant for wavenumbers 1 to 3 in the
+Northern Hemisphere and 1 in the Southern Hemisphere but wavenumbers 2
+and 3 in the Southern Hemisphere show interdecadal variations. Planetary
+wave 2 stationarity oscillated around 0.3 with maximums in the 50's,
+70's and 00's. Planetary wave 3 stationarity jumped from zero to more
+than 0.5 in less than five years in the 50's and then oscillated around
+0.6 with a strong maximum in the late 80's.
 
 The study was also made using ERA Interim reanalysis and the results for
-the overlapping period are similar (not shown). The latter suggest that
-the observed decadal variations are not an artifact of the reanalysis.
-However, The sudden shift in planetary wave 3 stationarity observed
-between 1950 and 1960 is probably spurious and we couldn't find it using
-data from ERA 20C (not shown).
+the overlapping period are similar (not shown). The latter lends some
+credence the observed decadal variations not being an artifact of the
+reanalysis model. However, the sudden shift in planetary wave 3
+stationarity observed between 1950 and 1960 is probably spurious and we
+couldn't find it using data from ERA 20C (not shown).
 
 \subsection{Comparison with other indices}
 
@@ -481,32 +484,24 @@ hemispheres using different quantitative measures. We confirmed that
 planetary wave stationarity associated with SH planetary wave 1 is high
 and constant throughout the year and period. Instead stationarity levels
 for both waves 2 and 3 vary on intraseasonal and interdecadal
-timescales. On the other hand, as it was described in the literature, ,
+timescales. On the other hand, as it was described in the literature,
 planetary wave stationarity in the Northern Hemisphere is higher and
 varies much less.
 
 Planetary waves can be both forced by the surface and excited by
 internal variability. Assuming that the later process will not result in
 a phase preference, higher stationarity would be evidence of stronger
-forcing or, more strictly, stronger forcing response. In the Northern
+forcing or, more strictly, stronger response. In the Northern
 Hemisphere, topography and thermal contrasts are the main forcings of
 planetary waves \citep{chen1988}, which explains their highly and not
 variable stationary nature. In the SH, only planetary wave 1 seems to be
 the result of mainly surface forcings. Planetary waves 2 and 3 seem to
-be composed of a comparable mix of internal variability and surface
-forcing components.
+be a product of internal variability and surface forcing components in
+similar magnitude.
 
-Since in the SH the amplitude of the mean planetary wave can differ
-greatly from the mean amplitude of planetary waves, care must be taken
-when interpreting the literature. Some studies analyze the former
-\citep[e.g.~][\citet{quintanar1995a}, \citet{raphael2004}]{vanloon1972}
-while others analyze the later \citep[e.g.~][\citet{turner2017},
-\citet{irving2015}]{rao2004}. For instance, \citet{irving2015} compare
-their planetary wave activity index with \citet{raphael2004}'s wave 3
-index and conclude that the later cannot account for events with waves
-far removed from their climatological position. However, being an index
-of the zonal wave component in phase with the quasi-stationary wave,
-this is by design.
+Since in the SH the amplitude of the time mean planetary wave can be as
+low as 10\% of the mean amplitude of planetary waves ins ome levels and
+seasons, care must be taken when interpreting the literature. XXXX
 
 The explorations of both zonal waves and quasi-stationary waves can lead
 to novel levels of analysis. For example, \citet{smith2012} used their
