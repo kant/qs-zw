@@ -177,10 +177,9 @@ stationarity. We confirm that in the SH planetary wave 1 is highly
 stationary. Planetary waves 2 and 3 have a comparable mixture of
 stationary and moving components with significant variability on
 interseasonal and decadal timescales. A deeper knowledge of those
-variations could help in the future to better understand the variability
-in the responses of mid-latitudes atmospheric circulation to surface
-forcing caused either by its strength, or the sensitivity of the
-atmosphere to it.
+variations could help to better understand the the response of the
+mid-latitude atmospheric circulation to surface forcings, caused either
+by their strength, or the sensitivity of the atmosphere to them.
 \end{abstract}
 \noindent{\bf Plain language summary}\vskip-\parskip
 
@@ -205,9 +204,10 @@ atmosphere to them.}
 Zonal asymmetries of extratropical circulation in the Southern
 Hemisphere (hereafter called as ``planetary waves'') strongly modulate
 weather systems and regional climate through latitudinal transport of
-heat, humidity, and momentum (\citet{trenberth1980a}). They can also
+heat, humidity, and momentum (\citet{trenberth1980a}). They may also
 contribute to the development of blocking events
-\citep[e.g.~][]{trenberth1985}.
+\citep[e.g.~][]{trenberth1985}, for example, via quasi-resonant
+amplifications \citep{petoukhov2013}.
 
 In Rossby wave theory, stationary waves are those with zero frequency or
 phase velocity \citep{holton2012}. In practice, however, most studies
@@ -216,7 +216,7 @@ their quasi-stationary nature based on \citet{vanloon1972}. In this
 foundational study, the authors analyzed data only from two years, from
 1957 and 1958 and found that while extratropical waves with wavenumber 1
 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3
-contributed significantly to the climatological field. From that, they
+featured significantly in the climatological field. From that, they
 concluded that only waves 1 and 3 recur consistently in the same
 location and thus have a significant quasi-stationary component on top
 of a ``moving'' component. This was a qualitative conclusion and to our
@@ -228,10 +228,10 @@ greatly from the mean amplitude of planetary waves, care must be taken
 when interpreting the literature. XXXX
 
 Some studies analyze the former \citep[e.g.~][\citet{quintanar1995a},
-\citet{raphael2004}]{vanloon1972} while others analyze the later
+\citet{raphael2004b}]{vanloon1972} while others analyze the later
 \citep[e.g.~][\citet{turner2017}, \citet{irving2015}]{rao2004}. For
 instance, \citet{irving2015} compare their planetary wave activity index
-with \citet{raphael2004}'s wave 3 index and conclude that the later
+with \citet{raphael2004b}'s wave 3 index and conclude that the later
 cannot account for events with waves far removed from their
 climatological position. However, being an index of the zonal wave
 component in phase with the quasi-stationary wave, this is by design.
@@ -264,6 +264,9 @@ where \(\mathrm{k}\) is wavenumber, \(\lambda\) longitude, and
 \(\mathrm{A_{ZWk}}\), \(\alpha_\mathrm{ZWk}\) \(\mathrm{A_{QSk}}\) and
 \(\alpha_\mathrm{QSk}\), are the amplitudes and phases of each wave.
 \(\mathrm{ZWk}(t)\) depends on time, but not \(\mathrm{QSk}\).
+Quasi-strationary waves could be more correctly called ``climatological
+planetary waves'', but we chose this name for consistency with some of
+the previous literature \citep[e.g.~][]{quintanar1995, turner2017}.
 
 These definitions depend on which are the ``instantaneous fields'' and
 the averaging time-scales. For example, a dataset of 365 daily mean
@@ -326,16 +329,16 @@ and then applied Equation \ref{eq:S2} with a 15-year rolling window
 approximated using loess regression with degree 0.
 
 A variety of indices that are used in the literature to study zonal
-waves / planetary waves. \citet{raphael2004} explicitly defined a
+waves / planetary waves. \citet{raphael2004b} explicitly defined a
 ``zonal wave 3 index'' based on averaging the (temporal) anomalies of
 the three-monthly geopotential height mean at three points that roughly
 coincide with the position of the climatological zonal wave 3 ridges.
 \citet{turner2017}, on the other hand, used the fourier amplitude of the
 wave 3. To make these indices more intercomparable between themselves
 and our data, we replicate them with slight diferences. We compute
-\citet{raphael2004} baed on monthly means instead of three-monthly means
-and we compute \citet{turner2017}'s fourier amplitude at 50S instead of
-using the mean geopotential height between 55S and 65S.
+\citet{raphael2004b} baed on monthly means instead of three-monthly
+means and we compute \citet{turner2017}'s fourier amplitude at 50S
+instead of using the mean geopotential height between 55S and 65S.
 
 \subsection{Data}
 
@@ -362,7 +365,7 @@ Figshare repository \citep{Campitelli2019-figshare}.
 
 }
 
-\caption{Seasonal cycle of amplitude of the geopotential height planetary waves 1, 2 and 3 (top, middle and bottom rows, respectively) computed as the mean amplitude of the monthly waves ($\overline{A_\mathrm{ZW} }$, left column) the amplitude of the mean wave ($A_\mathrm{QSk}$, right column)}\label{fig:rao}
+\caption{Seasonal cycle of amplitude of the geopotential height planetary waves 1, 2 and 3 (top, middle and bottom rows, respectively) computed as the amplitude of the mean wave ($A_\mathrm{QSk}$, left column) and the mean amplitude of the monthly waves ($\overline{A_\mathrm{ZW} }$, right column) in meters.}\label{fig:rao}
 \end{figure}
 
 Figure \ref{fig:rao} shows the seasonal cycle of the amplitude of
@@ -461,11 +464,11 @@ couldn't find it using data from ERA 20C (not shown).
 Figure \ref{fig:index-comparison} shows the relationship between the
 amplitude of the projection of the zonal wave 3 onto the climatological
 wave 3 and two zonal wave indeces propsed in the literature.
-\citet{raphael2004}'s index is highly correlated with ours (correlation
+\citet{raphael2004b}'s index is highly correlated with ours (correlation
 = 0.73) and the relationship is quite linear in nature. Negative values
-of \citet{raphael2004}'s index are generally associated to zonal waves
+of \citet{raphael2004b}'s index are generally associated to zonal waves
 with negative projection onto the climatological mean. The main
-difference between \citet{raphael2004}'s index is that it consideres
+difference between \citet{raphael2004b}'s index is that it consideres
 temporal anomalies instead of zonal anomalies. Computing the index using
 zonal anomalies instead increases the correlation to 0.95.
 

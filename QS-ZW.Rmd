@@ -20,7 +20,8 @@ corresponding_author:
 keypoints:  
   - "We devised a quantitative measure of planetary wave stationarity"
   - "In the southern hemisphere, waves 2 and 3 have interseasonal and decadal variations in stationarity"
-abstract: "Many studies of quasi-stationary planetary waves in the Southern Hemisphere (SH) assumed their quasi-stationary nature based on @vanloon1972. However, that study considered only 2 years of data (1957-1958) before the advent of reanalysis datasets. In this study, we assessed the stationary conditions in the SH and contrasted it with that of the Northern Hemisphere using the NCEP/NCAR reanalysis from 1948 to 2017. We also devised a quantitative measure of planetary-wave stationarity. We confirm that in the SH planetary wave 1 is highly stationary. Planetary waves 2 and 3 have a comparable mixture of stationary and moving components with significant variability on interseasonal and decadal timescales. A deeper knowledge of those variations could help in the future to better understand the variability in the responses of mid-latitudes atmospheric circulation to surface forcing caused either by its strength, or the sensitivity of the atmosphere to it."
+abstract: "Many studies of quasi-stationary planetary waves in the Southern Hemisphere (SH) assumed their quasi-stationary nature based on @vanloon1972. However, that study considered only 2 years of data (1957-1958) before the advent of reanalysis datasets. In this study, we assessed the stationary conditions in the SH and contrasted it with that of the Northern Hemisphere using the NCEP/NCAR reanalysis from 1948 to 2017. We also devised a quantitative measure of planetary-wave stationarity. We confirm that in the SH planetary wave 1 is highly stationary. Planetary waves 2 and 3 have a comparable mixture of stationary and moving components with significant variability on interseasonal and decadal timescales. A deeper knowledge of those variations could help to better understand the the response of the mid-latitude atmospheric circulation to surface forcings, caused either by their strength, or the sensitivity of the atmosphere to them."
+
 plain_language_summary: "Large-scale waves in the atmosphere can have stationary and travelling components. Many studies that focus on the stationary part assume their stationary nature based on the results of @vanloon1972, which studied only 2 years of data (1957-1958) before the existence of modern reanalysis datasets. In this study we evaluated the stationarity nature of large-scale waves in the Southern Hemisphere in contrast with the Northern Hemisphere using the NCEP/NCAR reanalysis from 1948 to 2017. We also created a quantitative measure of wave stationarity. The results show that, in the Southern Hemisphere, waves with one maximum per latitude circle are highly stationary during the whole period and throughout the year. Higher frequency waves (2 or 3 maximums) have a comparable mix of stationary and travelling components that varies in between each season and between decades. These variations could mirror either variations in external factors or the sensitivity of the atmosphere to them."
 output:
    rticles::agu_article:
@@ -154,14 +155,14 @@ if (any(nchar(rmarkdown::metadata$keypoints) > 100)) {
 
 # Introduction
 
-Zonal asymmetries of extratropical circulation in the Southern Hemisphere (hereafter called as “planetary waves”) strongly modulate weather systems and regional climate through latitudinal transport of heat, humidity, and momentum (@trenberth1980a). They can also contribute to the development of blocking events [e.g. @trenberth1985]. 
+Zonal asymmetries of extratropical circulation in the Southern Hemisphere (hereafter called as “planetary waves”) strongly modulate weather systems and regional climate through latitudinal transport of heat, humidity, and momentum (@trenberth1980a). They may also contribute to the development of blocking events [e.g. @trenberth1985], for example, via quasi-resonant amplifications [@petoukhov2013].
 
-In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@holton2012]. In practice, however, most studies focusing on planetary waves in the Southern Hemisphere (HS) assumed their quasi-stationary nature based on @vanloon1972. In this foundational study, the authors analyzed data only from two years, from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 contributed significantly to the climatological field. From that, they concluded that only waves 1 and 3 recur consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no further study has actually quantified the level of stationarity associated to each wavenumber.
+In Rossby wave theory, stationary waves are those with zero frequency or phase velocity [@holton2012]. In practice, however, most studies focusing on planetary waves in the Southern Hemisphere (HS) assumed their quasi-stationary nature based on @vanloon1972. In this foundational study, the authors analyzed data only from two years, from 1957 and 1958 and found that while extratropical waves with wavenumber 1 to 6 had comparable amplitudes in daily fields, only wavenumbers 1 and 3 featured significantly in the climatological field. From that, they concluded that only waves 1 and 3 recur consistently in the same location and thus have a significant quasi-stationary component on top of a "moving" component. This was a qualitative conclusion and to our knowledge no further study has actually quantified the level of stationarity associated to each wavenumber.
 
 Since in the SH the amplitude of the mean planetary wave can differ greatly from the mean amplitude of planetary waves, care must be taken when interpreting the literature. XXXX
 
 
-Some studies analyze the former [e.g. @vanloon1972, @quintanar1995a, @raphael2004] while others analyze the later [e.g. @rao2004, @turner2017, @irving2015]. For instance, @irving2015 compare their planetary wave activity index with @raphael2004's wave 3 index and conclude that the later cannot account for events with waves far removed from their climatological position. However, being an index of the zonal wave component in phase with the quasi-stationary wave, this is by design. 
+Some studies analyze the former [e.g. @vanloon1972, @quintanar1995a, @raphael2004b] while others analyze the later [e.g. @rao2004, @turner2017, @irving2015]. For instance, @irving2015 compare their planetary wave activity index with @raphael2004b's wave 3 index and conclude that the later cannot account for events with waves far removed from their climatological position. However, being an index of the zonal wave component in phase with the quasi-stationary wave, this is by design. 
 
 
 
@@ -181,9 +182,10 @@ We define *planetary waves* as waves that extend along a full latitude circle. *
 \end{eqnarray}
 \end{linenomath*}
 
-where $\mathrm{k}$ is wavenumber, $\lambda$ longitude, and $\mathrm{A_{ZWk}}$, $\alpha_\mathrm{ZWk}$ $\mathrm{A_{QSk}}$ and $\alpha_\mathrm{QSk}$, are the amplitudes and phases of each wave. $\mathrm{ZWk}(t)$ depends on time, but not $\mathrm{QSk}$. 
+where $\mathrm{k}$ is wavenumber, $\lambda$ longitude, and $\mathrm{A_{ZWk}}$, $\alpha_\mathrm{ZWk}$ $\mathrm{A_{QSk}}$ and $\alpha_\mathrm{QSk}$, are the amplitudes and phases of each wave. $\mathrm{ZWk}(t)$ depends on time, but not $\mathrm{QSk}$. Quasi-strationary waves could be more correctly called "climatological planetary waves", but we chose this name for consistency with some of the previous literature [e.g. @quintanar1995; @turner2017].
 
 These definitions depend on which are the "instantaneous fields" and the averaging time-scales. For example, a dataset of 365 daily mean fields defines 365 daily zonal waves and one annual quasi-stationary wave as well as 12 monthly quasi-stationary waves (per level and latitude). On the other hand, a 30-year dataset of monthly mean fields defines 360 monthly zonal waves and one 30-year quasi-stationary wave. While monthly planetary waves are quasi-stationary waves in the first case, they are zonal waves in the second. The latter shows that the definition of quasi-stationary waves depends on the temporal sampling considered.
+
 
 ```{r set-period}
 period_rao <- c(1948, 2017)
@@ -281,7 +283,7 @@ The numerator represents the sum of the zonal waves amplitudes projected onto th
 
 We used Equation \ref{eq:S2} to compute a timeseries of quasi-stationary wave stationarity. We first calculated $\alpha_{QSk}$ for each month and then applied Equation \ref{eq:S2} with a 15-year rolling window approximated using loess regression with degree 0.
 
-A variety of indices that are used in the literature to study zonal waves / planetary waves. @raphael2004 explicitly defined a "zonal wave 3 index" based on averaging the (temporal) anomalies of the three-monthly geopotential height mean at three points that roughly coincide with the position of the climatological zonal wave 3 ridges. @turner2017, on the other hand, used the fourier amplitude of the wave 3. To make these indices more intercomparable between themselves and our data, we replicate them with slight diferences. We compute @raphael2004 baed on monthly means instead of three-monthly means and we compute @turner2017's fourier amplitude at 50S instead of using the mean geopotential height between 55S and 65S.
+A variety of indices that are used in the literature to study zonal waves / planetary waves. @raphael2004b explicitly defined a "zonal wave 3 index" based on averaging the (temporal) anomalies of the three-monthly geopotential height mean at three points that roughly coincide with the position of the climatological zonal wave 3 ridges. @turner2017, on the other hand, used the fourier amplitude of the wave 3. To make these indices more intercomparable between themselves and our data, we replicate them with slight diferences. We compute @raphael2004b baed on monthly means instead of three-monthly means and we compute @turner2017's fourier amplitude at 50S instead of using the mean geopotential height between 55S and 65S.
 
 ## Data
 
@@ -318,7 +320,7 @@ math_levels <- c(TeX("Amplitude of quasi-stationary wave ($A_{QS}$)"),
 k_prefix <- AddPreffix("Wavenumber ")
 ```
 
-```{r rao, fig.cap = "Seasonal cycle of amplitude of the geopotential height planetary waves 1, 2 and 3 (top, middle and bottom rows, respectively) computed as the mean amplitude of the monthly waves ($\\overline{A_\\mathrm{ZW} }$, left column) the amplitude of the mean wave ($A_\\mathrm{QSk}$, right column)", fig.subcap=c("Northern Hemisphere.", "Southern Hemisphere."), fig.width=5, fig.height=4, fig.ncol=1}
+```{r rao, fig.cap = "Seasonal cycle of amplitude of the geopotential height planetary waves 1, 2 and 3 (top, middle and bottom rows, respectively) computed as the amplitude of the mean wave ($A_\\mathrm{QSk}$, left column) and the mean amplitude of the monthly waves ($\\overline{A_\\mathrm{ZW} }$, right column) in meters.", fig.subcap=c("Northern Hemisphere.", "Southern Hemisphere."), fig.width=5, fig.height=4, fig.ncol=1}
 plot_crossection <- function(k, hemisphere, binwidth) {
   ks <- k
   hem <- hemisphere
@@ -510,7 +512,7 @@ both %>%
 ```
 
 
-Figure \ref{fig:index-comparison} shows the relationship between the amplitude of the projection of the zonal wave 3 onto the climatological wave 3 and two zonal wave indeces propsed in the literature. @raphael2004's index is highly correlated with ours (correlation = `r signif(cors$original, 2)`) and the relationship is quite linear in nature. Negative values of @raphael2004's index are generally associated to zonal waves with negative projection onto the climatological mean. The main difference between @raphael2004's index is that it consideres temporal anomalies instead of zonal anomalies. Computing the index using zonal anomalies instead increases the correlation to `r signif(cors$zonal, 2)`. 
+Figure \ref{fig:index-comparison} shows the relationship between the amplitude of the projection of the zonal wave 3 onto the climatological wave 3 and two zonal wave indeces propsed in the literature. @raphael2004b's index is highly correlated with ours (correlation = `r signif(cors$original, 2)`) and the relationship is quite linear in nature. Negative values of @raphael2004b's index are generally associated to zonal waves with negative projection onto the climatological mean. The main difference between @raphael2004b's index is that it consideres temporal anomalies instead of zonal anomalies. Computing the index using zonal anomalies instead increases the correlation to `r signif(cors$zonal, 2)`. 
 
 The relationship with @turner2017's approach is very different. While the correlation is not low (`r signif(cors$amplitude, 2)`), but the relationship is far from linear. Mainly, @turner2017's index fails to capture the fact that in a considerable number of dates, zonal wave 3 has a big amplitude but with negative centers where climatologically there are positive centers. Since this leads to oposite patterns of circulation, corrlations derived from this index are not physically meaningful. 
 

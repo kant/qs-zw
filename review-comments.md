@@ -14,6 +14,25 @@ Added a direct comparison to both indices.
 
 ## Reviewer 2:
 
+> I disagree with the definition of planetary waves given on line 60. You can have waves of WN7 or 8 extending along a full latitudinal circle and those are not planetary waves
+
+
+
+> Also I am not familiar with the term zonal waves for planetary waves in the "instantaneous" and would suggest to use a different name. How about climatological planetary wave and just planetary waves? And finally why are the waves referred to as quasi-stationary and not stationary?
+
+Although we agree that the naminc conventions are not ideal, both "zonal waves" and "quasi-stationary waves" are terms used in the citing literature (see for example Raphael 2004) and we don't want to invent new nomenclature. We aded a clarification. 
+
+>  L21 it is unclear what is meant exactly by the strength of the mid-latitude circulation
+
+"it" refers to the forcing, not the circulation. Rephrased to make it clearer. 
+
+> L40 How do the planetary waves contribute to blocking development? Could you add one more sentence?
+
+Added a refernece to the literature. 
+
+> L47 Do you not have a feedback from the higher WN waves on the climatology?
+
+Yes, there are dynamical feedbacks between scales, but the point here is that those other waves cancel out in the climatology. Reworded to make it clearer. 
 
 > L77/78 Two key variables alpha zkw and Azkw are not properly defined.
 
@@ -45,7 +64,7 @@ Added numerical information.
 
 > L171 This statement is unclear, please reformulate
 
-XXX 
+XXX   
 
 > L18 from on
 > L112 based on monthly mean ...

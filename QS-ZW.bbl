@@ -294,6 +294,40 @@ Pain, H\BPBI J.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Petoukhov%
+, Rahmstorf%
+, Petri%
+\BCBL {}\ \BBA {} Schellnhuber%
+}{%
+Petoukhov%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+petoukhov2013}
+\APACinsertmetastar {%
+petoukhov2013}%
+\begin{APACrefauthors}%
+Petoukhov, V.%
+, Rahmstorf, S.%
+, Petri, S.%
+\BCBL {}\ \BBA {} Schellnhuber, H\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{{\APACmonth{04}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Quasiresonant Amplification of Planetary Waves and
+  Recent {{Northern Hemisphere}} Weather Extremes} {Quasiresonant amplification
+  of planetary waves and recent {{Northern Hemisphere}} weather
+  extremes}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Proceedings of the National Academy of
+  Sciences}{110}{14}{5336-5341}.
+\newblock
+\begin{APACrefDOI} \doi{10.1073/pnas.1222000110} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Poli%
 \ \protect \BOthers {.}}{%
 Poli%
@@ -333,7 +367,7 @@ Quintanar%
 \ \BBA {} Mechoso%
 }{%
 {\protect \APACyear {1995}}%
-}]{%
+{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
 quintanar1995a}
 \APACinsertmetastar {%
 quintanar1995a}%
@@ -343,7 +377,7 @@ Quintanar, A\BPBI I.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{1995}{{\APACmonth{11}}}{}.
+\APACrefYearMonthDay{1995{\protect \BCnt {1}}}{{\APACmonth{11}}}{}.
 \newblock
 {\BBOQ}\APACrefatitle {Quasi-{{Stationary Waves}} in the {{Southern
   Hemisphere}}. {{Part II}}: {{Generation Mechanisms}}} {Quasi-{{Stationary
@@ -353,6 +387,36 @@ Quintanar, A\BPBI I.%
 \APACjournalVolNumPages{Journal of Climate}{8}{11}{2673-2690}.
 \newblock
 \begin{APACrefDOI} \doi{10.1175/1520-0442(1995)008<2673:QSWITS>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Quintanar%
+\ \BBA {} Mechoso%
+}{%
+Quintanar%
+\ \BBA {} Mechoso%
+}{%
+{\protect \APACyear {1995}}%
+{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
+quintanar1995}
+\APACinsertmetastar {%
+quintanar1995}%
+\begin{APACrefauthors}%
+Quintanar, A\BPBI I.%
+\BCBT {}\ \BBA {} Mechoso, C\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1995{\protect \BCnt {2}}}{{\APACmonth{11}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Quasi-{{Stationary Waves}} in the {{Southern
+  Hemisphere}}. {{Part I}}: {{Observational Data}}} {Quasi-{{Stationary Waves}}
+  in the {{Southern Hemisphere}}. {{Part I}}: {{Observational Data}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Climate}{8}{11}{2659-2672}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0442(1995)008<2659:QSWITS>2.0.CO;2}
   \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -553,10 +617,9 @@ Turner, J.%
 \APACrefYearMonthDay{2017}{{\APACmonth{04}}}{}.
 \newblock
 {\BBOQ}\APACrefatitle {Variability and Trends in the {{Southern Hemisphere}}
-  High Latitude, Quasi-Stationary Planetary Waves: {{SOUTHERN HEMISPHERE
-  PLANETARY WAVES}}} {Variability and trends in the {{Southern Hemisphere}}
-  high latitude, quasi-stationary planetary waves: {{SOUTHERN HEMISPHERE
-  PLANETARY WAVES}}}.{\BBCQ}
+  High Latitude, Quasi-Stationary Planetary Waves} {Variability and trends in
+  the {{Southern Hemisphere}} high latitude, quasi-stationary planetary
+  waves}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{International Journal of
   Climatology}{37}{5}{2325-2336}.
