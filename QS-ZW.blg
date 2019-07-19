@@ -13,48 +13,47 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: qszw.bib
 Database file #2: qszw-pkgs.bib
-Warning--I didn't find a database entry for "raphael2004b"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No journal in Campitelli2019-figshare
-You've used 23 entries,
+You've used 24 entries,
             6951 wiz_defined-function locations,
-            1438 strings with 16234 characters,
-and the built_in function-call counts, 46886 in all, are:
-= -- 5761
-> -- 370
-< -- 2280
-+ -- 2449
-- -- 49
-* -- 3116
-:= -- 8675
-add.period$ -- 92
-call.type$ -- 23
-change.case$ -- 438
+            1443 strings with 16349 characters,
+and the built_in function-call counts, 48455 in all, are:
+= -- 5957
+> -- 380
+< -- 2352
++ -- 2516
+- -- 51
+* -- 3212
+:= -- 8947
+add.period$ -- 96
+call.type$ -- 24
+change.case$ -- 455
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 1297
-empty$ -- 1807
-format.name$ -- 651
-if$ -- 8754
+cite$ -- 49
+duplicate$ -- 1337
+empty$ -- 1876
+format.name$ -- 665
+if$ -- 9066
 int.to.chr$ -- 0
-int.to.str$ -- 73
+int.to.str$ -- 76
 missing$ -- 0
-newline$ -- 622
-num.names$ -- 184
-pop$ -- 817
+newline$ -- 646
+num.names$ -- 192
+pop$ -- 841
 preamble$ -- 1
-purify$ -- 122
+purify$ -- 126
 quote$ -- 0
-skip$ -- 2812
+skip$ -- 2932
 stack$ -- 0
-substring$ -- 2688
-swap$ -- 762
-text.length$ -- 81
+substring$ -- 2762
+swap$ -- 787
+text.length$ -- 83
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1904
+type$ -- 1984
 warning$ -- 1
-while$ -- 248
+while$ -- 253
 width$ -- 0
-write$ -- 761
-(There were 2 warnings)
+write$ -- 787
+(There was 1 warning)

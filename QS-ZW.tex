@@ -223,18 +223,16 @@ of a ``moving'' component. This was a qualitative conclusion and to our
 knowledge no further study has actually quantified the level of
 stationarity associated to each wavenumber.
 
-Since in the SH the amplitude of the mean planetary wave can differ
-greatly from the mean amplitude of planetary waves, care must be taken
-when interpreting the literature. XXXX
-
-Some studies analyze the former \citep[e.g.~][\citet{quintanar1995a},
-\citet{raphael2004b}]{vanloon1972} while others analyze the later
-\citep[e.g.~][\citet{turner2017}, \citet{irving2015}]{rao2004}. For
-instance, \citet{irving2015} compare their planetary wave activity index
-with \citet{raphael2004b}'s wave 3 index and conclude that the later
-cannot account for events with waves far removed from their
-climatological position. However, being an index of the zonal wave
-component in phase with the quasi-stationary wave, this is by design.
+Quantifying planetary wave stationarity in the \citet{vanloon1972} sense
+can be important both in forcasting and process understanging. On one
+hand, stationary planetary waves mihgt be more predictable than their
+non-stationary counterpart and on the other, the degree of stationarity
+is probably an indication of the sensitivity to external forcings.
+Moreover, it has also methodological implications. For example,
+interpretation of correlations and regressions between planetary wave
+amplitudes and other atmospheric and surface variables
+\citep[e.g.~][]{turner2017} are only straightforward in the case of
+highly stationary planetary waves.
 
 After more than four decades from the publication of
 \citet{vanloon1972}, and considering the current availability of
@@ -267,6 +265,9 @@ where \(\mathrm{k}\) is wavenumber, \(\lambda\) longitude, and
 Quasi-strationary waves could be more correctly called ``climatological
 planetary waves'', but we chose this name for consistency with some of
 the previous literature \citep[e.g.~][]{quintanar1995, turner2017}.
+While these definitions can, in principle, be applied to any wavenumber,
+only long waves are considered true planetary waves and thus here we
+limit our analysis to weavenumbers 1 to 3.
 
 These definitions depend on which are the ``instantaneous fields'' and
 the averaging time-scales. For example, a dataset of 365 daily mean
@@ -329,16 +330,16 @@ and then applied Equation \ref{eq:S2} with a 15-year rolling window
 approximated using loess regression with degree 0.
 
 A variety of indices that are used in the literature to study zonal
-waves / planetary waves. \citet{raphael2004b} explicitly defined a
+waves / planetary waves. \citet{raphael2004} explicitly defined a
 ``zonal wave 3 index'' based on averaging the (temporal) anomalies of
 the three-monthly geopotential height mean at three points that roughly
 coincide with the position of the climatological zonal wave 3 ridges.
 \citet{turner2017}, on the other hand, used the fourier amplitude of the
 wave 3. To make these indices more intercomparable between themselves
 and our data, we replicate them with slight diferences. We compute
-\citet{raphael2004b} baed on monthly means instead of three-monthly
-means and we compute \citet{turner2017}'s fourier amplitude at 50S
-instead of using the mean geopotential height between 55S and 65S.
+\citet{raphael2004} baed on monthly means instead of three-monthly means
+and we compute \citet{turner2017}'s fourier amplitude at 50S instead of
+using the mean geopotential height between 55S and 65S.
 
 \subsection{Data}
 
@@ -464,11 +465,11 @@ couldn't find it using data from ERA 20C (not shown).
 Figure \ref{fig:index-comparison} shows the relationship between the
 amplitude of the projection of the zonal wave 3 onto the climatological
 wave 3 and two zonal wave indeces propsed in the literature.
-\citet{raphael2004b}'s index is highly correlated with ours (correlation
+\citet{raphael2004}'s index is highly correlated with ours (correlation
 = 0.73) and the relationship is quite linear in nature. Negative values
-of \citet{raphael2004b}'s index are generally associated to zonal waves
+of \citet{raphael2004}'s index are generally associated to zonal waves
 with negative projection onto the climatological mean. The main
-difference between \citet{raphael2004b}'s index is that it consideres
+difference between \citet{raphael2004}'s index is that it consideres
 temporal anomalies instead of zonal anomalies. Computing the index using
 zonal anomalies instead increases the correlation to 0.95.
 
@@ -502,9 +503,17 @@ the result of mainly surface forcings. Planetary waves 2 and 3 seem to
 be a product of internal variability and surface forcing components in
 similar magnitude.
 
-Since in the SH the amplitude of the time mean planetary wave can be as
-low as 10\% of the mean amplitude of planetary waves ins ome levels and
-seasons, care must be taken when interpreting the literature. XXXX
+Since in the SH the amplitude of the mean planetary wave can differ
+greatly from the mean amplitude of planetary waves, care must be taken
+when interpreting the literature. Some studies analyze the former
+\citep[e.g.~][\citet{quintanar1995a}, \citet{raphael2004}]{vanloon1972}
+while others analyze the later \citep[e.g.~][\citet{turner2017},
+\citet{irving2015}]{rao2004}. For instance, \citet{irving2015} compare
+their planetary wave activity index with \citet{raphael2004}'s wave 3
+index and conclude that the later cannot account for events with waves
+far removed from their climatological position. However, being an index
+of the zonal wave component in phase with the quasi-stationary wave,
+this is by design.
 
 The explorations of both zonal waves and quasi-stationary waves can lead
 to novel levels of analysis. For example, \citet{smith2012} used their

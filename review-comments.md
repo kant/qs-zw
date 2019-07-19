@@ -14,13 +14,17 @@ Added a direct comparison to both indices.
 
 ## Reviewer 2:
 
-> I disagree with the definition of planetary waves given on line 60. You can have waves of WN7 or 8 extending along a full latitudinal circle and those are not planetary waves
+> I disagree with the definition of planetary waves given on line 60. You can have waves of WN7 or 8 extending along a full latitudinal circle and those are not planetary waves (see e.g. Krishnamurti, T. N., M. Tewari, D. R. Chakraborty, J. Marengo, P. L. S. Dias, and P. Satyamurty, 1999: Downstream amplification: A possible precursor to major freeze events over southeastern Brazil. Weather and Forecasting, 14, 242-270.) It is more standard to define planetary waves based on their WN (e.g., WN1-3)
 
-
+Added clarification in text. 
 
 > Also I am not familiar with the term zonal waves for planetary waves in the "instantaneous" and would suggest to use a different name. How about climatological planetary wave and just planetary waves? And finally why are the waves referred to as quasi-stationary and not stationary?
 
 Although we agree that the naminc conventions are not ideal, both "zonal waves" and "quasi-stationary waves" are terms used in the citing literature (see for example Raphael 2004) and we don't want to invent new nomenclature. We aded a clarification. 
+
+> 3) The plain language summary is still quite complex and could be simplified further. Maybe also say here why what you are doing is relevant at some stage for forecasting maybe or process understanding
+
+Plain Language Summary is not required for Atmospheric Sciences Letters. Changed to a short abstract. 
 
 >  L21 it is unclear what is meant exactly by the strength of the mid-latitude circulation
 

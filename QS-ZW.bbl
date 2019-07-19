@@ -478,6 +478,31 @@ Rao, B\BPBI V.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Raphael%
+}{%
+Raphael%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+raphael2004}
+\APACinsertmetastar {%
+raphael2004}%
+\begin{APACrefauthors}%
+Raphael, M\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Zonal Wave 3 Index for the {{Southern Hemisphere}}} {A
+  zonal wave 3 index for the {{Southern Hemisphere}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Geophysical Research Letters}{31}{23}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1029/2004GL020365} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Singer%
 }{%
 Singer%
