@@ -21,13 +21,12 @@ keypoints:
   - "We devised a quantitative measure of planetary wave stationarity"
   - "In the southern hemisphere, waves 2 and 3 have interseasonal and decadal variations in stationarity"
 abstract: "Many studies of quasi-stationary planetary waves in the Southern Hemisphere (SH) assumed their quasi-stationary nature based on @vanloon1972. However, that study considered only 2 years of data (1957-1958) before the advent of reanalysis datasets. In this study, we assessed the stationary conditions in the SH and contrasted it with that of the Northern Hemisphere using the NCEP/NCAR reanalysis from 1948 to 2017. We also devised a quantitative measure of planetary-wave stationarity. We confirm that in the SH planetary wave 1 is highly stationary. Planetary waves 2 and 3 have a comparable mixture of stationary and moving components with significant variability on interseasonal and decadal timescales. A deeper knowledge of those variations could help to better understand the the response of the mid-latitude atmospheric circulation to surface forcings, caused either by their strength, or the sensitivity of the atmosphere to them."
-
 plain_language_summary: "Large-scale waves in the atmosphere can have stationary and travelling components. Many studies that focus on the stationary part assume their stationary nature based on the results of @vanloon1972, which studied only 2 years of data (1957-1958) before the existence of modern reanalysis datasets. In this study we evaluated the stationarity nature of large-scale waves in the Southern Hemisphere in contrast with the Northern Hemisphere using the NCEP/NCAR reanalysis from 1948 to 2017. We also created a quantitative measure of wave stationarity. The results show that, in the Southern Hemisphere, waves with one maximum per latitude circle are highly stationary during the whole period and throughout the year. Higher frequency waves (2 or 3 maximums) have a comparable mix of stationary and travelling components that varies in between each season and between decades. These variations could mirror either variations in external factors or the sensitivity of the atmosphere to them."
 output:
-   rticles::agu_article:
-      keep_tex: true
    word_document:
       default
+   rticles::agu_article:
+      keep_tex: true
 bibliography: [qszw.bib, qszw-pkgs.bib]
 header-includes: 
       - \usepackage{gensymb} 
