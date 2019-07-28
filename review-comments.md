@@ -32,7 +32,7 @@ Plain Language Summary is not required for Atmospheric Sciences Letters. Changed
 
 > L40 How do the planetary waves contribute to blocking development? Could you add one more sentence?
 
-Added a refernece to the literature. 
+Added a reference to the literature. 
 
 > L47 Do you not have a feedback from the higher WN waves on the climatology?
 
@@ -56,7 +56,7 @@ At every level available (Figure 2).
 
 >  L146 I disagree with this statement since the reanalyses suffer from the same data constrains.
 
-Agree. The original statements was not meant to be absolute, but just a areflection that seeing similar resultas in different reanalysis makes the conclusions more solid. It's now amended to be even more soft. 
+Agree. The original statements was not meant to be absolute, but just a reflection that seeing similar results in different reanalysis makes the conclusions more solid. It's now amended to be even more soft. 
 
 > L162 comparable mix is unclear? Do you mean of equal magnitude?
 
